@@ -1,6 +1,6 @@
 [build]
-  publish = "public" # Remplacez par le nom du dossier qui contient votre site
-  command = "echo 'Netlify build command...'" # Commandes de construction (si vous en avez)
+  publish = "public"
+  command = "npm install"
 
 [functions]
-  directory = "netlify/functions" # Indique le chemin vers le dossier de vos fonctions
+  directory = "netlify/functions"
