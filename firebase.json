@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|webp|avif|svg|css|js|woff2|woff|ttf|eot)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      }
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}
