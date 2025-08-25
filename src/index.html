@@ -57,6 +57,8 @@
 		
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 
+
+		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="stylesheet" href="style.css">
   
   </head>
@@ -292,19 +294,10 @@
                                 </div>
                             </div>
                             <div class="flex items-center justify-center space-x-6 mt-4">
-								<button id="rewind-button" aria-label="Reculer de 10 secondes" class="w-12 h-12 flex items-center justify-center text-xl text-white/80 hover:text-white transition"><i class="fas fa-undo-alt"></i></button>
-								
-							<button id="play-pause-button" aria-label="Lecture / Pause" class="relative w-20 h-20 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-105" style="background-image: linear-gradient(to right, #fe8412, #f75917, #e51848, #920b68);">
-	
-								<i id="play-pause-icon" class="fas fa-play text-white text-3xl"></i>
-								
-								<div id="player-loading-spinner" class="custom-spinner absolute hidden">
-</div>
-								
-							</button>
-
-								<button id="forward-button" aria-label="Avancer de 10 secondes" class="w-12 h-12 flex items-center justify-center text-xl text-white/80 hover:text-white transition"><i class="fas fa-redo-alt"></i></button>
-							</div>
+                                <button id="rewind-button" aria-label="Reculer de 10 secondes" class="w-12 h-12 flex items-center justify-center text-xl text-white/80 hover:text-white transition"><i class="fas fa-undo-alt"></i></button>
+                                <button id="play-pause-button" aria-label="Lecture / Pause" class="w-20 h-20 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-105" style="background-image: linear-gradient(to right, #fe8412, #f75917, #e51848, #920b68);"><i id="play-pause-icon" class="fas fa-play text-white text-3xl"></i></button>
+                                <button id="forward-button" aria-label="Avancer de 10 secondes" class="w-12 h-12 flex items-center justify-center text-xl text-white/80 hover:text-white transition"><i class="fas fa-redo-alt"></i></button>
+                            </div>
                             <div class="flex justify-between items-center mt-4 w-full">
                                 <div class="flex items-center space-x-3 w-1.5/5">
                                     <i class="fas fa-volume-down text-gray-400"></i>
@@ -390,11 +383,7 @@
                             <a href="https://www.instagram.com/cabinet_sexo_logique" target="_blank" rel="noopener" class="social-icon w-10 h-10 md:w-14 md:h-14" aria-label="Instagram"><i class="fab fa-instagram text-xl md:text-2xl"></i></a>
                         </div>
                     </div>
-                   <div class="p-2 rounded-2xl bg-white/30 shadow-lg border border-white/50">
-    
-    <div class="relative w-full h-64 md:h-full min-h-[256px] md:min-h-[300px] rounded-xl overflow-hidden" id="map-container">
-        </div>
-</div>
+                    <div class="relative w-full h-64 md:h-full min-h-[256px] md:min-h-[300px] rounded-lg overflow-hidden shadow-md" id="map-container"></div>
                 </div>
             </div>
         </section>
@@ -827,44 +816,18 @@ if (mobileMenuButton && mobileMenu) {
             setPlayIcon();
         });
 
-function showLoadingState(isLoading) {
-            const spinner = document.getElementById('player-loading-spinner');
-            if (isLoading) {
-                player.playPauseIcon.classList.add('hidden');
-                spinner.classList.remove('hidden');
-                player.playPauseBtn.disabled = true;
-            } else {
-                spinner.classList.add('hidden');
-                player.playPauseIcon.classList.remove('hidden');
-                player.playPauseBtn.disabled = false;
-            }
-        }
-
 		function togglePlayPause() {
             if (audio.paused) {
-                const playPromise = audio.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        // On ignore l'erreur "AbortError" qui est normale quand on change de piste rapidement.
-                        if (error.name !== 'AbortError') {
-                            console.error("Erreur de lecture :", error);
-                            displayPlayerError();
-                        }
+                audio.play()
+                    .catch(error => {
+                        console.error("Erreur lors de la tentative de lecture :", error);
+                        setPlayIcon();
+                        displayPlayerError();
                     });
-                }
             } else {
                 audio.pause();
             }
         }
-
-        // Écouteurs pour gérer l'état de chargement
-        audio.addEventListener('loadstart', () => showLoadingState(true));
-        audio.addEventListener('playing', () => showLoadingState(false));
-        audio.addEventListener('waiting', () => showLoadingState(true));
-        audio.addEventListener('canplay', () => showLoadingState(false));
-        audio.addEventListener('pause', () => showLoadingState(false));
-        audio.addEventListener('stalled', () => showLoadingState(false));
-        audio.addEventListener('error', () => showLoadingState(false));
 
 		function setPlayIcon() {
 			const iconElement = document.getElementById('play-pause-icon');
@@ -880,15 +843,14 @@ function showLoadingState(isLoading) {
 			iconElement.setAttribute('data-icon', 'pause'); // C'est la ligne cruciale
 		}
 
-function playNextEpisodeAutomatically() {
-    if (currentEpisodeIndex < episodes.length - 1) {
-        // On charge le prochain épisode et on demande sa lecture automatique.
-        loadEpisode(currentEpisodeIndex + 1, true);
-    } else {
-        audio.pause();
-        setPlayIcon(); // Assure que l'icône revient en mode "lecture" à la fin de la playlist.
-    }
-}
+        function playNextEpisodeAutomatically() {
+            if (currentEpisodeIndex < episodes.length - 1) {
+                loadEpisode(currentEpisodeIndex + 1);
+                togglePlayPause();
+            } else {
+                audio.pause();
+            }
+        }
 
         function loadEpisode(index) {
             const episode = episodes[index];

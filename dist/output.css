@@ -2662,19 +2662,4 @@ input[type="range"]::-webkit-slider-thumb {
   }
 }
 
-/* Animation pour la rotation du spinner */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Style du nouvel anneau de chargement */
-.custom-spinner {
-  width: 72px; /* Un peu plus petit que le bouton de 80px (w-20) */
-  height: 72px;
-  border: 5px solid rgba(255, 255, 255, 0.3); /* Bordure semi-transparente */
-  border-top-color: #ffffff; /* La partie visible de la bordure */
-  border-radius: 50%; /* Pour le rendre parfaitement rond */
-  animation: spin 1s linear infinite; /* Applique l'animation de rotation */
-}
 

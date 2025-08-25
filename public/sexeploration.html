@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast - Sex(e)ploration</title>
+    <meta name="description" content="Découvrez le podcast Sexeploration de Lucile Bach avec Chloé François sexologue clinicienne à Nancy.">
+
+
+
+<!-- Open Graph Meta Tags (pour Facebook, LinkedIn, WhatsApp, etc.) -->
+<meta property="og:title" content="Podcast - Sex(e)ploration" id="og-title">
+<meta property="og:description" content="Découvrez nos épisodes sur la sexologie et le plaisir. Le guide complet pour explorer votre sexualité en toute conscience, de l'intimité à l'éducation sexuelle." id="og-description">
+<meta property="og:type" content="audio.podcast">
+<meta property="og:url" content="https://sexo-logique.com/sexeploration.html" id="og-url">
+<meta property="og:image" content="https://sexo-logique.com/images/sexeploration.avif" id="og-image">
+<meta property="og:audio" content="" id="og-audio-url"> <!-- URL de l'audio direct -->
+
+<!-- Twitter Card Meta Tags (pour Twitter) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Podcast - Sex(e)ploration" id="twitter-title">
+<meta name="twitter:description" content="Découvrez nos épisodes sur la sexologie et le plaisir. Le guide complet pour explorer votre sexualité en toute conscience, de l'intimité à l'éducation sexuelle." id="twitter-description">
+<meta name="twitter:image" content="https://sexo-logique.com/images/sexeploration.avif" id="twitter-image">
+
+
+
+
+
+
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    </noscript>
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+
+
+</head>
+
+<body class="antialiased">
+
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
+    <div class="container mx-auto px-4">
+<nav class="flex items-center justify-between h-16 glass-effect rounded-full px-4 lg:px-8 shadow-sm">
+    <a href="/" class="text-xl font-bold text-custom-dark flex-shrink-0">sexo-logique.com</a>
+    
+    <div class="hidden md:flex items-center md:space-x-4 lg:space-x-8 text-custom-dark">
+        <a href="/#consultations" class="nav-link">Consultations</a>
+        <a href="/#apropos" class="nav-link">À propos</a>
+        <a href="/sexeploration.html" class="nav-link">Podcast</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+    </div>
+    
+    <button data-src="https://sexologue.as.me/schedule/2810fbd3?calendarIds=9092470" class="open-schedule-modal hidden md:inline-block bg-custom-dark text-white md:px-4 lg:px-6 py-2 rounded-full hover:bg-opacity-90 transition shadow-md hover:shadow-lg btn-mobile-feedback whitespace-nowrap">Prendre RDV</button>
+    
+    <button id="mobile-menu-button" class="md:hidden text-2xl text-custom-dark" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars"></i>
+    </button>
+</nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden glass-effect rounded-2xl mt-2 p-4 text-custom-dark text-center">
+            <a href="/#consultations" class="block py-2 hover:text-custom-accent">Consultations</a>
+            <a href="/#apropos" class="block py-2 hover:text-custom-accent">À propos</a>
+            <a href="/sexeploration.html" class="block py-2 hover:text-custom-accent">Podcast</a>
+            <a href="/#contact" class="block py-2 hover:text-custom-accent">Contact</a>
+            <button data-src="https://sexologue.as.me/schedule/2810fbd3?calendarIds=9092470" class="open-schedule-modal mt-4 w-full bg-custom-dark text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition shadow-md btn-mobile-feedback">Prendre RDV</button>
+        </div>
+    </div>
+</header>
+
+    <main id="podcast-page-main">
+<section id="Podcast" class="min-h-screen flex flex-col items-center justify-center hero-bg py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center mb-12">
+ <h2 class="text-3xl md:text-4xl font-bold text-custom-dark mb-4">
+                        Découvrez le podcast <span class="text-custom-accent">Sex(e)ploration</span>
+                    </h2>
+        <p class="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-gray-700">
+            Découvrez nos épisodes sur la sexologie et le plaisir. Le guide complet pour explorer votre sexualité en toute conscience, de l'intimité à l'éducation sexuelle.
+        </p>
+    </div>
+
+    <div id="podcast-content" class="w-full max-w-5xl mx-auto hidden flex flex-col space-y-8">
+
+	<div id="player-container" style="background-color: #333333; color: white;" class="shadow-2xl rounded-3xl p-8 flex flex-col md:flex-row md:space-x-8 md:space-y-0 space-y-6 items-center">
+		<div class="w-full md:w-1/3 flex justify-center md:justify-start">
+<a href="https://www.instagram.com/sexeploration.lucile.bach/?hl=fr" target="_blank" id="player-image-link" class="block w-64 h-64 relative overflow-hidden rounded-2xl shadow-xl group">
+    <img src="/images/sexeploration.avif" alt="Pochette de l'épisode" class="w-full h-full object-cover transition-opacity duration-300">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <svg class="w-20 h-20 transform scale-75 group-hover:scale-100 transition-transform duration-300" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+            <defs>
+                <linearGradient id="instagramGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#feda75; stop-opacity:1" />
+                    <stop offset="25%" style="stop-color:#fa7e1e; stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#d62976; stop-opacity:1" />
+                    <stop offset="75%" style="stop-color:#962fbf; stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#4f5bd5; stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#instagramGradient)" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+        </svg>
+    </div>
+</a>
+		</div>
+<div class="flex-1 w-full md:w-2/3 md:ml-auto">
+    <h2 id="player-title" class="text-2xl font-bold">Titre de l'épisode</h2>
+    <p id="player-date" class="text-sm text-gray-400 mt-1">Date de publication</p>
+    <div class="space-y-2 mt-4">
+        <input type="range" id="seek-bar" value="0" class="w-full h-2 rounded-lg appearance-none cursor-pointer">
+        <div class="flex justify-between text-xs text-gray-400">
+            <span id="current-time">0:00</span>
+            <span id="total-duration">0:00</span>
+        </div>
+    </div>
+	<div class="flex items-center justify-center space-x-6 mt-4">
+		<button id="rewind-button" aria-label="Reculer de 10 secondes" class="w-12 h-12 flex items-center justify-center text-xl text-white/80 hover:text-white transition"><i class="fas fa-undo-alt"></i></button>
+		
+<button id="play-pause-button" aria-label="Lecture / Pause" class="relative w-20 h-20 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-105" style="background-image: linear-gradient(to right, #fe8412, #f75917, #e51848, #920b68);">
+    
+    <i id="play-pause-icon" class="fas fa-play text-white text-3xl"></i>
+    
+<div id="player-loading-spinner" class="custom-spinner absolute hidden">
+</div>
+    
+</button>
+
+		<button id="forward-button" aria-label="Avancer de 10 secondes" class="w-12 h-12 flex items-center justify-center text-xl text-white/80 hover:text-white transition"><i class="fas fa-redo-alt"></i></button>
+	</div>
+    <div class="flex justify-between items-center mt-4 w-full">
+       <div class="flex items-center space-x-3 w-1.5/5">
+            <i class="fas fa-volume-down text-gray-400"></i>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="w-24">
+            <i class="fas fa-volume-up text-gray-400"></i>
+        </div>
+        <div class="flex items-center space-x-4">
+    <a href="https://open.spotify.com/show/3477q2jyE0640A8XkkDXCj" target="_blank" class="text-white hover:text-green-500 transition-colors">
+        <i class="fab fa-spotify text-2xl"></i>
+    </a>
+    <a href="https://podcasts.apple.com/us/podcast/se-x-eploration-podcasts-lucile-bach/id1807489334" target="_blank" class="text-white hover:text-gray-400 transition-colors">
+        <i class="fab fa-apple text-2xl"></i>
+    </a>
+    <a href="https://www.deezer.com/fr/show/1001788981?host=0&utm_campaign=clipboard-generic&utm_source=user_sharing&utm_content=talk_show-1001788981&deferredFl=1" target="_blank" class="text-white hover:text-pink-500 transition-colors">
+        <i class="fab fa-deezer text-2xl"></i>
+    </a>
+            <button id="download-button" class="text-white hover:text-custom-accent transition-colors">
+                <i class="fas fa-download text-2xl"></i>
+            </button>
+        </div>
+    </div>
+</div>
+	</div>
+
+        <div id="episodes-section" class="w-full py-8">
+            <h3 class="text-2xl font-bold text-custom-dark text-center mb-6">Tous les épisodes</h3>
+            
+            <div id="episodes-container-wrapper" class="w-full min-h-[500px]">
+                <div class="relative flex items-center justify-center w-full max-w-4xl mx-auto px-12 sm:px-16 md:px-20">
+                    <button id="prev-slide-button" class="absolute -left-1 sm:-left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-white/90 rounded-full shadow-xl text-custom-dark hover:bg-white transition disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fas fa-arrow-left text-xl"></i>
+                    </button>
+                    <div id="carousel-viewport" class="relative w-full overflow-hidden">
+                        <div id="carousel-track" class="flex gap-4 transition-transform duration-300">
+                            </div>
+                    </div>
+                    <button id="next-slide-button" class="absolute -right-1 sm:-right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-white/90 rounded-full shadow-xl text-custom-dark hover:bg-white transition disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fas fa-arrow-right text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-8 w-full max-w-5xl mx-auto px-4">
+        <div class="relative">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Rechercher un épisode..."
+                class="w-full p-4 rounded-3xl border border-gray-300 bg-white/80 backdrop-blur-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-custom-accent focus:ring-offset-1 shadow-md transition-all duration-300"
+            >
+            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+                <i class="fas fa-search"></i>
+            </span>
+        </div>
+    </div>
+    
+    <div id="loading-spinner" class="text-center p-8">
+        <i class="fas fa-spinner fa-spin text-3xl text-pink-800"></i>
+        <p class="mt-4 text-gray-600">Chargement des épisodes...</p>
+    </div>
+</section>
+		
+
+		<div id="schedule-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-30 transition-all duration-300 hidden opacity-0">
+        <div id="modal-content" class="glass-effect p-6 md:p-8 rounded-2xl shadow-xl w-full max-w-lg md:max-w-4xl transition-all duration-300 transform scale-95 opacity-0">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl md:text-3xl font-light" style="color: #A37B73;">Prise de rendez-vous</h3>
+                <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600 transition-colors duration-200" aria-label="Fermer la modale"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+            </div>
+            <div class="h-[70vh] w-full relative">
+                <div id="loading-spinner" class="absolute inset-0 flex flex-col items-center justify-center bg-white/80 z-10 hidden text-center px-4">
+                    <i class="fas fa-spinner fa-spin text-4xl text-custom-accent mb-4"></i>
+                    <p class="text-lg font-medium text-custom-dark">Chargement de l’agenda sécurisé…</p>
+                </div>
+                <iframe id="acuity-iframe" class="w-full h-full border-0 rounded-lg hidden" title="Module de prise de rendez-vous Acuity Scheduling"></iframe>
+            </div>
+        </div>
+    </div>
+		
+		
+		
+		
+    </main>
+
+    <footer class="bg-gray-100/60 border-t border-gray-200/80">
+        <div class="container mx-auto px-4 py-8 text-center text-gray-600">
+            <p>© 2024 sexo-logique.com - Chloé François - Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+	
+	
+	 // =================================================================
+    // UTILITY FUNCTIONS
+    // =================================================================
+    const formatTime = (seconds) => {
+        const min = Math.floor(seconds / 60);
+        const sec = Math.floor(seconds % 60).toString().padStart(2, '0');
+        return `${min}:${sec}`;
+    };
+    
+    // IMPROVEMENT: Debounce function prevents excessive calls on frequent events like 'resize'.
+    const debounce = (func, delay = 250) => {
+        let timeoutId;
+        return (...args) => {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                func.apply(this, args);
+            }, delay);
+        };
+    };
+	
+	// =================================================================
+        // PLAYER UI STATE HANDLING
+        // =================================================================
+        function displayPlayerError() {
+            player.title.innerHTML = `<span class="text-lg text-red-400" style="font-size: 1.125rem;"><i class="fas fa-exclamation-triangle mr-2"></i> Erreur de lecture</span>`;
+            player.date.textContent = "Le lecteur est indisponible pour l'instant. Veuillez réessayer plus tard.";
+            
+            // Disable controls
+            player.playPauseBtn.disabled = true;
+            player.rewindBtn.disabled = true;
+            player.forwardBtn.disabled = true;
+            player.seekBar.disabled = true;
+            player.playPauseBtn.style.cursor = 'not-allowed';
+            player.seekBar.style.cursor = 'not-allowed';
+        }
+
+        function resetPlayerUI() {
+            // Enable controls
+            player.playPauseBtn.disabled = false;
+            player.rewindBtn.disabled = false;
+            player.forwardBtn.disabled = false;
+            player.seekBar.disabled = false;
+            player.playPauseBtn.style.cursor = 'pointer';
+            player.seekBar.style.cursor = 'pointer';
+        }
+	
+// --- GESTION DU HEADER (SCROLL & MENU MOBILE) ---
+const header = document.getElementById('main-header');
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// Gère l'apparence du header au défilement
+if (header) {
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('header-scrolled', window.scrollY > 50);
+    });
+}
+
+// Gère le clic sur le bouton du menu mobile
+if (mobileMenuButton && mobileMenu) {
+    const mobileMenuIcon = mobileMenuButton.querySelector('i');
+    mobileMenuButton.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        if (mobileMenuIcon) {
+            mobileMenuIcon.className = isHidden ? 'fas fa-bars' : 'fas fa-times';
+        }
+    });
+}
+
+
+
+    // =================================================================
+    // API & DATA HANDLING
+    // =================================================================
+    async function fetchEpisodes() {
+        try {
+            const response = await fetch(`/.netlify/functions/get-episodes?podcastId=${podcastId}`);
+            if (!response.ok) throw new Error(`API Error: ${response.statusText}`);
+            return await response.json();
+        } catch (error) {
+            console.error("Failed to fetch episodes:", error);
+            UI.loadingSpinner.innerHTML = `<p class="text-red-500">Erreur lors du chargement des épisodes. Veuillez réessayer plus tard.</p>`;
+            return null;
+        }
+    }
+
+
+	// =================================================================
+    // CONSTANTES
+    // =================================================================
+	
+        const podcastId = 'Vxg5ls9jY0D4';
+		const CARDS_PER_SLIDE_GROUP = 5;
+
+		const player = {
+            title: document.getElementById('player-title'),
+            date: document.getElementById('player-date'),
+            seekBar: document.getElementById('seek-bar'),
+            currentTime: document.getElementById('current-time'),
+            totalDuration: document.getElementById('total-duration'),
+            playPauseBtn: document.getElementById('play-pause-button'),
+            playPauseIcon: document.getElementById('play-pause-icon'),
+            rewindBtn: document.getElementById('rewind-button'),
+            forwardBtn: document.getElementById('forward-button'),
+            volumeSlider: document.getElementById('volume-slider'),
+            downloadBtn: document.getElementById('download-button'),
+        };
+
+        const carouselViewport = document.getElementById('carousel-viewport');
+        const carouselTrack = document.getElementById('carousel-track');
+        const prevSlideBtn = document.getElementById('prev-slide-button');
+        const nextSlideBtn = document.getElementById('next-slide-button');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const podcastContent = document.getElementById('podcast-content');
+        const searchInput = document.getElementById('search-input');
+
+        let audio = new Audio();
+        let currentEpisodeIndex = 0;
+        let currentSlideIndex = 0;
+        let episodes = [];
+        let fuse;
+
+
+
+
+
+// --- GESTION DE LA MODALE DE PRISE DE RDV ---
+        const modal = document.getElementById('schedule-modal');
+        const modalContent = document.getElementById('modal-content');
+        const iframe = document.getElementById('acuity-iframe');
+        
+        const openModal = (src) => {
+            if (!src) return;
+            const loadingSpinnerModal = modal.querySelector('#loading-spinner'); // Cible le spinner de la modale
+            loadingSpinnerModal.classList.remove('hidden');
+            iframe.classList.add('hidden');
+            iframe.src = src;
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95', 'opacity-0');
+            }, 10);
+        };
+
+        const closeModal = () => {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                iframe.src = '';
+            }, 300);
+        };
+
+        iframe.addEventListener('load', () => {
+            const loadingSpinnerModal = modal.querySelector('#loading-spinner');
+            loadingSpinnerModal.classList.add('hidden');
+            iframe.classList.remove('hidden');
+        });
+        
+        document.body.addEventListener('click', (e) => {
+            const openBtn = e.target.closest('.open-schedule-modal');
+            const closeBtn = e.target.closest('#close-modal-btn');
+
+            if (openBtn) {
+                e.preventDefault();
+                openModal(openBtn.dataset.src);
+            } else if (closeBtn || e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+
+
+
+
+        // =================================================================
+        // download
+        // =================================================================
+
+
+        player.downloadBtn.addEventListener('click', () => {
+            const podcastId = 'Vxg5ls9jY0D4';
+            if (currentEpisodeIndex !== undefined) {
+                const link = document.createElement('a');
+                // Pointez vers la fonction Netlify en lui passant l'ID et l'index de l'épisode
+                link.href = `/.netlify/functions/download-episode?podcastId=${podcastId}&episodeIndex=${currentEpisodeIndex}`;
+                
+                // Le nom du fichier sera le titre de l'épisode, nettoyé.
+                const filename = player.title.textContent.trim().replace(/ /g, '_') + '.mp3';
+                link.download = filename;
+                
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        });
+
+		
+	// =================================================================
+    // LECTEUR AUDIO PAR AMAU
+    // =================================================================
+		audio.addEventListener('error', displayPlayerError);
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                player.seekBar.value = (audio.currentTime / audio.duration) * 100;
+                player.currentTime.textContent = formatTime(audio.currentTime);
+            }
+        });
+
+        audio.addEventListener('loadedmetadata', () => {
+            player.totalDuration.textContent = formatTime(audio.duration);
+        });
+
+        audio.addEventListener('ended', () => {
+            playNextEpisodeAutomatically();
+        });
+
+audio.addEventListener('play', () => {
+    setPauseIcon();
+});
+
+audio.addEventListener('pause', () => {
+    setPlayIcon();
+});
+
+function showLoadingState(isLoading) {
+            const spinner = document.getElementById('player-loading-spinner');
+            if (isLoading) {
+                player.playPauseIcon.classList.add('hidden');
+                spinner.classList.remove('hidden');
+                player.playPauseBtn.disabled = true;
+            } else {
+                spinner.classList.add('hidden');
+                player.playPauseIcon.classList.remove('hidden');
+                player.playPauseBtn.disabled = false;
+            }
+        }
+
+        function togglePlayPause() {
+            if (audio.paused) {
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        // On ignore l'erreur "AbortError" qui est normale quand on change de piste rapidement.
+                        if (error.name !== 'AbortError') {
+                            console.error("Erreur de lecture :", error);
+                            displayPlayerError();
+                        }
+                    });
+                }
+            } else {
+                audio.pause();
+            }
+        }
+
+        // Écouteurs pour gérer l'état de chargement
+        audio.addEventListener('loadstart', () => showLoadingState(true));
+        audio.addEventListener('playing', () => showLoadingState(false));
+        audio.addEventListener('waiting', () => showLoadingState(true));
+        audio.addEventListener('canplay', () => showLoadingState(false)); 
+        audio.addEventListener('pause', () => showLoadingState(false));
+        audio.addEventListener('stalled', () => showLoadingState(false));
+        audio.addEventListener('error', () => showLoadingState(false));
+
+function setPlayIcon() {
+    const iconElement = document.getElementById('play-pause-icon');
+    iconElement.classList.remove('fa-pause');
+    iconElement.classList.add('fa-play');
+    iconElement.setAttribute('data-icon', 'play'); // C'est la ligne cruciale
+}
+
+function setPauseIcon() {
+    const iconElement = document.getElementById('play-pause-icon');
+    iconElement.classList.remove('fa-play');
+    iconElement.classList.add('fa-pause');
+    iconElement.setAttribute('data-icon', 'pause'); // C'est la ligne cruciale
+}
+
+
+
+
+
+
+
+function playNextEpisodeAutomatically() {
+    if (currentEpisodeIndex < episodes.length - 1) {
+        // On charge le prochain épisode et on demande sa lecture automatique.
+        loadEpisode(currentEpisodeIndex + 1, true);
+    } else {
+        audio.pause();
+        setPlayIcon(); // Assure que l'icône revient en mode "lecture" à la fin de la playlist.
+    }
+}
+
+
+
+
+
+function loadEpisode(index, shouldPlay = false) {
+    const episode = episodes[index];
+    if (!episode) return;
+
+    currentEpisodeIndex = index;
+    player.title.textContent = episode.title;
+    player.date.textContent = `${episode.date} - Lucile Bach & Chloé François`;
+    
+    // On change la source, ce qui arrête la lecture en cours
+    audio.src = episode.audio_url;
+    
+    if (shouldPlay) {
+        // On attend que le navigateur puisse jouer le fichier avant de lancer la lecture
+        audio.addEventListener('canplay', () => {
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    // On ignore l'erreur d'interruption qui est normale ici
+                    if (error.name !== 'AbortError') {
+                        console.error("Erreur de lecture automatique :", error);
+                        setPlayIcon(); // S'assure que l'icône est correcte si la lecture échoue
+                    }
+                });
+            }
+        }, { once: true }); // L'écouteur ne s'exécute qu'une seule fois
+    } else {
+        audio.pause();
+        setPlayIcon();
+    }
+
+    updateActiveEpisodeInCarousel();
+    
+    const targetSlide = Math.floor(currentEpisodeIndex / CARDS_PER_SLIDE_GROUP);
+    if (targetSlide !== currentSlideIndex) {
+        goToSlide(targetSlide);
+    }
+    updateSlideNavigationButtons();
+}
+
+
+
+
+
+    // =================================================================
+    // LISTE PAR CARDS
+    // =================================================================
+
+
+function updateActiveEpisodeInCarousel() {
+            Array.from(carouselTrack.querySelectorAll('.episode-card')).forEach((card, idx) => {
+                const globalIndex = Array.from(carouselTrack.querySelectorAll('.episode-card')).indexOf(card);
+                if (globalIndex === currentEpisodeIndex) {
+                    card.classList.add('active-episode');
+                } else {
+                    card.classList.remove('active-episode');
+                }
+            });
+        }
+        
+        function renderCarousel(episodesToRender) {
+            const carouselTrack = document.getElementById('carousel-track');
+            const prevSlideBtn = document.getElementById('prev-slide-button');
+            const nextSlideBtn = document.getElementById('next-slide-button');
+        
+            // Vide le carrousel avant de rendre de nouveaux éléments
+            carouselTrack.innerHTML = '';
+        
+            // Si aucun épisode n'est trouvé
+            if (episodesToRender.length === 0) {
+                // Crée l'élément du message d'erreur et le stylise
+                const noResultsMessage = document.createElement('div');
+                noResultsMessage.className = 'flex flex-col items-center justify-center h-full w-full py-16 text-center';
+                noResultsMessage.innerHTML = `
+                    <i class="fas fa-microphone-alt text-6xl text-gray-300 mb-4"></i>
+                    <p class="text-xl text-gray-500 font-semibold mb-2">Aucun épisode trouvé</p>
+                    <p class="text-gray-400 max-w-sm">
+                        Veuillez essayer un autre mot-clé ou réinitialiser votre recherche.
+                    </p>
+                `;
+                carouselTrack.appendChild(noResultsMessage);
+        
+                // Désactive les boutons de navigation pour éviter de les cliquer
+                prevSlideBtn.disabled = true;
+                nextSlideBtn.disabled = true;
+                return; // Sort de la fonction
+            }
+        
+            // Si des épisodes sont trouvés, rend le carrousel comme d'habitude
+            let currentSlideGroup;
+            episodesToRender.forEach((episode, index) => {
+                if (index % CARDS_PER_SLIDE_GROUP === 0) {
+                    currentSlideGroup = document.createElement("div");
+                    currentSlideGroup.className = "slide-group";
+                    carouselTrack.appendChild(currentSlideGroup);
+                }
+        
+                const wrapper = document.createElement("div");
+                wrapper.className = "episode-card-wrapper";
+                
+                const card = document.createElement("div");
+                card.className = "relative p-4 bg-white/50 rounded-xl shadow-sm flex flex-col h-full cursor-pointer hover:bg-white/80 transition group episode-card";
+                const iconClass = getIconForTitle(episode.title);
+                
+                card.innerHTML = `
+                    <div class="flex items-center space-x-4 mb-3">
+                        <div class="w-16 h-16 rounded-md backdrop-blur-sm bg-white/30 flex items-center justify-center text-custom-accent text-3xl flex-shrink-0">
+                            <i class="${iconClass}"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-semibold text-custom-dark leading-tight whitespace-nowrap overflow-hidden text-ellipsis">${episode.title}</p>
+                            <span class="text-xs text-gray-600">${episode.date}</span>
+                        </div>
+                    </div>
+                    <div class="play-overlay">
+                        <i class="fas fa-play-circle text-white text-4xl"></i>
+                    </div>
+                `;
+        
+                // IMPORTANT : L'écouteur d'événement doit trouver l'index original
+                const originalIndex = episodes.findIndex(e => e.id === episode.id);
+        
+card.addEventListener("click", () => {
+    // On appelle loadEpisode en lui demandant de jouer le son
+    loadEpisode(originalIndex, true);
+});
+                wrapper.appendChild(card);
+                currentSlideGroup.appendChild(wrapper);
+            });
+        
+            updateActiveEpisodeInCarousel();
+            goToSlide(currentSlideIndex);
+            updateSlideNavigationButtons();
+        }
+
+        function goToSlide(slideIndex) {
+            const totalSlides = carouselTrack.querySelectorAll('.slide-group').length;
+            if (slideIndex < 0) slideIndex = 0;
+            if (slideIndex >= totalSlides) slideIndex = totalSlides - 1;
+            currentSlideIndex = slideIndex;
+
+            const firstSlide = carouselTrack.querySelector('.slide-group');
+            if (!firstSlide) return;
+
+            const trackStyle = window.getComputedStyle(carouselTrack);
+            const gap = parseFloat(trackStyle.gap) || 0;
+            const slideWidth = firstSlide.offsetWidth + gap;
+
+            const offset = -currentSlideIndex * slideWidth;
+            carouselTrack.style.transform = `translateX(${offset}px)`;
+
+            updateSlideNavigationButtons();
+        }
+
+        function updateSlideNavigationButtons() {
+            const totalSlides = Math.ceil(carouselTrack.querySelectorAll('.episode-card').length / CARDS_PER_SLIDE_GROUP);
+            prevSlideBtn.disabled = currentSlideIndex === 0;
+            nextSlideBtn.disabled = currentSlideIndex >= (totalSlides - 1);
+        }
+
+
+        function showPreviousSlide() {
+            goToSlide(currentSlideIndex - 1);
+        }
+
+        function showNextSlide() {
+            goToSlide(currentSlideIndex + 1);
+        }
+
+
+
+
+
+        function getIconForTitle(title) {
+            const lowerTitle = title.toLowerCase();
+
+            if (lowerTitle.includes('trauma') || lowerTitle.includes('psycho') || lowerTitle.includes('héritage')) return 'fas fa-brain';
+            if (lowerTitle.includes('handicap')) return 'fas fa-universal-access';
+            if (lowerTitle.includes('iv-g') || lowerTitle.includes('fausse couche') || lowerTitle.includes('grossesse') || lowerTitle.includes('maternité') || lowerTitle.includes('post-partum') || lowerTitle.includes('pma') || lowerTitle.includes('infertilité')) return 'fas fa-baby-carriage';
+            if (lowerTitle.includes('contraception') || lowerTitle.includes('pilule') || lowerTitle.includes('stérilet') || lowerTitle.includes('préservatif')) return 'fas fa-user-shield';
+            if (lowerTitle.includes('ist') || lowerTitle.includes('mst') || lowerTitle.includes('vih') || lowerTitle.includes('hpv') || lowerTitle.includes('dépistage')) return 'fas fa-shield-virus';
+            if (lowerTitle.includes('hormon') || lowerTitle.includes('ménopause') || lowerTitle.includes('andropause')) return 'fas fa-seedling';
+            if (lowerTitle.includes('règles') || lowerTitle.includes('menstruations') || lowerTitle.includes('cycle')) return 'fas fa-tint';
+            if (lowerTitle.includes('endométriose') || lowerTitle.includes('douleurs') || lowerTitle.includes('maladie') || lowerTitle.includes('syndrome') || lowerTitle.includes('vaginisme') || lowerTitle.includes('dyspareunie')) return 'fas fa-ribbon';
+            if (lowerTitle.includes('troubles') || lowerTitle.includes('dysfonction') || lowerTitle.includes('impuissance') || lowerTitle.includes('éjaculation') || lowerTitle.includes('anorgasmie')) return 'fas fa-exclamation-triangle';
+            if (lowerTitle.includes('anxiété') || lowerTitle.includes('stress') || lowerTitle.includes('phobie')) return 'fas fa-cloud-bolt';
+            if (lowerTitle.includes('libido') || lowerTitle.includes('désir')) return 'fas fa-fire';
+            if (lowerTitle.includes('plaisir') || lowerTitle.includes('orgasme') || lowerTitle.includes('jouir') || lowerTitle.includes('érotisme') || lowerTitle.includes('sensation') || lowerTitle.includes('masturbation')) return 'fas fa-heart';
+            if (lowerTitle.includes('fantasmes') || lowerTitle.includes('porno') || lowerTitle.includes('imagination') || lowerTitle.includes('rêves') || lowerTitle.includes('bdsm')) return 'fas fa-mask';
+            if (lowerTitle.includes('pénétration') || lowerTitle.includes('fellation') || lowerTitle.includes('cunnilingus') || lowerTitle.includes('rapport sexuel') || lowerTitle.includes('coït')) return 'fas fa-bed';
+            if (lowerTitle.includes('âge') || lowerTitle.includes('âgé') || lowerTitle.includes('vieillissement') || lowerTitle.includes('anatomie') || lowerTitle.includes('physiologie') || lowerTitle.includes('puberté')) return 'fas fa-dna';
+            if (lowerTitle.includes('lgbtq') || lowerTitle.includes('genre') || lowerTitle.includes('identité') || lowerTitle.includes('orientation') || lowerTitle.includes('non-binaire') || lowerTitle.includes('trans') || lowerTitle.includes('homosexualité') || lowerTitle.includes('bisexualité') || lowerTitle.includes('pansexualité')) return 'fas fa-rainbow';
+            if (lowerTitle.includes('corps') || lowerTitle.includes('image de soi') || lowerTitle.includes('acceptation') || lowerTitle.includes('estime de soi') || lowerTitle.includes('nudité')) return 'fas fa-spa';
+            if (lowerTitle.includes('rupture') || lowerTitle.includes('séparation') || lowerTitle.includes('divorce') || lowerTitle.includes('célibat') || lowerTitle.includes('infidélité')) return 'fas fa-heart-crack';
+            if (lowerTitle.includes('communication') || lowerTitle.includes('dialogue') || lowerTitle.includes('partenaire') || lowerTitle.includes('conflits') || lowerTitle.includes('couple')) return 'fas fa-comments';
+            if (lowerTitle.includes('consentement') || lowerTitle.includes('respect') || lowerTitle.includes('abus') || lowerTitle.includes('violences') || lowerTitle.includes('harcèlement')) return 'fas fa-handshake-slash';
+            if (lowerTitle.includes('parent') || lowerTitle.includes('enfant') || lowerTitle.includes('famille')) return 'fas fa-hands-holding-child';
+            if (lowerTitle.includes('polyamour') || lowerTitle.includes('échangisme')) return 'fas fa-people-arrows';
+            if (lowerTitle.includes('éducation') || lowerTitle.includes('jeunes') || lowerTitle.includes('ado') || lowerTitle.includes('première fois')) return 'fas fa-graduation-cap';
+            if (lowerTitle.includes('mythes') || lowerTitle.includes('tabous') || lowerTitle.includes('croyances') || lowerTitle.includes('idées reçues')) return 'fas fa-question-circle';
+            if (lowerTitle.includes('conseils') || lowerTitle.includes('astuces') || lowerTitle.includes('guide') || lowerTitle.includes('savoir')) return 'fas fa-lightbulb';
+            if (lowerTitle.includes('médecine') || lowerTitle.includes('professionnels') || lowerTitle.includes('santé') || lowerTitle.includes('consultation') || lowerTitle.includes('sexothérapie')) return 'fas fa-user-doctor';
+            if (lowerTitle.includes('histoire') || lowerTitle.includes('historique') || lowerTitle.includes('culture')) return 'fas fa-book-open';
+            if (lowerTitle.includes('sexualité')) return 'fas fa-podcast';
+            return 'fas fa-microphone-alt';
+        }
+
+
+
+
+
+
+
+
+    // =================================================================
+    // INIT
+    // =================================================================
+
+        async function init() {
+            try {
+                episodes = await fetchEpisodes();
+                
+                // NOUVEAU : Initialisation de Fuse.js
+                const fuseOptions = {
+                    keys: ['title', 'description'],
+                    threshold: 0.4,
+                    includeScore: true
+                };
+                fuse = new Fuse(episodes, fuseOptions);
+
+                // NOUVEAU : Écouteur d'événement pour le champ de recherche
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.trim();
+                    if (query.length > 2) {
+                        const result = fuse.search(query);
+                        renderCarousel(result.map(res => res.item));
+                    } else {
+                        renderCarousel(episodes);
+                    }
+                });
+
+                window.addEventListener('resize', () => {
+                    goToSlide(currentSlideIndex);
+                    updateSlideNavigationButtons();
+                });
+
+                if (episodes.length > 0) {
+                    renderCarousel(episodes);
+                    loadEpisode(0);
+                }
+                loadingSpinner.style.display = 'none';
+                podcastContent.style.display = 'block';
+            } catch (err) {
+                console.error(err);
+                loadingSpinner.innerHTML = `<p class="text-red-500">Erreur lors du chargement des épisodes.</p>`;
+            }
+        }
+
+        player.playPauseBtn.addEventListener('click', togglePlayPause);
+        player.rewindBtn.addEventListener('click', () => { audio.currentTime -= 10; });
+        player.forwardBtn.addEventListener('click', () => { audio.currentTime += 10; });
+        player.volumeSlider.addEventListener('input', (e) => { audio.volume = e.target.value; });
+        player.seekBar.addEventListener('input', (e) => {
+            if (audio.duration) audio.currentTime = (e.target.value / 100) * audio.duration;
+        });
+
+        prevSlideBtn.addEventListener('click', showPreviousSlide);
+        nextSlideBtn.addEventListener('click', showNextSlide);
+
+        init();
+    });
+</script>
+
+
+</body>
+</html>

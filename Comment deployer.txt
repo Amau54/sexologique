@@ -1,0 +1,93 @@
+#!/bin/bash
+
+# ==============================================================================
+# CONFIGURATION
+# ==============================================================================
+
+# Remplacer par votre nom de domaine
+DOMAIN="sexo-logique.com"
+
+# Votre clé IndexNow
+INDEXNOW_KEY="f28b4799603242a0aa2eda4e825ae01e"
+
+# L'URL complète de votre sitemap
+SITEMAP_URL="https://sexo-logique.com/sitemap.xml"
+
+# Couleurs pour une meilleure lisibilité des logs
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+
+# ==============================================================================
+# DÉBUT DU SCRIPT
+# ==============================================================================
+
+# 1. Push sur GitHub
+echo -e "${GREEN}Étape 1/5 : Envoi des modifications vers GitHub...${NC}"
+read -p "Entrez votre message de commit : " commitMessage
+
+# Si le message est vide, on en met un par défaut
+if [ -z "$commitMessage" ]; then
+  commitMessage="Mise à jour et déploiement automatique"
+fi
+
+git add .
+git commit -m "$commitMessage"
+git push origin main
+
+echo -e "${GREEN}Push vers GitHub terminé.${NC}"
+echo "--------------------------------"
+
+
+# 2. Génération du sitemap
+echo -e "${GREEN}Étape 2/5 : Génération du sitemap...${NC}"
+node generate-sitemap.js
+echo -e "${GREEN}Sitemap généré.${NC}"
+echo "--------------------------------"
+
+
+# 3. Déploiement sur Firebase
+echo -e "${GREEN}Étape 3/5 : Déploiement sur Firebase...${NC}"
+firebase deploy
+echo -e "${GREEN}Déploiement Firebase terminé.${NC}"
+echo "--------------------------------"
+
+
+# 4. Déploiement sur Netlify
+echo -e "${GREEN}Étape 4/5 : Déploiement sur Netlify...${NC}"
+netlify deploy --prod
+echo -e "${GREEN}Déploiement Netlify terminé.${NC}"
+echo "--------------------------------"
+
+
+# 5. Ping IndexNow avec toutes les URLs du sitemap
+echo -e "${GREEN}Étape 5/5 : Notification à IndexNow...${NC}"
+echo "Récupération des URLs depuis $SITEMAP_URL"
+
+# Récupère la liste des URLs depuis le sitemap et la formate pour la requête JSON
+URL_LIST=$(curl -s $SITEMAP_URL | grep '<loc>' | sed 's|<loc>|"\n|g' | sed 's|</loc>|",|g' | tr -d '\t' | tr -d '\n')
+URL_LIST="[${URL_LIST%?}]" # Enlève la dernière virgule et ajoute les crochets
+
+# Construit la requête JSON
+JSON_PAYLOAD=$(cat <<EOF
+{
+  "host": "$DOMAIN",
+  "key": "$INDEXNOW_KEY",
+  "keyLocation": "https://$DOMAIN/$INDEXNOW_KEY.txt",
+  "urlList": $URL_LIST
+}
+EOF
+)
+
+echo "Envoi des URLs du sitemap à IndexNow..."
+
+# Envoie la requête POST à l'API IndexNow
+curl --location --request POST 'https://api.indexnow.org/indexnow' \
+--header 'Content-Type: application/json' \
+--data-raw "$JSON_PAYLOAD"
+
+echo -e "\n${GREEN}Notification IndexNow envoyée.${NC}"
+echo "--------------------------------"
+
+
+echo -e "${GREEN}Toutes les opérations sont terminées !${NC}"
