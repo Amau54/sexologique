@@ -116,7 +116,7 @@
     </div>
 </a>
 		</div>
-<div class="flex-1 w-full md:w-2/3 md:ml-auto">
+<div class="flex-1 w-full md:w-2/3 md:ml-auto text-center">
     <h2 id="player-title" class="text-2xl font-bold">Titre de l'épisode</h2>
     <p id="player-date" class="text-sm text-gray-400 mt-1">Date de publication</p>
     <div class="space-y-2 mt-4">
@@ -140,32 +140,46 @@
 
 		<button id="forward-button" aria-label="Avancer de 10 secondes" class="w-12 h-12 flex items-center justify-center text-xl text-white/80 hover:text-white transition"><i class="fas fa-redo-alt"></i></button>
 	</div>
-    <div class="flex justify-between items-center mt-4 w-full">
-       <div class="flex items-center space-x-3 w-1.5/5">
-            <i class="fas fa-volume-down text-gray-400"></i>
-            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="w-24">
-            <i class="fas fa-volume-up text-gray-400"></i>
-        </div>
-        <div class="flex items-center space-x-4">
-    <a href="https://open.spotify.com/show/3477q2jyE0640A8XkkDXCj" target="_blank" class="text-white hover:text-green-500 transition-colors">
-        <i class="fab fa-spotify text-2xl"></i>
-    </a>
-    <a href="https://podcasts.apple.com/us/podcast/se-x-eploration-podcasts-lucile-bach/id1807489334" target="_blank" class="text-white hover:text-gray-400 transition-colors">
-        <i class="fab fa-apple text-2xl"></i>
-    </a>
-    <a href="https://www.deezer.com/fr/show/1001788981?host=0&utm_campaign=clipboard-generic&utm_source=user_sharing&utm_content=talk_show-1001788981&deferredFl=1" target="_blank" class="text-white hover:text-pink-500 transition-colors">
-        <i class="fab fa-deezer text-2xl"></i>
-    </a>
-            <button id="download-button" class="text-white hover:text-custom-accent transition-colors">
-                <i class="fas fa-download text-2xl"></i>
-            </button>
-        </div>
+<div class="flex justify-between items-center mt-4 w-full">
+    <div class="flex items-center space-x-3 w-2/5">
+        <i class="fas fa-volume-down text-gray-400"></i>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="w-full">
+        <i class="fas fa-volume-up text-gray-400"></i>
     </div>
+    <div class="flex items-center space-x-4 flex-wrap justify-end">
+        <a href="https://open.spotify.com/show/3477q2jyE0640A8XkkDXCj" target="_blank" class="text-white hover:text-green-500 transition-colors">
+            <i class="fab fa-spotify text-2xl"></i>
+        </a>
+        <a href="https://podcasts.apple.com/us/podcast/se-x-eploration-podcasts-lucile-bach/id1807489334" target="_blank" class="text-white hover:text-gray-400 transition-colors">
+            <i class="fab fa-apple text-2xl"></i>
+        </a>
+        <a href="https://www.deezer.com/fr/show/1001788981?host=0&utm_campaign=clipboard-generic&utm_source=user_sharing&utm_content=talk_show-1001788981&deferredFl=1" target="_blank" class="text-white hover:text-pink-500 transition-colors">
+            <i class="fab fa-deezer text-2xl"></i>
+        </a>
+        <button id="download-button" class="text-white hover:text-custom-accent transition-colors">
+            <i class="fas fa-download text-2xl"></i>
+        </button>
+    </div>
+</div>
 </div>
 	</div>
 
-        <div id="episodes-section" class="w-full py-8">
+    <div class="mt-8 w-full max-w-5xl mx-auto px-8 py-8">
+        <div class="relative">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Rechercher un épisode..."
+                class="w-full p-4 rounded-3xl border border-gray-300 bg-white/80 backdrop-blur-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-custom-accent focus:ring-offset-1 shadow-md transition-all duration-300">
+            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+                <i class="fas fa-search"></i>
+            </span>
+        </div>
+    </div>
+
+        <div id="episodes-section" class="w-full ">
             <h3 class="text-2xl font-bold text-custom-dark text-center mb-6">Tous les épisodes</h3>
+			
             
             <div id="episodes-container-wrapper" class="w-full min-h-[500px]">
                 <div class="relative flex items-center justify-center w-full max-w-4xl mx-auto px-12 sm:px-16 md:px-20">
@@ -184,19 +198,7 @@
         </div>
     </div>
 
-    <div class="mt-8 w-full max-w-5xl mx-auto px-4">
-        <div class="relative">
-            <input
-                type="text"
-                id="search-input"
-                placeholder="Rechercher un épisode..."
-                class="w-full p-4 rounded-3xl border border-gray-300 bg-white/80 backdrop-blur-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-custom-accent focus:ring-offset-1 shadow-md transition-all duration-300"
-            >
-            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
-                <i class="fas fa-search"></i>
-            </span>
-        </div>
-    </div>
+
     
     <div id="loading-spinner" class="text-center p-8">
         <i class="fas fa-spinner fa-spin text-3xl text-pink-800"></i>
@@ -310,7 +312,7 @@ if (mobileMenuButton && mobileMenu) {
     // =================================================================
     // API & DATA HANDLING
     // =================================================================
-    async function fetchEpisodes() {
+ /*   async function fetchEpisodes() {
         try {
             const response = await fetch(`/.netlify/functions/get-episodes?podcastId=${podcastId}`);
             if (!response.ok) throw new Error(`API Error: ${response.statusText}`);
@@ -321,6 +323,62 @@ if (mobileMenuButton && mobileMenu) {
             return null;
         }
     }
+
+
+
+
+// Remplacez 'nom-de-la-fonction' par le nom réel de votre fonction sur Netlify
+const netlifyFunctionUrl = 'https://helpful-tapioca-011b0a.netlify.app/.netlify/functions/nom-de-la-fonction';
+
+// Les requêtes fetch vers d'autres domaines sont soumises à la politique CORS des navigateurs.[1]
+// Le navigateur enverra d'abord une requête "preflight" OPTIONS avant la requête POST.
+// Votre fonction Netlify doit être configurée pour gérer cette requête OPTIONS et renvoyer les en-têtes CORS.
+
+fetch(netlifyFunctionUrl, {
+  method: 'POST', // ou 'GET', selon ce que fait votre fonction
+  headers: {
+    'Content-Type': 'application/json',
+    // D'autres en-têtes si nécessaire
+  },
+  body: JSON.stringify({ message: 'Données à envoyer à la fonction Netlify' })
+})
+.then(response => {
+  // Une fois les en-têtes CORS correctement configurés, la réponse devrait être reçue.[2]
+  if (!response.ok) {
+    throw new Error(`Erreur HTTP : ${response.status}`);
+  }
+  return response.json();
+})
+.then(data => {
+  console.log('Réponse de la fonction Netlify :', data);
+})
+.catch(error => {
+  console.error('Erreur lors de l’appel de la fonction Netlify :', error);
+});
+
+
+*/
+
+// La fonction client qui va chercher les épisodes
+async function fetchEpisodes() {
+    try {
+        // La requête fetch doit maintenant appeler directement l'URL de la fonction Netlify.
+        // C'est ce qui rend la requête "inter-origines" et pourquoi les en-têtes CORS
+        // que nous avons ajoutés à la fonction Netlify sont nécessaires.[1]
+        const response = await fetch(`https://helpful-tapioca-011b0a.netlify.app/.netlify/functions/get-episodes?podcastId=${podcastId}`);
+        if (!response.ok) throw new Error(`API Error: ${response.statusText}`);
+        return await response.json();
+    } catch (error) {
+        console.error("Failed to fetch episodes:", error);
+        UI.loadingSpinner.innerHTML = `<p class="text-red-500">Erreur lors du chargement des épisodes. Veuillez réessayer plus tard.</p>`;
+        return null;
+    }
+}
+
+
+
+
+
 
 
 	// =================================================================

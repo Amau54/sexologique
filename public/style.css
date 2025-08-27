@@ -2678,3 +2678,96 @@ input[type="range"]::-webkit-slider-thumb {
   animation: spin 1s linear infinite; /* Applique l'animation de rotation */
 }
 
+
+
+/*******************************
+/*MOBILE AJUSTEMENT
+/******************************
+@media (max-width: 767px) {
+  /* Réduit le padding de la carte du podcast pour que le lecteur prenne plus de largeur */
+  #podcast #player-container {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 1.5rem 1rem; /* On conserve un padding interne pour le lecteur */
+  }
+
+  /* Réduit la taille de l'image de la pochette sur mobile */
+  #podcast #player-image-link {
+    width: 192px;   /* equiv. w-48 */
+    height: 192px;  /* equiv. h-48 */
+    margin-left: auto;
+    margin-right: auto; /* Assure le centrage parfait */
+  }
+
+  /* Réduit le padding du lecteur lui-même */
+  #podcast #player-container {
+    padding: 1rem 1rem; /* Moins de padding vertical et horizontal */
+  }
+    #podcast #episode-list-dropdown .dropdown-content {
+    max-height: none;
+  }
+    #podcast #episode-list-dropdown {
+    left: -1rem;
+    right: -1rem;
+	top: 0rem;
+    bottom: 0rem;
+  }
+    .hero-bg > div {
+  /* Applique un décalage vertical pour compenser la hauteur de la navbar */
+  transform: translateY(50px);
+	}
+	
+	
+/* Amélioration du carrousel d'épisodes sur mobile */
+  #episodes-container-wrapper > .relative {
+    /* Réduit les marges latérales pour agrandir le carrousel */
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+/* Conteneur principal du contenu de la carte */
+  #carousel-track .episode-card .flex.items-center {
+      position: relative; /* Établit le contexte pour les couches superposées */
+      min-height: 6rem;   /* Assure une hauteur minimale pour la carte */
+      width: 100%;
+      display: block;     /* On désactive flex pour un positionnement absolu */
+  }
+
+/* Conteneur de l'icône, positionné comme couche de fond */
+  #carousel-track .episode-card .flex-shrink-0 {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.10;
+      
+      /* La taille et la couleur sont définies ici pour être appliquées à l'icône SVG */
+      font-size: 7.75rem; /* Icône agrandie */
+      color: #3d3b30;
+  }
+
+  /* Conteneur du texte, positionné comme couche de premier plan */
+  #carousel-track .episode-card .flex-1 {
+      position: absolute;
+      inset: 0;
+      z-index: 1; /* Garanti d'être au-dessus de l'icône */
+      width: 100%;
+      padding: 0.5rem 0.5rem;
+      
+      /* Centre le texte verticalement pour un meilleur rendu */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  /* Resserre les espacements verticaux sur mobile */
+  #podcast-content > #episodes-section {
+      margin-top: 0rem; /* Réduit l'espace entre le player et la liste d'épisodes */
+  }
+
+
+  
+} /*******************************
+/*MOBILE AJUSTEMENT FIN
+/******************************
