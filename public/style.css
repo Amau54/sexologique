@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial'); /* Utilise Arial ou une autre police sans-serif commune */
+  size-adjust: 107%;   /* Ajuste la taille pour correspondre à Inter */
+  ascent-override: 90%;  /* Aligne le haut des caractères */
+  descent-override: 22%; /* Aligne le bas des caractères */
+  line-gap-override: 10%;/* Ajuste l'espacement entre les lignes */
+}
 body {
-  font-family: Inter,sans-serif;
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
   background-color: #f8f7f4;
   background: linear-gradient(135deg,#f8f7f4 0,#eae6e1 50%,#d4c9bf 100%);
   color: #3d3b30;
@@ -2770,4 +2778,9 @@ input[type="range"]::-webkit-slider-thumb {
   
 } /*******************************
 /*MOBILE AJUSTEMENT FIN
-/******************************
+/******************************/
+
+.hero-bg h1 {
+  font-size: 2.75rem; /* 44px, vous pouvez ajuster cette valeur */
+  line-height: 1.2;   /* Améliore la lisibilité */
+}
