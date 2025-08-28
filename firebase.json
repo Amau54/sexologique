@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "public",
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -20,7 +21,7 @@
     "rewrites": [
       {
         "source": "/.netlify/functions/**",
-        "destination": "https://helpful-tapioca-011b0a.netlify.app/.netlify/functions/"
+        "destination": "https://helpful-tapioca-011b0a.netlify.app/.netlify/functions/**"
       },
       {
         "source": "/:sexeploration",

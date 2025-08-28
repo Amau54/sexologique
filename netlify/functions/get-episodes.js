@@ -5,7 +5,9 @@ const { XMLParser } = require("fast-xml-parser");
 // Définition d'une constante pour les en-têtes CORS
 const CORS_HEADERS = {
   // Une meilleure pratique de sécurité est d'autoriser uniquement votre domaine
-  'Access-Control-Allow-Origin': 'https://sexo-logique.com', 
+  'Access-Control-Allow-Origin': 'https://sexo-logique.com',
+  
+  
   // Vous pouvez utiliser '*' pour le développement, mais ce n'est pas recommandé en production
   // 'Access-Control-Allow-Origin': '*', 
   'Cache-Control': 'public, max-age=3600, s-maxage=43200',

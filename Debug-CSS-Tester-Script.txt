@@ -1,0 +1,98 @@
+(function() {
+  let elements = [];
+  let currentIndex = 0;
+
+  // Crée le conteneur flottant
+  const container = document.createElement('div');
+  container.style.position = 'fixed';
+  container.style.bottom = '20px';
+  container.style.right = '20px';
+  container.style.zIndex = 9999;
+  container.style.display = 'flex';
+  container.style.gap = '8px';
+  container.style.alignItems = 'center';
+  container.style.background = 'rgba(0,0,0,0.6)';
+  container.style.padding = '8px 12px';
+  container.style.borderRadius = '10px';
+  container.style.boxShadow = '0 4px 8px rgba(0,0,0,0.3)';
+  document.body.appendChild(container);
+
+  // Bouton principal pour entrer le sélecteur
+  const mainBtn = document.createElement('button');
+  mainBtn.textContent = '🔍 Highlight';
+  mainBtn.style.padding = '6px 10px';
+  mainBtn.style.borderRadius = '6px';
+  mainBtn.style.border = 'none';
+  mainBtn.style.background = '#ff5722';
+  mainBtn.style.color = 'white';
+  mainBtn.style.cursor = 'pointer';
+  container.appendChild(mainBtn);
+
+  // Boutons navigation
+  const prevBtn = document.createElement('button');
+  prevBtn.textContent = '◀';
+  prevBtn.style.padding = '6px 10px';
+  prevBtn.style.borderRadius = '6px';
+  prevBtn.style.border = 'none';
+  prevBtn.style.background = '#2196f3';
+  prevBtn.style.color = 'white';
+  prevBtn.style.cursor = 'pointer';
+  prevBtn.disabled = true;
+  container.appendChild(prevBtn);
+
+  const nextBtn = document.createElement('button');
+  nextBtn.textContent = '▶';
+  nextBtn.style.padding = '6px 10px';
+  nextBtn.style.borderRadius = '6px';
+  nextBtn.style.border = 'none';
+  nextBtn.style.background = '#2196f3';
+  nextBtn.style.color = 'white';
+  nextBtn.style.cursor = 'pointer';
+  nextBtn.disabled = true;
+  container.appendChild(nextBtn);
+
+  // Fonction pour surligner et scroller un élément spécifique
+  function highlightElement(index) {
+    elements.forEach((el, i) => {
+      el.style.outline = '';
+      el.style.backgroundColor = '';
+    });
+    const el = elements[index];
+    el.style.outline = '3px solid red';
+    el.style.backgroundColor = 'rgba(255,0,0,0.1)';
+    if (el.tabIndex === -1) el.tabIndex = 0;
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.focus();
+  }
+
+  // Événement pour le bouton principal
+  mainBtn.addEventListener('click', () => {
+    const selector = prompt('Entrez le sélecteur CSS à tester:', '.hero-bg h1');
+    if (!selector) return;
+    elements = Array.from(document.querySelectorAll(selector));
+    if (elements.length === 0) {
+      alert(`Aucun élément trouvé pour "${selector}"`);
+      return;
+    }
+    currentIndex = 0;
+    highlightElement(currentIndex);
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
+    console.log(`${elements.length} élément(s) trouvé(s) pour "${selector}"`);
+  });
+
+  // Boutons navigation
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      highlightElement(currentIndex);
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < elements.length - 1) {
+      currentIndex++;
+      highlightElement(currentIndex);
+    }
+  });
+})();
