@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nos Articles | Sexo-logique</title>
+        <meta name="description" content="Découvrez tous les articles de Chloé François, sexologue. Explorez nos réflexions sur la sexualité, le couple et le bien-être.">
+        
+        <meta property="og:title" content="Nos Articles | Sexo-logique"/>
+        <meta property="og:description" content="Découvrez tous les articles de Chloé François, sexologue. Explorez nos réflexions sur la sexualité, le couple et le bien-être."/>
+        <meta property="og:url" content="https://www.sexo-logique.com/articles/articles.html"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://www.sexo-logique.com/../images/og-image-main.jpg"/>
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="apple-touch-icon" href="../images/favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        
+        <link rel="preconnect" href="https://app.acuityscheduling.com" crossorigin>
+        <link rel="preconnect" href="https://embed.acuityscheduling.com" crossorigin>
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+        </noscript>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+
+
+
+		<script src="https://cdn.tailwindcss.com"></script>
+		
+ 	<style>
+            @font-face {
+                font-family: 'Inter Fallback';
+                src: local('Arial');
+                size-adjust:107%;ascent-override:90%;descent-override:22%;line-gap-override:10%
+            }
+
+            body {
+                font-family: 'Inter','Inter Fallback',sans-serif;
+                background-color: #f8f7f4;
+                background: linear-gradient(135deg,#f8f7f4 0,#eae6e1 50%,#d4c9bf 100%);
+                color: #3d3b30;
+                min-height: 100vh;
+                margin: 0;
+                line-height: inherit
+            }
+		</style> 
+  
+ <style>
+ /* ==========================================================================
+    1. General & Utility Styles
+    ========================================================================== */
+
+/* Backgrounds & Colors */
+.hero-bg {
+    background-color: #eae6e1;
+    background-image: radial-gradient(at 20% 20%, hsl(30 60% 90%) 0, transparent 50%), radial-gradient(at 80% 10%, hsl(200 60% 85%) 0, transparent 50%), radial-gradient(at 80% 80%, hsl(340 60% 90%) 0, transparent 50%);
+}
+
+.bg-custom-dark {
+    background-color: #a37b73;
+}
+
+.text-custom-accent {
+    color: #a37b73;
+}
+
+/* Effects & Helpers */
+.glass-effect {
+    background: rgb(255 255 255 / .5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgb(255 255 255 / .25);
+    transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Typography */
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #a37b73;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgb(163 123 115 / 0.3);
+}
+
+/* ==========================================================================
+    2. Components
+    ========================================================================== */
+
+/* Navigation & Tabs */
+.nav-link {
+    transition: color .3s ease;
+}
+
+.nav-link:hover {
+    color: #a37b73;
+}
+
+
+/* Cards */
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: rgb(255 255 255 / 0.3);
+    border-radius: 1.5rem;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 12px 35px rgb(0 0 0 / .08), 0 4px 15px rgb(0 0 0 / .03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgb(0 0 0 / .12), 0 6px 20px rgb(0 0 0 / .05);
+}
+
+.card .badge-new {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    background: linear-gradient(135deg, #a37b73, #c28f82);
+    color: #fff;
+    padding: 0.35rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+  
+.card:hover .card-image-placeholder {
+    transform: scale(1.05);
+}
+
+.card-image-placeholder {
+    height: 180px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.card-image-placeholder svg {
+    width: 50%; /* L'icône occupera 50% de la largeur de son parent */
+    height: auto; /* La hauteur s'ajustera automatiquement */
+    max-width: 88px;
+	max-height: 88px;
+    padding: 1rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+}
+
+/* Article & Prose Content */
+.article-category {
+    display: inline-block;
+    background-color: rgb(163 123 115 / 0.1);
+    color: #a37b73;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.article-meta {
+    color: #5c5a4d;
+    font-size: 0.9rem;
+}
+
+/* Carousel */
+#articles-carousel-viewport {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#articles-carousel-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+#articles-carousel-track {
+    display: flex;
+    gap: 1.25rem;
+    padding-bottom: 3rem;
+	padding-top: 2.5rem;
+}
+
+.article-slide {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+
+
+/* ==========================================================================
+    5. Media Queries (Responsive Styles)
+    ========================================================================== */
+
+/* Styles pour les écrans jusqu'à 1023px (tablettes et mobiles) */
+@media (max-width: 1023px) {
+    
+    /* 1. Grille et alignement de la carte "À la une" */
+    #latest-articles-container .card {
+        flex-direction: row;
+        align-items: stretch;
+        padding: 1rem 1.25rem;
+        gap: 1.25rem;
+    }
+
+    /* 2. Conteneur de l'image/placeholder */
+    #latest-articles-container .card-image-wrapper {
+        display: flex;
+        flex-shrink: 0;
+        width: 80px;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 3. Contenu texte */
+    #latest-articles-container .card-content {
+        flex: 1;
+        padding: 0;
+        min-width: 0;
+    }
+
+
+    /* 5. Ajustements typographiques */
+    #latest-articles-container .article-category {
+        margin-bottom: 0.25rem;
+    }
+
+    #latest-articles-container .card-content h2 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Styles spécifiques pour les petits mobiles */
+@media (max-width: 767px) {
+    .hero-bg > div {
+        transform: translateY(50px);
+    }
+}
+
+/* Styles pour les tablettes et plus grands */
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .article-slide {
+        width: calc(50% - 0.75rem);
+    }
+}
+
+/* Styles pour les écrans larges */
+@media (min-width: 1024px) {
+    .article-slide {
+        width: calc(33.333% - 1rem);
+    }
+    /* Cible le conteneur de l'image pour lui donner une hauteur fixe */
+    #latest-articles-container .card-image-wrapper {
+        height: 160px;
+    }
+}
+
+/* Styles pour les très grands écrans */
+@media (min-width: 1279px) {
+    .article-slide {
+        width: calc(25% - 1.125rem);
+    }
+}
+/* Réduit l'ombre spécifiquement pour les cartes du carrousel */
+#articles-carousel-track .card {
+    box-shadow: 0 12px 18px -6px rgb(0 0 0 / .08), 0 4px 10px -2px rgb(0 0 0 / .04);
+}
+
+#articles-carousel-track .card:hover {
+    box-shadow: 0 18px 20px -6px rgb(0 0 0 / .12), 0 6px 12px -3px rgb(0 0 0 / .06);
+}
+
+        </style>
+		
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+    </head>
+    <body class="antialiased flex flex-col min-h-screen">
+			<header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
+		<div class="container mx-auto px-4">
+			<nav class="flex items-center justify-between h-16 glass-effect rounded-full px-4 lg:px-8 shadow-sm">
+				<a href="/" class="text-xl font-bold text-custom-dark flex-shrink-0">sexo-logique.com</a>
+				<div class="hidden lg:flex items-center md:space-x-4 lg:space-x-8 text-custom-dark">
+					<a href="/#consultations" class="nav-link">Consultations</a>
+					<a href="/#apropos" class="nav-link">À propos</a>
+					<a href="/sexeploration.html" class="nav-link">Podcast</a>
+					<a href="/articles/articles.html" class="nav-link font-bold text-custom-accent">Articles</a>
+					<a href="/#contact" class="nav-link">Contact</a>
+				</div>
+				<button data-src="https://sexologue.as.me/schedule/2810fbd3?calendarIds=9092470" class="open-schedule-modal hidden lg:inline-block bg-custom-dark text-white md:px-4 lg:px-6 py-2 rounded-full hover:bg-opacity-90 transition shadow-md hover:shadow-lg btn-mobile-feedback whitespace-nowrap">Prendre RDV</button>
+				<button id="mobile-menu-button" class="lg:hidden text-2xl text-custom-dark" aria-label="Ouvrir le menu">
+					<i class="fas fa-bars"></i>
+				</button>
+			</nav>
+			<div id="mobile-menu" class="hidden lg:hidden glass-effect rounded-2xl mt-2 p-4 text-custom-dark text-center">
+				<a href="/#consultations" class="block py-2 hover:text-custom-accent">Consultations</a>
+				<a href="/#apropos" class="block py-2 hover:text-custom-accent">À propos</a>
+				<a href="/sexeploration.html" class="block py-2 hover:text-custom-accent">Podcast</a>
+				<a href="/articles/articles.html" class="block py-2 text-custom-accent font-semibold">Articles</a>
+				<a href="/#contact" class="block py-2 hover:text-custom-accent">Contact</a>
+				<button data-src="https://sexologue.as.me/schedule/2810fbd3?calendarIds=9092470" class="open-schedule-modal mt-4 w-full bg-custom-dark text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition shadow-md btn-mobile-feedback">Prendre RDV</button>
+			</div>
+		</div>
+	</header>
+		
+		
+		
+
+<main id="articles-page-main" class="flex-grow pt-32 pb-20 hero-bg"> 
+    <section id="Articles" class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h1 class="mt-10 text-4xl md:text-5xl font-bold text-custom-dark tracking-tight leading-tight">
+                Mes réflexions en <span class="text-custom-accent">Sexologie</span>
+            </h1>
+            <p class="mt-8 text-lg md:text-xl max-w-2xl mx-auto text-gray-700">
+                À travers mes articles, je vous invite à explorer le désir, l’intimité et la vie de couple, afin de  vous accompagner vers une sexualité plus consciente et épanouie.
+            </p>
+        </div>
+
+        <section class="mb-16">
+                    <h2 class="section-title">À la une</h2>
+                    <div id="latest-articles-container" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Tous les articles</h2>
+                    
+				<div class="mb-10 max-w-lg mx-auto">
+                        <div class="relative">
+                            <label for="searchInput" class="sr-only">Rechercher des articles</label>
+                            <input type="search" id="searchInput" placeholder="Rechercher par mot-clé (ex: désir, couple...)" class="w-full py-3 pl-5 pr-12 text-base text-gray-700 bg-white/60 border border-transparent rounded-full focus:outline-none focus:ring-2 focus:ring-custom-accent/80 glass-effect transition duration-300">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-5" aria-hidden="true">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+<div class="relative flex items-center justify-center w-full max-w-full mx-auto px-8 md:px-12">
+    <button id="prev-article-slide-button" aria-label="Article précédent" class="absolute -left-6 lg:-left-12 top-1/2 -translate-y-1/2 z-10 w-14 h-14 grid place-items-center bg-white/90 rounded-full shadow-lg text-custom-dark hover:bg-white hover:shadow-xl hover:scale-110 transition-all duration-200 ease-in-out disabled:opacity-40 disabled:cursor-not-allowed">
+        <i class="fas fa-chevron-left text-xl" aria-hidden="true"></i>
+    </button>
+    <div id="articles-carousel-viewport" class="relative w-full">
+        <div id="articles-carousel-track" class="flex">
+        </div>
+    </div>
+    <button id="next-article-slide-button" aria-label="Article suivant" class="absolute -right-6 lg:-right-12 top-1/2 -translate-y-1/2 z-10 w-14 h-14 grid place-items-center bg-white/90 rounded-full shadow-lg text-custom-dark hover:bg-white hover:shadow-xl hover:scale-110 transition-all duration-200 ease-in-out disabled:opacity-40 disabled:cursor-not-allowed">
+        <i class="fas fa-chevron-right text-xl" aria-hidden="true"></i>
+    </button>
+</div>
+
+                    <div id="no-results" class="hidden text-center mt-10">
+                        <p class="text-lg text-gray-600">Aucun article ne correspond à votre recherche.</p>
+                    </div>
+                </section>
+            </section>
+        </main>
+		
+		
+        <div id="schedule-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-30 transition-all duration-300 hidden opacity-0">
+            <div id="modal-content" class="glass-effect p-6 md:p-8 rounded-2xl shadow-xl w-full max-w-lg md:max-w-4xl transition-all duration-300 transform scale-95 opacity-0">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl md:text-3xl font-light" style="color: #A37B73;">Prise de rendez-vous</h3>
+                    <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600 transition-colors duration-200" aria-label="Fermer la modale">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="h-[70vh] w-full relative">
+                    <div id="loading-spinner" class="absolute inset-0 flex flex-col items-center justify-center bg-white/80 z-10 hidden text-center px-4">
+                        <i class="fas fa-spinner fa-spin text-4xl text-custom-accent mb-4"></i>
+                        <p class="text-lg font-medium text-custom-dark">Chargement de l’agenda sécurisé…</p>
+                    </div>
+                    <iframe id="acuity-iframe" class="w-full h-full border-0 rounded-lg hidden" title="Module de prise de rendez-vous Acuity Scheduling"></iframe>
+                </div>
+            </div>
+        </div>
+
+        
+        <footer class="bg-gray-100/60 border-t border-gray-200/80">
+            <div class="container mx-auto px-4 py-8 text-center text-gray-600">
+                <p>© 2024 sexo-logique.com - Chloé François - Tous droits réservés.</p>
+            </div>
+        </footer>
+
+    </body>		
+		
+		
+		<script>		
+document.addEventListener("DOMContentLoaded", function() {
+    // Gestion du menu mobile
+    const header = document.getElementById("main-header");
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (header) {
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("header-scrolled", window.scrollY > 50);
+        });
+    }
+
+    if (mobileMenuButton && mobileMenu) {
+        const icon = mobileMenuButton.querySelector("i");
+        const closeMenu = () => {
+            mobileMenu.classList.add("hidden");
+            if (icon) icon.className = "fas fa-bars";
+        };
+
+        mobileMenuButton.addEventListener("click", () => {
+            const isHidden = mobileMenu.classList.toggle("hidden");
+            if (icon) icon.className = isHidden ? "fas fa-bars" : "fas fa-times";
+		const isExpanded = !isHidden;
+		mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+		mobileMenuButton.setAttribute('aria-label', isExpanded ? 'Fermer le menu' : 'Ouvrir le menu');	
+        });
+
+        mobileMenu.addEventListener("click", (e) => {
+            if (e.target.closest("a") || e.target.closest("button")) {
+                closeMenu();
+            }
+        });
+    }
+
+    const scheduleModal = document.getElementById("schedule-modal");
+    const modalContent = document.getElementById("modal-content");
+    const iframe = document.getElementById("acuity-iframe");
+    const loadingSpinner = document.getElementById("loading-spinner");
+
+    const openModal = (src) => {
+        if (!src) return;
+        loadingSpinner.classList.remove("hidden");
+        iframe.classList.add("hidden");
+        iframe.src = src;
+        scheduleModal.classList.remove("hidden");
+        setTimeout(() => {
+            scheduleModal.classList.remove("opacity-0");
+            modalContent.classList.remove("scale-95", "opacity-0");
+        }, 10);
+    };
+
+    const closeModal = () => {
+        scheduleModal.classList.add("opacity-0");
+        modalContent.classList.add("scale-95", "opacity-0");
+        setTimeout(() => {
+            scheduleModal.classList.add("hidden");
+            iframe.src = "";
+        }, 300);
+    };
+
+    iframe.addEventListener("load", () => {
+        loadingSpinner.classList.add("hidden");
+        iframe.classList.remove("hidden");
+    });
+
+    document.body.addEventListener("click", (e) => {
+        const openBtn = e.target.closest(".open-schedule-modal");
+        const closeBtn = e.target.closest("#close-modal-btn");
+        if (openBtn) {
+            e.preventDefault();
+            openModal(openBtn.dataset.src);
+        } else if (closeBtn || e.target === scheduleModal) {
+            closeModal();
+        }
+    });
+
+
+const latestContainer = document.getElementById('latest-articles-container');
+    const carouselViewport = document.getElementById('articles-carousel-viewport');
+    const carouselTrack = document.getElementById('articles-carousel-track');
+    const searchInput = document.getElementById('searchInput');
+    const noResults = document.getElementById('no-results');
+    const prevButton = document.getElementById('prev-article-slide-button');
+    const nextButton = document.getElementById('next-article-slide-button');
+
+    if (latestContainer && carouselViewport && carouselTrack && searchInput && noResults && prevButton && nextButton) {
+        let allArticles = [];
+        let fuse;
+
+function updateCarouselButtons() {
+            requestAnimationFrame(() => {
+                if (!carouselViewport) return;
+                
+                const scrollLeft = carouselViewport.scrollLeft;
+                const maxScroll = carouselViewport.scrollWidth - carouselViewport.clientWidth;
+                
+                prevButton.disabled = scrollLeft < 1;    
+                nextButton.disabled = scrollLeft >= maxScroll - 1;
+            });
+        }
+
+        function scrollToNext() {
+            const firstSlide = carouselTrack.querySelector('.article-slide');
+            if (!firstSlide) return;
+
+            const slideWidth = firstSlide.offsetWidth;
+            const gap = parseFloat(window.getComputedStyle(carouselTrack).gap);
+            const scrollDistance = slideWidth + gap;
+            
+            carouselViewport.scrollBy({ left: scrollDistance, behavior: 'smooth' });
+        }
+
+        function scrollToPrev() {
+            const firstSlide = carouselTrack.querySelector('.article-slide');
+            if (!firstSlide) return;
+            
+            const slideWidth = firstSlide.offsetWidth;
+            const gap = parseFloat(window.getComputedStyle(carouselTrack).gap);
+            const scrollDistance = slideWidth + gap;
+
+            carouselViewport.scrollBy({ left: -scrollDistance, behavior: 'smooth' });
+        }
+		
+function generateArticlePlaceholder(title) {
+            const iconMap = {
+                // Thèmes psychologiques et mentaux
+                'fa-solid fa-brain': ['trauma', 'psycho', 'héritage', 'mémoire', 'inconscient'],
+                'fa-solid fa-head-side-virus': ['santé mentale', 'charge mentale', 'dépression', 'burn-out'],
+                'fa-solid fa-cloud-bolt': ['anxiété', 'stress', 'phobie', 'peur', 'crise'],
+
+                // Santé physique, maladies et conditions
+                'fa-solid fa-baby-carriage': ['iv-g', 'fausse couche', 'grossesse', 'maternité', 'post-partum', 'pma', 'infertilité', 'devenir parent'],
+                'fa-solid fa-shield-virus': ['ist', 'mst', 'vih', 'hpv', 'dépistage', 'infection', 'herpès', 'chlamydia'],
+                'fa-solid fa-ribbon': ['endométriose', 'douleurs', 'maladie', 'syndrome', 'vaginisme', 'dyspareunie', 'cancer'],
+                'fa-solid fa-triangle-exclamation': ['troubles', 'dysfonction', 'impuissance', 'éjaculation', 'anorgasmie', 'panne'],
+                'fa-solid fa-user-doctor': ['médecine', 'professionnels', 'santé', 'consultation', 'sexothérapie', 'gynécologue', 'urologue'],
+                'fa-solid fa-person-running': ['sport', 'fatigue', 'sommeil', 'alimentation', 'lifestyle', 'hygiène de vie'],
+
+                // Corps, cycle et développement
+                'fa-solid fa-dna': ['âge', 'âgé', 'vieillissement', 'anatomie', 'physiologie', 'puberté', 'génétique', 'corps humain'],
+                'fa-solid fa-spa': ['corps', 'image de soi', 'acceptation', 'estime de soi', 'nudité', 'bien-être', 'beauté', 'complexes'],
+                'fa-solid fa-droplet': ['règles', 'menstruations', 'cycle', 'syndrome prémenstruel', 'spm'],
+                'fa-solid fa-seedling': ['hormone', 'ménopause', 'andropause', 'testostérone', 'oestrogène'],
+                'fa-solid fa-universal-access': ['handicap', 'validisme', 'accessibilité'],
+                
+                // Plaisir, désir et pratiques
+                'fa-solid fa-fire': ['libido', 'désir', 'attirance', 'excitation', 'fantasme'],
+                'fa-solid fa-heart': ['plaisir', 'orgasme', 'jouir', 'érotisme', 'sensation', 'masturbation', 'amour', 'tendresse', 'sensualité'],
+                'fa-solid fa-mask': ['fantasmes', 'porno', 'imagination', 'rêves', 'bdsm', 'fétichisme', 'kink'],
+                'fa-solid fa-bed': ['pénétration', 'fellation', 'cunnilingus', 'rapport sexuel', 'coït', 'preliminaires', 'position'],
+                'fa-solid fa-wand-magic-sparkles': ['sextoys', 'accessoires', 'lubrifiant', 'jouets'],
+                
+                // Relations et communication
+                'fa-solid fa-comments': ['communication', 'dialogue', 'partenaire', 'conflits', 'couple', 'dispute', 'jalousie', 'attachement', 'sentiments', 'émotions'],
+                'fa-solid fa-heart-crack': ['rupture', 'séparation', 'divorce', 'célibat', 'infidélité', 'trahison', 'ghosting'],
+                'fa-solid fa-people-arrows': ['polyamour', 'échangisme', 'trouple', 'non-monogamie', 'relation libre'],
+                'fa-solid fa-handshake-slash': ['consentement', 'respect', 'abus', 'violences', 'harcèlement', 'limites', 'culture du viol'],
+                'fa-solid fa-hands-holding-child': ['parent', 'enfant', 'famille', 'parentalité', 'transmission'],
+
+                // Identité, société et culture
+                'fa-solid fa-rainbow': ['lgbtq', 'genre', 'identité', 'orientation', 'non-binaire', 'trans', 'homosexualité', 'bisexualité', 'pansexualité', 'queer', 'asexualité'],
+                'fa-solid fa-users': ['société', 'culture', 'normes', 'pression sociale', 'stéréotypes'],
+                'fa-solid fa-scale-balanced': ['féminisme', 'patriarcat', 'droit', 'loi', 'égalité', 'justice'],
+                'fa-solid fa-book-open-reader': ['histoire', 'historique', 'culture', 'anthropologie'],
+                
+                // Technologie et modernité
+                'fa-solid fa-mobile-screen-button': ['appli de rencontre', 'rencontre en ligne', 'sexting', 'cybersexe', 'technologie', 'tinder', 'réseaux sociaux'],
+                'fa-solid fa-link-slash': ['addiction', 'dépendance', 'porno-dépendance'],
+                
+                // Connaissance et éducation
+                'fa-solid fa-user-shield': ['contraception', 'pilule', 'stérilet', 'préservatif', 'vasectomie', 'ligature'],
+                'fa-solid fa-graduation-cap': ['éducation', 'jeunes', 'ado', 'première fois', 'apprentissage'],
+                'fa-solid fa-circle-question': ['mythes', 'tabous', 'croyances', 'idées reçues', 'faq', 'questions'],
+                'fa-solid fa-lightbulb': ['conseils', 'astuces', 'guide', 'savoir', 'épanouissement', 'exploration', 'découverte'],
+                'fa-solid fa-venus-mars': ['sexualité', 'sexe']
+            };
+
+            const palettes = [
+                ['#a37b73', '#c28f82'], ['#b09e99', '#8a7974'], ['#d4c9bf', '#a37b73'],
+                ['#8c92ac', '#5f6784'], ['#c2aa9a', '#9b806f'], ['#ab8d83', '#d1b8af'],
+                ['#7a8b99', '#a0b0bf'], ['#c2a7a1', '#a38a83']
+            ];
+
+            let selectedIcon = 'fa-solid fa-book-open'; // Icône par défaut
+            const lowerCaseTitle = title.toLowerCase();
+
+            for (const [icon, keywords] of Object.entries(iconMap)) {
+                if (keywords.some(key => lowerCaseTitle.includes(key))) {
+                    selectedIcon = icon;
+                    break;
+                }
+            }
+
+            const paletteIndex = title.length % palettes.length;
+            const selectedPalette = palettes[paletteIndex];
+            const style = `background: linear-gradient(135deg, ${selectedPalette[0]}, ${selectedPalette[1]});`;
+
+            return `<div class="card-image-placeholder" style="${style}"><i class="${selectedIcon}"></i></div>`;
+        }
+		
+		
+		
+		
+function displayLatestArticles(articles) {
+    latestContainer.innerHTML = '';
+    articles.slice(0, 3).forEach(article => {
+        const placeholderHtml = generateArticlePlaceholder(article.title);
+        
+        latestContainer.innerHTML += `
+            <a href="${article.url}" class="card block relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1">
+                
+                <span class="badge-new">Nouveau</span>
+
+                <div class="flex flex-row lg:flex-col h-full">
+
+                    <div class="flex-shrink-0 w-1/4 lg:w-full aspect-[3/4] lg:aspect-video rounded-2xl lg:rounded-none lg:rounded-t-3xl overflow-hidden transition-all duration-300 ease-in-out">
+                        ${placeholderHtml.replace('<div class="card-image-placeholder"', '<div class="w-full h-full card-image-placeholder"')}
+                    </div>
+                    
+                    <div class="flex flex-col flex-grow justify-start px-4 pb-4 pt-10 lg:p-6 transition-all duration-300 ease-in-out">
+                        
+                        <h2 class="text-xl font-bold text-custom-dark leading-tight">${article.title}</h2>
+                        
+                        <p class="text-base text-gray-600 leading-snug lg:leading-relaxed mt-2 lg:flex-grow">${article.excerpt}</p>
+                        
+                        <div class="hidden sm:flex items-center mt-4 pt-4 border-t border-gray-200/80">
+                            <p class="article-meta">Publié le <time datetime="${article.date}">${new Date(article.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', 'year': 'numeric' })}</time></p>
+                        </div>
+                    </div>
+                </div>
+            </a>`;
+    });
+}
+
+function displayCarouselArticles(articles) {
+    carouselTrack.innerHTML = '';
+    if (articles.length === 0) {
+        noResults.classList.remove('hidden');
+        updateCarouselButtons();
+        return;
+    }
+    noResults.classList.add('hidden');
+
+    articles.forEach(article => {
+        const placeholderHtml = generateArticlePlaceholder(article.title);
+        const slide = document.createElement('div');
+        slide.className = 'article-slide';
+        slide.innerHTML = `
+            <article class="card glass-effect flex flex-col p-0 overflow-hidden h-full">
+                <a href="${article.url}" class="block">${placeholderHtml}</a>
+                <div class="p-6 flex flex-col flex-grow">
+                    <div><span class="article-category">${article.category}</span></div>
+                    <h2 class="text-xl font-bold text-custom-dark mt-2 mb-3"><a href="${article.url}" class="hover:text-custom-accent transition-colors">${article.title}</a></h2>
+                    <p class="text-gray-700 leading-relaxed flex-grow">${article.excerpt}</p>
+                    <div class="mt-6 pt-4 border-t border-gray-200/80">
+                        <p class="article-meta">Publié le <time datetime="${article.date}">${new Date(article.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</time></p>
+                    </div>
+                </div>
+            </article>`;
+        carouselTrack.appendChild(slide);
+    });
+    carouselViewport.scrollLeft = 0;
+    updateCarouselButtons();
+}
+
+async function loadArticles() {
+            // Affiche un état de chargement initial
+            const loadingHTML = '<p class="text-center text-gray-600 col-span-full py-8">Chargement des articles...</p>';
+            latestContainer.innerHTML = loadingHTML;
+            carouselTrack.innerHTML = ''; // Vide la piste du carrousel
+
+            try {
+                const response = await fetch('articles.json');
+                if (!response.ok) {
+                    throw new Error(`Erreur réseau : ${response.status} ${response.statusText}`);
+                }
+                const articlesData = await response.json();
+
+                // Vérifie si les données sont un tableau et ne sont pas vides
+                if (!Array.isArray(articlesData)) {
+                     throw new Error('Le format des données est incorrect.');
+                }
+                
+                if (articlesData.length === 0) {
+                    latestContainer.innerHTML = '<p class="text-center text-gray-600 col-span-full py-8">Aucun article à la une pour le moment.</p>';
+                    noResults.querySelector('p').textContent = 'Aucun article n\'a été publié pour le moment.';
+                    noResults.classList.remove('hidden');
+                    updateCarouselButtons();
+                    return;
+                }
+
+allArticles = articlesData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                displayLatestArticles(allArticles);
+                displayCarouselArticles(allArticles);
+
+                const options = { keys: ['title', 'category', 'excerpt'], threshold: 0.4 };
+                fuse = new Fuse(allArticles, options);
+
+            } catch (error) {
+                console.error('Erreur de chargement des articles:', error);
+                const errorHTML = `<p class="text-center text-red-600 col-span-full py-8">Impossible de charger les articles. Veuillez réessayer plus tard.</p>`;
+                latestContainer.innerHTML = errorHTML;
+                noResults.querySelector('p').textContent = 'Une erreur est survenue lors du chargement.';
+                noResults.classList.remove('hidden');
+                updateCarouselButtons();
+            }
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            const articlesToDisplay = query ? fuse.search(query).map(result => result.item) : allArticles;
+            displayCarouselArticles(articlesToDisplay);
+        });
+
+        prevButton.addEventListener('click', scrollToPrev);
+        nextButton.addEventListener('click', scrollToNext);
+        carouselViewport.addEventListener('scroll', updateCarouselButtons);
+        window.addEventListener('resize', updateCarouselButtons);
+
+        loadArticles();
+    }
+});
+
+</script>
+</html>

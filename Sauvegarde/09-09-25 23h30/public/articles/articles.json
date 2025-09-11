@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "L'intime dans le couple",
+    "excerpt": "Le sommeil dans le couple",
+    "date": "2025-08-31",
+    "author": "Chloé François",
+    "url": "L'intime stress.html",
+    "iconClass": "fa-solid fa-person-running"
+  },
+  {
+    "id": 2,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Sexualité et Parentalité",
+    "excerpt": "L'arrivée d'un enfant bouleverse l'intimité. Comment réussir à maintenir une sexualité et de l'érotisme au sein du couple ?",
+    "date": "2025-08-31",
+    "author": "Chloé François",
+    "url": "sexualite-et-parentalite.html",
+    "iconClass": "fa-solid fa-heart"
+  }
+]

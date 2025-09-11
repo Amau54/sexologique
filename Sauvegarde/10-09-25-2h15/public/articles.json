@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Réinventer sa Sexualité dans une Relation Longue",
+    "excerpt": "Votre passion des débuts s'est transformée ? Découvrez comment le temps enrichit la sexualité, passant de la quantité à la qualité, et comment la tendresse devient le socle d'un amour plus serein.",
+    "date": "2025-08-31",
+    "author": "Chloé François",
+    "url": "laisser-la-flamme-evoluer-avec-le-temps.html",
+    "iconClass": "fa-solid fa-heart"
+  },
+  {
+    "id": 2,
+    "category": [
+      "Bien-être & Plaisir"
+    ],
+    "title": "Comment Raviver le Désir ? Arrêtez de le Chercher, Invitez-le à Revenir.",
+    "excerpt": "Votre sexualité est en veille ? Oubliez la pression de la performance. Apprenez à nourrir le lien et la tendresse au quotidien pour que le désir refleurisse de lui-même.",
+    "date": "2025-08-31",
+    "author": "Chloé François",
+    "url": "le-desir-s-est-endormi.html",
+    "iconClass": "fa-solid fa-fire"
+  },
+  {
+    "id": 3,
+    "category": [
+      "Bien-être & Plaisir"
+    ],
+    "title": "Mon Corps : Se Réconcilier avec son Image pour Retrouver l'Intimité.",
+    "excerpt": "L'idée même d'un contact physique vous angoisse ? Explorez le massage bienveillant et la redécouverte sensorielle pour restaurer la confiance, apaiser le corps et raviver la complicité.",
+    "date": "2025-08-31",
+    "author": "Chloé François",
+    "url": "mon-corps-n-est-plus-mon-allie.html",
+    "iconClass": "fa-solid fa-spa"
+  },
+  {
+    "id": 4,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Sexualité et Parentalité",
+    "excerpt": "L'arrivée d'un enfant bouleverse l'intimité. Comment réussir à maintenir une sexualité et de l'érotisme au sein du couple ?",
+    "date": "2025-08-31",
+    "author": "Chloé François",
+    "url": "sexualite-et-parentalite.html",
+    "iconClass": "fa-solid fa-heart"
+  }
+]

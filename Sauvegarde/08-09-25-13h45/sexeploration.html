@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Podcast - Sex(e)ploration</title>
+        <meta name="description" content="Découvrez le podcast Sexeploration de Lucile Bach avec Chloé François sexologue clinicienne à Nancy.">
+        <meta property="og:title" content="Podcast - Sex(e)ploration" id="og-title">
+        <meta property="og:description" content="Nos épisodes explorent la sexologie et le plaisir. Un guide pour vous aider à vivre une sexualité épanouie et mieux comprendre votre corps et vos désirs." id="og-description">
+        <meta property="og:type" content="audio.podcast">
+        <meta property="og:url" content="https://sexo-logique.com/sexeploration.html" id="og-url">
+        <meta property="og:image" content="https://sexo-logique.com/images/sexeploration.avif" id="og-image">
+        <meta property="og:audio" content="" id="og-audio-url">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Podcast - Sex(e)ploration" id="twitter-title">
+        <meta name="twitter:description" content="Nos épisodes explorent la sexologie et le plaisir. Un guide pour vous aider à vivre une sexualité épanouie et mieux comprendre votre corps et vos désirs." id="twitter-description">
+        <meta name="twitter:image" content="https://sexo-logique.com/images/sexeploration.avif" id="twitter-image">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="apple-touch-icon" href="images/favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+        <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+        </noscript>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+       
+	   
+
+	   
+	   
+<!--Style All-->	
+	   <style>
+            @font-face {
+                font-family: 'Inter Fallback';
+                src: local('Arial');
+                size-adjust:107%;ascent-override:90%;descent-override:22%;line-gap-override:10%
+            }
+
+            body {
+                font-family: 'Inter','Inter Fallback',sans-serif;
+                background-color: #f8f7f4;
+                background: linear-gradient(135deg,#f8f7f4 0,#eae6e1 50%,#d4c9bf 100%);
+                color: #3d3b30;
+                min-height: 100vh;
+                margin: 0;
+                line-height: inherit
+            }
+        </style>
+		
+		   		<script src="https://cdn.tailwindcss.com"></script>	
+	
+<!--Style Perso-->	
+	<style>
+            .glass-effect {
+                background: rgb(255 255 255 / .4);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgb(255 255 255 / .2);
+                transition: background-color .3s ease-in-out,box-shadow .3s ease-in-out
+            }
+
+            .hero-bg {
+                background-color: #eae6e1;
+                background-image: radial-gradient(at 20% 20%,hsl(30 60% 90%) 0,transparent 50%),radial-gradient(at 80% 10%,hsl(200 60% 85%) 0,transparent 50%),radial-gradient(at 80% 80%,hsl(340 60% 90%) 0,transparent 50%)
+            }
+
+            .nav-link {
+                transition: color .3s ease
+            }
+
+            .nav-link:hover {
+                color: #a37b73
+            }
+
+            .tab-btn.active {
+                background-color: #a37b73;
+                color: #fff
+            }
+
+            .tab-btn {
+                transition: background-color .3s ease,color .3s ease
+            }
+
+            .bg-custom-dark {
+                background-color: #a37b73
+            }
+
+            .text-custom-dark {
+                color: #3d3b30
+            }
+
+            .text-custom-accent {
+                color: #a37b73
+            }
+
+            .card {
+                background: rgb(255 255 255 / .3);
+                border-radius: 1.5rem;
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                box-shadow: 0 10px 30px rgb(0 0 0 / .05);
+                padding: 1.5rem;
+                transition: transform .3s ease,box-shadow .3s ease
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgb(0 0 0 / .1)
+            }
+
+            .social-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                background-color: rgb(234 230 225 / .6);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                color: #a37b73;
+                transition: background-color .2s ease-in-out,color .2s ease-in-out,transform .2s ease-in-out,box-shadow .2s ease-in-out;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / .1),0 2px 4px -2px rgb(0 0 0 / .1);
+                border: 1px solid rgb(255 255 255 / .2)
+            }
+
+            .social-icon:hover {
+                background-color: #a37b73;
+                color: #fff;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1),0 4px 6px -4px rgb(0 0 0 / .1)
+            }
+
+            .fade-in {
+                animation: fadeIn .5s ease-in-out forwards
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px)
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0)
+                }
+            }
+
+            .rotate-icon {
+                transition: transform .3s ease
+            }
+
+            .btn-mobile-feedback:active {
+                transform: scale(.98);
+                opacity: .9
+            }
+
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none
+            }
+
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none
+            }
+
+            #apropos-card {
+                scroll-margin-top: 140px
+            }
+
+            section[id] {
+                scroll-margin-top: 100px
+            }
+
+            input[type=range] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+                cursor: pointer;
+                background: #fff0
+            }
+
+            input[type=range]::-webkit-slider-runnable-track {
+                height: 6px;
+                background: rgb(255 255 255 / .3);
+                border-radius: 3px
+            }
+
+            input[type=range]::-moz-range-track {
+                height: 6px;
+                background: rgb(255 255 255 / .3);
+                border-radius: 3px
+            }
+
+            input[type=range]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                margin-top: -5px;
+                width: 16px;
+                height: 16px;
+                background: #fff;
+                border-radius: 50%;
+                border: 1px solid rgb(0 0 0 / .2)
+            }
+
+            input[type=range]::-moz-range-thumb {
+                width: 16px;
+                height: 16px;
+                background: #fff;
+                border-radius: 50%;
+                border: 1px solid rgb(0 0 0 / .2)
+            }
+
+            .active-episode {
+                background-color: rgb(233 30 99 / .2);
+                border-left: 4px solid #E91E63
+            }
+
+            .slide-group {
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 100%;
+                height: 100%;
+                justify-content: flex-start;
+                align-items: center
+            }
+
+            .episode-card-wrapper {
+                flex-shrink: 0;
+                width: 100%;
+                padding: .5rem;
+                box-sizing: border-box;
+                flex-grow: 1;
+                display: flex;
+                align-items: stretch;
+                scroll-snap-align: start
+            }
+
+            .episode-card {
+                width: 100%;
+                max-width: none;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 1rem;
+                background-color: rgb(255 255 255 / .5);
+                box-shadow: 0 1px 4px rgb(0 0 0 / .1);
+                transition: background 0.3s ease
+            }
+
+            .play-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgb(0 0 0 / .5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                border-radius: .75rem
+            }
+
+            .episode-card-wrapper:hover .play-overlay {
+                opacity: 1
+            }
+
+            .episode-card p {
+                white-space: normal;
+                overflow: hidden;
+                text-overflow: ellipsis
+            }
+
+            .episode-card .flex-1.text-sm {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical
+            }
+
+            #player-container {
+                position: relative;
+                background-image: linear-gradient(to right,#242424,#2c3e50);
+                background-color: #fff0
+            }
+
+            #seek-bar::-webkit-slider-runnable-track {
+                background-image: linear-gradient(to right,#fe8412,#920b68);
+                border-radius: 10px;
+                height: 6px
+            }
+
+            #seek-bar::-moz-range-track {
+                background-image: linear-gradient(to right,#fe8412,#920b68);
+                border-radius: 10px;
+                height: 6px
+            }
+
+            #volume-slider {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+                height: 20px;
+                background: #fff0
+            }
+
+            #volume-slider::-webkit-slider-runnable-track {
+                background: rgb(255 255 255 / .2);
+                height: 2px;
+                border-radius: 1px;
+                -webkit-transition: background 0.3s ease;
+                transition: background 0.3s ease
+            }
+
+            #volume-slider::-moz-range-track {
+                background: rgb(255 255 255 / .2);
+                height: 2px;
+                border-radius: 1px;
+                -moz-transition: background 0.3s ease;
+                transition: background 0.3s ease
+            }
+
+            #volume-slider:hover::-webkit-slider-runnable-track {
+                background: rgb(255 255 255 / .4)
+            }
+
+            #volume-slider:hover::-moz-range-track {
+                background: rgb(255 255 255 / .4)
+            }
+
+            #volume-slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 16px;
+                height: 16px;
+                background: #fff0;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-top: -7px;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease
+            }
+
+            #volume-slider::-moz-range-thumb {
+                width: 16px;
+                height: 16px;
+                background: #fff0;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-top: -7px;
+                -moz-transition: all 0.3s ease;
+                transition: all 0.3s ease
+            }
+
+            #volume-slider:hover::-webkit-slider-thumb {
+                transform: scale(1.2);
+                background: #fff
+            }
+
+            #volume-slider:hover::-moz-range-thumb {
+                transform: scale(1.2);
+                background: #fff
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: #fff;
+                box-shadow: 0 0 5px rgb(0 0 0 / .2);
+                cursor: pointer;
+                margin-top: -7px
+            }
+
+            #player-image-link {
+                transition: transform 0.4s ease,box-shadow 0.4s ease
+            }
+
+            #player-image-link:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgb(12 100 200 / .5)
+            }
+
+            #player-image-link img {
+                transition: opacity 0.3s ease
+            }
+
+            #player-image-link:hover img {
+                opacity: .5
+            }
+
+            #podcast-content {
+                position: relative
+            }
+
+            #episode-list-dropdown {
+                position: absolute;
+                inset: 1rem;
+                border-radius: 1.5rem;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.25s ease-in-out,transform 0.25s ease-in-out;
+                overflow: hidden;
+                z-index: 20
+            }
+
+            #episode-list-dropdown.visible {
+                opacity: 1;
+                pointer-events: auto
+            }
+
+            #episode-list-dropdown .dropdown-content {
+                height: 100%;
+                max-height: 50vh;
+                display: flex
+            }
+
+            #episodes-list {
+                flex-grow: 1;
+                overflow-y: auto;
+                padding: .75rem;
+                -webkit-mask-image: linear-gradient(to bottom,black 90%,transparent);
+                scrollbar-width: none
+            }
+
+            #episode-list-dropdown .dropdown-content {
+                position: relative;
+                background-color: rgb(255 255 255 / .15);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgb(255 255 255 / .2)
+            }
+
+            #episodes-list .episode-item {
+                padding: .75rem 1rem;
+                border-radius: .75rem;
+                background-color: rgb(255 255 255 / .1);
+                border: 1px solid rgb(255 255 255 / .15);
+                transition: all 0.25s ease-in-out;
+                background-color: rgb(255 255 255 / .5)
+            }
+
+            #episodes-list .episode-item .font-semibold {
+                color: #3d3b30;
+                font-size: 1.125rem
+            }
+
+            #episodes-list .episode-item .text-sm {
+                color: #5c5a4d;
+                font-size: 1rem
+            }
+
+            #episodes-list .episode-item:hover {
+                background-color: rgb(255 255 255 / .7);
+                border-color: rgb(255 255 255 / .5);
+                transform: scale(1.02);
+                box-shadow: 0 4px 15px rgb(0 0 0 / .05)
+            }
+
+            #episodes-list .episode-item.active-episode,#episodes-list .episode-item.active-episode:hover {
+                background: rgb(255 255 255 / .8);
+                border: 1px solid rgb(255 255 255 / .5);
+                transform: scale(1.01);
+                box-shadow: 0 8px 25px rgb(0 0 0 / .08);
+                position: relative;
+                padding-left: 1.75rem
+            }
+
+            #episodes-list .episode-item.active-episode::before {
+                content: '';
+                position: absolute;
+                left: .75rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 50%;
+                background-color: #a37b73;
+                border-radius: 2px
+            }
+
+            #episodes-list .episode-item.active-episode .font-semibold {
+                color: #a37b73
+            }
+
+            #episodes-list .episode-item.active-episode .text-sm {
+                color: #5c5a4d
+            }
+
+            #scroll-indicator {
+                opacity: 1;
+                transition: opacity 0.3s ease-in-out;
+                position: absolute;
+                bottom: 1rem;
+                left: 50%;
+                transform: translateX(-50%);
+                animation: bounce-variable 1.5s infinite ease-in-out;
+                color: #fff;
+                filter: drop-shadow(0 2px 4px rgb(0 0 0 / .6))
+            }
+
+            @keyframes bounce-variable {
+                0%,100% {
+                    transform: translateX(-50%) translateY(0)
+                }
+
+                50% {
+                    transform: translateX(-50%) translateY(-10px) scale(1.08)
+                }
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg)
+                }
+
+                100% {
+                    transform: rotate(360deg)
+                }
+            }
+
+            .custom-spinner {
+                width: 80px;
+                height: 80px;
+                border: 5px solid rgb(255 255 255 / .3);
+                border-top-color: #fff;
+                border-radius: 50%;
+                animation: spin 1s linear infinite
+            }
+
+            @media (max-width: 767px) {
+                .card {
+                    padding:2.5rem
+                }
+
+                #podcast #player-container {
+                    margin-left: -1rem;
+                    margin-right: -1rem
+                }
+
+                #podcast #player-image-link {
+                    width: 192px;
+                    height: 192px;
+                    margin-left: auto;
+                    margin-right: auto
+                }
+
+                #podcast #episode-list-dropdown {
+                    left: -1rem;
+                    right: -1rem;
+                    top: 0rem;
+                    bottom: 0rem
+                }
+
+                .hero-bg>div {
+                    transform: translateY(50px)
+                }
+
+                #episodes-container-wrapper>.relative {
+                    padding-left: 0rem;
+                    padding-right: 0rem
+                }
+
+                #carousel-track .episode-card .flex.items-center {
+                    position: relative;
+                    min-height: 6rem;
+                    width: 100%;
+                    display: block
+                }
+
+                #carousel-track .episode-card .flex-shrink-0 {
+                    z-index: 0;
+                    opacity: .1;
+                    font-size: 7.75rem;
+                    color: #3d3b30
+                }
+
+                #carousel-track .episode-card .flex-1 {
+                    position: absolute;
+                    inset: 0;
+                    z-index: 1;
+                    width: 100%;
+                    padding: .5rem .5rem;
+                    display: flex;
+                    flex-direction: column
+                }
+
+                #podcast-content>#episodes-section {
+                    margin-top: 0rem
+                }
+            }
+
+            .nav-link:focus-visible,.tab-btn:focus-visible,.card:focus-visible,.social-icon:focus-visible,.btn-mobile-feedback:focus-visible,input[type=range]:focus-visible,#player-image-link:focus-visible,#episodes-list .episode-item:focus-visible {
+                outline: none;
+                box-shadow: 0 0 0 3px rgb(163 123 115 / .6);
+                border-radius: .5rem
+            }
+
+            input[type=range]:focus-visible::-webkit-slider-thumb {
+                box-shadow: 0 0 0 4px rgb(163 123 115 / .6)
+            }
+
+            input[type=range]:focus-visible::-moz-range-thumb {
+                box-shadow: 0 0 0 4px rgb(163 123 115 / .6)
+            }
+</style>			
+		
+		
+		
+    </head>
+    <body class="antialiased flex flex-col min-h-screen">		
+			<header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
+		<div class="container mx-auto px-4">
+			<nav class="flex items-center justify-between h-16 glass-effect rounded-full px-4 lg:px-8 shadow-sm">
+				<a href="/" class="text-xl font-bold text-custom-dark flex-shrink-0">sexo-logique.com</a>
+				<div class="hidden lg:flex items-center md:space-x-4 lg:space-x-8 text-custom-dark">
+					<a href="/#consultations" class="nav-link">Consultations</a>
+					<a href="/#apropos" class="nav-link">À propos</a>
+					<a href="/sexeploration.html" class="block py-2 text-custom-accent font-semibold">Podcast</a>
+					<a href="/articles/articles.html" class="nav-link">Articles</a>
+					<a href="/#contact" class="nav-link">Contact</a>
+				</div>
+				<button data-src="https://sexologue.as.me/schedule/2810fbd3?calendarIds=9092470" class="open-schedule-modal hidden lg:inline-block bg-custom-dark text-white md:px-4 lg:px-6 py-2 rounded-full hover:bg-opacity-90 transition shadow-md hover:shadow-lg btn-mobile-feedback whitespace-nowrap">Prendre RDV</button>
+				<button id="mobile-menu-button" class="lg:hidden text-2xl text-custom-dark" aria-label="Ouvrir le menu">
+					<i class="fas fa-bars"></i>
+				</button>
+			</nav>
+			<div id="mobile-menu" class="hidden lg:hidden glass-effect rounded-2xl mt-2 p-4 text-custom-dark text-center">
+				<a href="/#consultations" class="block py-2 hover:text-custom-accent">Consultations</a>
+				<a href="/#apropos" class="block py-2 hover:text-custom-accent">À propos</a>
+				<a href="/sexeploration.html" class="block py-2 text-custom-accent font-semibold">Podcast</a>
+				<a href="/articles/articles.html" class="block py-2 hover:text-custom-accent">Articles</a>
+				<a href="/#contact" class="block py-2 hover:text-custom-accent">Contact</a>
+				<button data-src="https://sexologue.as.me/schedule/2810fbd3?calendarIds=9092470" class="open-schedule-modal mt-4 w-full bg-custom-dark text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition shadow-md btn-mobile-feedback">Prendre RDV</button>
+			</div>
+		</div>
+	</header>
+		
+              	
+		
+		
+        <main id="podcast-page-main" class="flex-grow pt-32 pb-20 hero-bg">
+            <section id="Podcast" class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center mb-12">
+                    <h1 class="mt-10 text-4xl md:text-5xl font-bold text-custom-dark tracking-tight leading-tight">
+                        Découvrez le podcast <span class="text-custom-accent">Sex(e)ploration</span>
+                    </h1>
+                    <p class="mt-8 mb-20 text-lg md:text-xl max-w-2xl mx-auto text-gray-700">Nos épisodes explorent la sexologie et le plaisir.<br> Un guide pour vous aider à vivre une sexualité épanouie et mieux comprendre votre corps et vos désirs.</p>
+                </div>
+                <div id="podcast-content" class="w-full max-w-5xl mx-auto hidden flex flex-col space-y-8">
+                    <div id="player-container" style="background-color: #333333; color: white;" class="shadow-2xl rounded-3xl p-8 flex flex-col md:flex-row md:space-x-8 md:space-y-0 space-y-6 items-center">
+                        <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+                            <a href="https://www.instagram.com/sexeploration.lucile.bach/?hl=fr" target="_blank" id="player-image-link" class="block w-64 h-64 relative overflow-hidden rounded-2xl shadow-xl group">
+                                <img src="/images/sexeploration.avif" alt="Pochette de l'épisode" class="w-full h-full object-cover transition-opacity duration-300">
+                                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-20 h-20 transform scale-75 group-hover:scale-100 transition-transform duration-300" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                                        <defs>
+                                            <linearGradient id="instagramGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" style="stop-color:#feda75; stop-opacity:1"/>
+                                                <stop offset="25%" style="stop-color:#fa7e1e; stop-opacity:1"/>
+                                                <stop offset="50%" style="stop-color:#d62976; stop-opacity:1"/>
+                                                <stop offset="75%" style="stop-color:#962fbf; stop-opacity:1"/>
+                                                <stop offset="100%" style="stop-color:#4f5bd5; stop-opacity:1"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path fill="url(#instagramGradient)" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="flex-1 w-full md:w-2/3 md:ml-auto text-center">
+                            <h2 id="player-title" class="text-2xl font-bold">Podcast Sex(e)ploration</h2>
+                            <p id="player-date" class="text-sm text-gray-400 mt-1">Avec Lucile Bach et Chloé François</p>
+                            <div class="space-y-2 mt-4">
+                                <input type="range" id="seek-bar" value="0" class="w-full h-2 rounded-lg appearance-none cursor-pointer" aria-label="Barre de progression de l'épisode">
+                                <div class="flex justify-between text-xs text-gray-400">
+                                    <span id="current-time">0:00</span>
+                                    <span id="total-duration">0:00</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center space-x-6 mt-4">
+                                <button id="rewind-button" aria-label="Reculer de 10 secondes" class="w-12 h-12 flex items-center justify-center text-xl text-white/80 hover:text-white transition">
+                                    <i class="fas fa-undo-alt"></i>
+                                </button>
+                                <button id="play-pause-button" aria-label="Lecture / Pause" class="relative w-20 h-20 rounded-full flex items-center justify-center shadow-lg transition transform hover:scale-105" style="background-image: linear-gradient(to right, #fe8412, #f75917, #e51848, #920b68);">
+                                    <i id="play-pause-icon" class="fas fa-play text-white text-3xl"></i>
+                                    <div id="player-loading-spinner" class="custom-spinner absolute hidden"></div>
+                                </button>
+                                <button id="forward-button" aria-label="Avancer de 10 secondes" class="w-12 h-12 flex items-center justify-center text-xl text-white/80 hover:text-white transition">
+                                    <i class="fas fa-redo-alt"></i>
+                                </button>
+                            </div>
+                            <div class="flex justify-between items-center mt-8 w-full">
+                                <div class="hidden md:flex items-center space-x-3">
+                                    <i class="fas fa-volume-down text-gray-400"></i>
+                                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="w-full">
+                                    <i class="fas fa-volume-up text-gray-400"></i>
+                                </div>
+                                <div class="flex-1 md:flex-none flex justify-end md:ml-auto space-x-4">
+                                    <a href="https://open.spotify.com/show/3477q2jyE0640A8XkkDXCj" target="_blank" class="text-white hover:text-green-500 transition-colors">
+                                        <i class="fab fa-spotify text-2xl"></i>
+                                    </a>
+                                    <a href="https://podcasts.apple.com/us/podcast/se-x-eploration-podcasts-lucile-bach/id1807489334" target="_blank" class="text-white hover:text-gray-400 transition-colors">
+                                        <i class="fab fa-apple text-2xl"></i>
+                                    </a>
+                                    <a href="https://www.deezer.com/fr/show/1001788981?host=0&utm_campaign=clipboard-generic&utm_source=user_sharing&utm_content=talk_show-1001788981&deferredFl=1" target="_blank" class="text-white hover:text-pink-500 transition-colors">
+                                        <i class="fab fa-deezer text-2xl"></i>
+                                    </a>
+                                    <button id="download-button" class="text-white hover:text-custom-accent transition-colors">
+                                        <i class="fas fa-download text-2xl"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 w-full max-w-5xl mx-auto px-8 py-8">
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="Rechercher un épisode..." class="w-full p-4 rounded-3xl border border-gray-300 bg-white/80 backdrop-blur-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-custom-accent focus:ring-offset-1 shadow-md transition-all duration-300">
+                            <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="episodes-section" class="w-full ">
+                        <h3 class="text-2xl font-bold text-custom-dark text-center mb-6">Tous les épisodes</h3>
+                        <div id="episodes-container-wrapper" class="w-full min-h-[500px]">
+                            <div class="relative flex items-center justify-center w-full max-w-4xl mx-auto px-12 sm:px-16 md:px-20">
+                                <button id="prev-slide-button" class="absolute -left-1 sm:-left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-white/90 rounded-full shadow-xl text-custom-dark hover:bg-white transition disabled:opacity-40 disabled:cursor-not-allowed">
+                                    <i class="fas fa-arrow-left text-xl"></i>
+                                </button>
+                                <div id="carousel-viewport" class="relative w-full overflow-hidden">
+                                    <div id="carousel-track" class="flex gap-4 transition-transform duration-300"></div>
+                                </div>
+                                <button id="next-slide-button" class="absolute -right-1 sm:-right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center bg-white/90 rounded-full shadow-xl text-custom-dark hover:bg-white transition disabled:opacity-40 disabled:cursor-not-allowed">
+                                    <i class="fas fa-arrow-right text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="loading-spinner" class="text-center p-8">
+                    <i class="fas fa-spinner fa-spin text-3xl text-pink-800"></i>
+                    <p class="mt-4 text-gray-600">Chargement des épisodes...</p>
+                </div>
+            </section>
+            <div id="schedule-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black bg-opacity-30 transition-all duration-300 hidden opacity-0">
+                <div id="modal-content" class="glass-effect p-6 md:p-8 rounded-2xl shadow-xl w-full max-w-lg md:max-w-4xl transition-all duration-300 transform scale-95 opacity-0">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-2xl md:text-3xl font-light" style="color: #A37B73;">Prise de rendez-vous</h3>
+                        <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600 transition-colors duration-200" aria-label="Fermer la modale">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="h-[70vh] w-full relative">
+                        <div id="loading-spinner" class="absolute inset-0 flex flex-col items-center justify-center bg-white/80 z-10 hidden text-center px-4">
+                            <i class="fas fa-spinner fa-spin text-4xl text-custom-accent mb-4"></i>
+                            <p class="text-lg font-medium text-custom-dark">Chargement de l’agenda sécurisé…</p>
+                        </div>
+                        <iframe id="acuity-iframe" class="w-full h-full border-0 rounded-lg hidden" title="Module de prise de rendez-vous Acuity Scheduling"></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-gray-100/60 border-t border-gray-200/80">
+            <div class="container mx-auto px-4 py-8 text-center text-gray-600">
+                <p>© 2024 sexo-logique.com - Chloé François - Tous droits réservés.</p>
+            </div>
+        </footer>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let e = e => {
+                let t = Math.floor(e / 60)
+                  , a = Math.floor(e % 60).toString().padStart(2, "0");
+                return `${t}:${a}`
+            }
+            ;
+            function t() {
+                u.title.innerHTML = '<span class="text-lg text-red-400" style="font-size: 1.125rem;"><i class="fas fa-exclamation-triangle mr-2"></i> Erreur de lecture</span>',
+                u.date.textContent = "Le lecteur est indisponible pour l'instant. Veuillez r\xe9essayer plus tard.",
+                u.playPauseBtn.disabled = !0,
+                u.rewindBtn.disabled = !0,
+                u.forwardBtn.disabled = !0,
+                u.seekBar.disabled = !0,
+                u.playPauseBtn.style.cursor = "not-allowed",
+                u.seekBar.style.cursor = "not-allowed"
+            }
+            function a() {
+                u.playPauseBtn.disabled = !1,
+                u.rewindBtn.disabled = !1,
+                u.forwardBtn.disabled = !1,
+                u.seekBar.disabled = !1,
+                u.playPauseBtn.style.cursor = "pointer",
+                u.seekBar.style.cursor = "pointer"
+            }
+            let i = document.getElementById("main-header")
+              , s = document.getElementById("mobile-menu-button")
+              , d = document.getElementById("mobile-menu");
+            if (i && window.addEventListener("scroll", () => {
+                i.classList.toggle("header-scrolled", window.scrollY > 50)
+            }
+            ),
+            s && d) {
+                let n = s.querySelector("i");
+                s.addEventListener("click", () => {
+                    let e = d.classList.toggle("hidden");
+                    n && (n.className = e ? "fas fa-bars" : "fas fa-times")
+                }
+                )
+            }
+            let l = [{
+                id: "a4919ff5e066f2e6237abbb6dc80f4500810ec91",
+                title: "Honte sexuelle : poison intime, h\xe9ritage collectif, injonctions ?",
+                date: "28 ao\xfbt 2025",
+                audio_url: "https://audio.ausha.co/zrwMKhln7Mdp.mp3?t=1754388449"
+            }, {
+                id: "5aa4d09e8197fd3fcf681d7216f253e1366db439",
+                title: "Sexualit\xe9 et m\xe9decine : quand les professionnels nous \xe9coutent pas ou peu...",
+                date: "21 ao\xfbt 2025",
+                audio_url: "https://audio.ausha.co/ggR1Ks5RMYEO.mp3?t=1754384588"
+            }, {
+                id: "7c7fd25cc16b2e4e7314204e30e9e422d4dbd36e",
+                title: "Apr\xe8s l’IVG, comment retrouver une sexualit\xe9 libre ?",
+                date: "14 ao\xfbt 2025",
+                audio_url: "https://audio.ausha.co/VLZe1HJ1PnKO.mp3?t=1754386328"
+            }, {
+                id: "76f73283d9770347fa936f7e6507986fc53abd57",
+                title: "Sexualit\xe9 apr\xe8s une grossesse ou une fausse couche ?",
+                date: "7 ao\xfbt 2025",
+                audio_url: "https://audio.ausha.co/ZRq5Zu1x8XrK.mp3?t=1754383254"
+            }, {
+                id: "d0e7a2c4b93943b6a7a854a0e4aa833cdfb9dad9",
+                title: "Contraception & sexualit\xe9 : outil de libert\xe9 ou pi\xe8ge \xe0 d\xe9sir ?",
+                date: "31 juillet 2025",
+                audio_url: "https://audio.ausha.co/8Px0khjr6XwO.mp3?t=1753438127"
+            }, {
+                id: "6b87dfa675180284398918b7f1074dba3d259560",
+                title: "Sexualit\xe9 & troubles hormonaux - quand le d\xe9sir fait le grand 8 !",
+                date: "24 juillet 2025",
+                audio_url: "https://audio.ausha.co/ew2VKhdYeDa3.mp3?t=1752740003"
+            }, {
+                id: "0b502e76494ef0a1ce24f9772821969cbfa803ac",
+                title: "Plaisir et menstruations : jouir au rythme de ton corps !",
+                date: "17 juillet 2025",
+                audio_url: "https://audio.ausha.co/KjOpJS7eMV1O.mp3?t=1752738126"
+            }, {
+                id: "4e12489c8cdd8cf73bbfb7d5ea55094203ef9935",
+                title: "\xc9veil sexuel, orgasme & \xe2ge : Et si le plaisir n’avait pas de date limite ?",
+                date: "10 juillet 2025",
+                audio_url: "https://audio.ausha.co/kgzZKsqrYZGD.mp3?t=1751471484"
+            }, {
+                id: "c31bf7057808460dd3553923b7e5c7869d13417c",
+                title: "Tu veux booster ta libido ? Commence par ton assiette.",
+                date: "3 juillet 2025",
+                audio_url: "https://audio.ausha.co/ggR1KsvpX3z3.mp3?t=1751363091"
+            }, {
+                id: "5dd1c24ae9373320f5cf39efcf4f55d11e945fb6",
+                title: "Fantasmes, porno VS r\xe9alit\xe9 : quoi en penser ?",
+                date: "19 juin 2025",
+                audio_url: "https://audio.ausha.co/5Axg9TnrkD01.mp3?t=1750164376"
+            }, {
+                id: "54c4dc10fce784645194776dac784ef12f5fe984",
+                title: "Endom\xe9triose & sexualit\xe9 : et si on changeait le r\xe9cit ?",
+                date: "12 juin 2025",
+                audio_url: "https://audio.ausha.co/KjOpJSR5AeNp.mp3?t=1749565453"
+            }, {
+                id: "30fba06229868bbb3a66fef75fc111a211cdfaf2",
+                title: "Handicap et sexualit\xe9 : des clich\xe9s qui p\xe8sent lourd ?",
+                date: "5 juin 2025",
+                audio_url: "https://audio.ausha.co/Ne8LRCDZ7O35.mp3?t=1749130793"
+            }, {
+                id: "ae81af81b95f67de48829ec158cbb8a6e1a3d091",
+                title: "Traumas, sexualit\xe9 et h\xe9ritages invisibles : \xe7a laisse des traces ?",
+                date: "22 mai 2025",
+                audio_url: "https://audio.ausha.co/DeakQCk7Zmga.mp3?t=1747919638"
+            }, {
+                id: "913a96b40aa1b96b90cd81afc9068e4e6f68eae7",
+                title: "Vaginisme : Quand le corps dit non",
+                date: "15 mai 2025",
+                audio_url: "https://audio.ausha.co/xAYEKTr8LpXn.mp3?t=1747295274"
+            }, {
+                id: "57c28f4b01246b62c30bdf7858fe9ef50b21549e",
+                title: "M\xe9nopause & Andropause : le sexe, c’est pas fini !",
+                date: "8 mai 2025",
+                audio_url: "https://audio.ausha.co/LjRZ2S22kXQ6.mp3?t=1746694969"
+            }, {
+                id: "12ab223973c688809938d29d2cd1d50bdcdd97b9",
+                title: "Sexualit\xe9 et personnes \xe2g\xe9es, mythe ou r\xe9alit\xe9 ?",
+                date: "24 avril 2025",
+                audio_url: "https://audio.ausha.co/40G8RsO1e6m7.mp3?t=1745498673"
+            }, {
+                id: "1021095b479e204ca9812c478b4dbac621abb50a",
+                title: "Bien-\xeatre du couple et sommeil. Comment matcher les deux ?",
+                date: "17 avril 2025",
+                audio_url: "https://audio.ausha.co/6wd7jhl5a074.mp3?t=1744901845"
+            }, {
+                id: "94f4cd2cf0fbcc6ab6462b2f58115c5a99c72298",
+                title: "Vie de couple harmonieuse, sexualit\xe9 \xe9panouie. Comment faire?",
+                date: "11 avril 2025",
+                audio_url: "https://audio.ausha.co/00qYMsEggqJE.mp3?t=1744365390"
+            }, {
+                id: "40596b2640db49881e00c6b70ca1645797152af5",
+                title: "La disparit\xe9 dans la vie sexuelle entre une femme et un homme ?",
+                date: "9 avril 2025",
+                audio_url: "https://audio.ausha.co/BqxzGKSXxzpj.mp3?t=1744187374"
+            }];
+            async function c() {
+                try {
+                    let e = await fetch(`https://helpful-tapioca-011b0a.netlify.app/.netlify/functions/get-episodes?podcastId=${r}`);
+                    if (!e.ok)
+                        throw Error(`API Error: ${e.statusText}`);
+                    return await e.json()
+                } catch (t) {
+                    return console.log("%c Donn\xe9es Episodes Indisponibles %c\n\n%c► Le serveur n'a pas r\xe9pondu.\n%c► Utilisation des donn\xe9es de secours.", "background: linear-gradient(to right, #d32f2f, #c2185b); color: white; padding: 4px 10px; border-radius: 5px; font-weight: bold;", "", "color: #ffab40;", "color: #4caf50;"),
+                    l
+                }
+            }
+            let r = "Vxg5ls9jY0D4"
+              , u = {
+                title: document.getElementById("player-title"),
+                date: document.getElementById("player-date"),
+                seekBar: document.getElementById("seek-bar"),
+                currentTime: document.getElementById("current-time"),
+                totalDuration: document.getElementById("total-duration"),
+                playPauseBtn: document.getElementById("play-pause-button"),
+                playPauseIcon: document.getElementById("play-pause-icon"),
+                rewindBtn: document.getElementById("rewind-button"),
+                forwardBtn: document.getElementById("forward-button"),
+                volumeSlider: document.getElementById("volume-slider"),
+                downloadBtn: document.getElementById("download-button")
+            };
+            document.getElementById("carousel-viewport");
+            let o = document.getElementById("carousel-track"), p = document.getElementById("prev-slide-button"), f = document.getElementById("next-slide-button"), m = document.getElementById("loading-spinner"), h = document.getElementById("podcast-content"), $ = document.getElementById("search-input"), b = new Audio, _ = 0, g = 0, y = [], v, x = document.getElementById("schedule-modal"), E = document.getElementById("modal-content"), L = document.getElementById("acuity-iframe"), B = e => {
+                if (!e)
+                    return;
+                let t = x.querySelector("#loading-spinner");
+                t.classList.remove("hidden"),
+                L.classList.add("hidden"),
+                L.src = e,
+                x.classList.remove("hidden"),
+                setTimeout( () => {
+                    x.classList.remove("opacity-0"),
+                    E.classList.remove("scale-95", "opacity-0")
+                }
+                , 10)
+            }
+            , w = () => {
+                x.classList.add("opacity-0"),
+                E.classList.add("scale-95", "opacity-0"),
+                setTimeout( () => {
+                    x.classList.add("hidden"),
+                    L.src = ""
+                }
+                , 300)
+            }
+            ;
+            function I(e) {
+                let t = document.getElementById("player-loading-spinner");
+                e ? (u.playPauseIcon.classList.add("hidden"),
+                t.classList.remove("hidden"),
+                u.playPauseBtn.disabled = !0) : (t.classList.add("hidden"),
+                u.playPauseIcon.classList.remove("hidden"),
+                u.playPauseBtn.disabled = !1)
+            }
+            function k() {
+                if (b.paused) {
+                    let e = b.play();
+                    void 0 !== e && e.catch(e => {
+                        "AbortError" !== e.name && (console.error("Erreur de lecture :", e),
+                        t())
+                    }
+                    )
+                } else
+                    b.pause()
+            }
+            function j() {
+                let e = document.getElementById("play-pause-icon");
+                e.classList.remove("fa-pause"),
+                e.classList.add("fa-play"),
+                e.setAttribute("data-icon", "play")
+            }
+            function S() {
+                let e = document.getElementById("play-pause-icon");
+                e.classList.remove("fa-play"),
+                e.classList.add("fa-pause"),
+                e.setAttribute("data-icon", "pause")
+            }
+            function C() {
+                _ < y.length - 1 ? q(_ + 1, !0) : (b.pause(),
+                j())
+            }
+            function q(e, t=!1) {
+                let a = y[e];
+                if (!a)
+                    return;
+                _ = e,
+                u.title.textContent = a.title,
+                u.date.textContent = `${a.date} - Lucile Bach & Chlo\xe9 Fran\xe7ois`,
+                b.src = a.audio_url,
+                t ? b.addEventListener("canplay", () => {
+                    let e = b.play();
+                    void 0 !== e && e.catch(e => {
+                        "AbortError" !== e.name && (console.error("Erreur de lecture automatique :", e),
+                        j())
+                    }
+                    )
+                }
+                , {
+                    once: !0
+                }) : (b.pause(),
+                j()),
+                A();
+                let i = Math.floor(_ / 5);
+                i !== g && P(i),
+                D()
+            }
+            function A() {
+                Array.from(o.querySelectorAll(".episode-card")).forEach( (e, t) => {
+                    let a = Array.from(o.querySelectorAll(".episode-card")).indexOf(e);
+                    a === _ ? e.classList.add("active-episode") : e.classList.remove("active-episode")
+                }
+                )
+            }
+            function T(e) {
+                let t = document.getElementById("carousel-track")
+                  , a = document.getElementById("prev-slide-button")
+                  , i = document.getElementById("next-slide-button");
+                if (t.innerHTML = "",
+                0 === e.length) {
+                    let s = document.createElement("div");
+                    s.className = "flex flex-col items-center justify-center h-full w-full py-16 text-center",
+                    s.innerHTML = ` <i class="fas fa-microphone-alt text-6xl text-gray-300 mb-4"></i><p class="text-xl text-gray-500 font-semibold mb-2">Aucun \xe9pisode trouv\xe9</p><p class="text-gray-400 max-w-sm"> Veuillez essayer un autre mot-cl\xe9 ou r\xe9initialiser votre recherche. </p> `,
+                    t.appendChild(s),
+                    a.disabled = !0,
+                    i.disabled = !0;
+                    return
+                }
+                let d;
+                e.forEach( (e, a) => {
+                    a % 5 == 0 && ((d = document.createElement("div")).className = "slide-group",
+                    t.appendChild(d));
+                    let i = document.createElement("div");
+                    i.className = "episode-card-wrapper";
+                    let s = document.createElement("div");
+                    s.className = "relative p-4 bg-white/50 rounded-xl shadow-sm flex flex-col h-full cursor-pointer hover:bg-white/80 transition group episode-card";
+                    let n = V(e.title);
+                    s.innerHTML = ` <div class="flex items-center space-x-4 mb-3"><div class="w-16 h-16 rounded-md backdrop-blur-sm bg-white/30 flex items-center justify-center text-custom-accent text-3xl flex-shrink-0"><i class="${n}"></i></div><div class="flex-1"><p class="font-semibold text-custom-dark leading-tight whitespace-nowrap overflow-hidden text-ellipsis">${e.title}</p><span class="text-xs text-gray-600">${e.date}</span></div></div><div class="play-overlay"><i class="fas fa-play-circle text-white text-4xl"></i></div> `;
+                    let l = y.findIndex(t => t.id === e.id);
+                    s.addEventListener("click", () => {
+                        q(l, !0)
+                    }
+                    ),
+                    i.appendChild(s),
+                    d.appendChild(i)
+                }
+                ),
+                A(),
+                P(g),
+                D()
+            }
+            function P(e) {
+                let t = o.querySelectorAll(".slide-group").length;
+                e < 0 && (e = 0),
+                e >= t && (e = t - 1),
+                g = e;
+                let a = o.querySelector(".slide-group");
+                if (!a)
+                    return;
+                let i = window.getComputedStyle(o)
+                  , s = parseFloat(i.gap) || 0
+                  , d = a.offsetWidth + s
+                  , n = -g * d;
+                o.style.transform = `translateX(${n}px)`,
+                D()
+            }
+            function D() {
+                let e = Math.ceil(o.querySelectorAll(".episode-card").length / 5);
+                p.disabled = 0 === g,
+                f.disabled = g >= e - 1
+            }
+            function K() {
+                P(g - 1)
+            }
+            function M() {
+                P(g + 1)
+            }
+            function V(e) {
+                let t = e.toLowerCase();
+                return t.includes("trauma") || t.includes("psycho") || t.includes("h\xe9ritage") ? "fas fa-brain" : t.includes("handicap") ? "fas fa-universal-access" : t.includes("iv-g") || t.includes("fausse couche") || t.includes("grossesse") || t.includes("maternit\xe9") || t.includes("post-partum") || t.includes("pma") || t.includes("infertilit\xe9") ? "fas fa-baby-carriage" : t.includes("contraception") || t.includes("pilule") || t.includes("st\xe9rilet") || t.includes("pr\xe9servatif") ? "fas fa-user-shield" : t.includes("ist") || t.includes("mst") || t.includes("vih") || t.includes("hpv") || t.includes("d\xe9pistage") ? "fas fa-shield-virus" : t.includes("hormon") || t.includes("m\xe9nopause") || t.includes("andropause") ? "fas fa-seedling" : t.includes("r\xe8gles") || t.includes("menstruations") || t.includes("cycle") ? "fas fa-tint" : t.includes("endom\xe9triose") || t.includes("douleurs") || t.includes("maladie") || t.includes("syndrome") || t.includes("vaginisme") || t.includes("dyspareunie") ? "fas fa-ribbon" : t.includes("troubles") || t.includes("dysfonction") || t.includes("impuissance") || t.includes("\xe9jaculation") || t.includes("anorgasmie") ? "fas fa-exclamation-triangle" : t.includes("anxi\xe9t\xe9") || t.includes("stress") || t.includes("phobie") ? "fas fa-cloud-bolt" : t.includes("libido") || t.includes("d\xe9sir") ? "fas fa-fire" : t.includes("plaisir") || t.includes("orgasme") || t.includes("jouir") || t.includes("\xe9rotisme") || t.includes("sensation") || t.includes("masturbation") ? "fas fa-heart" : t.includes("fantasmes") || t.includes("porno") || t.includes("imagination") || t.includes("r\xeaves") || t.includes("bdsm") ? "fas fa-mask" : t.includes("p\xe9n\xe9tration") || t.includes("fellation") || t.includes("cunnilingus") || t.includes("rapport sexuel") || t.includes("co\xeft") ? "fas fa-bed" : t.includes("\xe2ge") || t.includes("\xe2g\xe9") || t.includes("vieillissement") || t.includes("anatomie") || t.includes("physiologie") || t.includes("pubert\xe9") ? "fas fa-dna" : t.includes("lgbtq") || t.includes("genre") || t.includes("identit\xe9") || t.includes("orientation") || t.includes("non-binaire") || t.includes("trans") || t.includes("homosexualit\xe9") || t.includes("bisexualit\xe9") || t.includes("pansexualit\xe9") ? "fas fa-rainbow" : t.includes("corps") || t.includes("image de soi") || t.includes("acceptation") || t.includes("estime de soi") || t.includes("nudit\xe9") ? "fas fa-spa" : t.includes("rupture") || t.includes("s\xe9paration") || t.includes("divorce") || t.includes("c\xe9libat") || t.includes("infid\xe9lit\xe9") ? "fas fa-heart-crack" : t.includes("communication") || t.includes("dialogue") || t.includes("partenaire") || t.includes("conflits") || t.includes("couple") ? "fas fa-comments" : t.includes("consentement") || t.includes("respect") || t.includes("abus") || t.includes("violences") || t.includes("harc\xe8lement") ? "fas fa-handshake-slash" : t.includes("parent") || t.includes("enfant") || t.includes("famille") ? "fas fa-hands-holding-child" : t.includes("polyamour") || t.includes("\xe9changisme") ? "fas fa-people-arrows" : t.includes("\xe9ducation") || t.includes("jeunes") || t.includes("ado") || t.includes("premi\xe8re fois") ? "fas fa-graduation-cap" : t.includes("mythes") || t.includes("tabous") || t.includes("croyances") || t.includes("id\xe9es re\xe7ues") ? "fas fa-question-circle" : t.includes("conseils") || t.includes("astuces") || t.includes("guide") || t.includes("savoir") ? "fas fa-lightbulb" : t.includes("m\xe9decine") || t.includes("professionnels") || t.includes("sant\xe9") || t.includes("consultation") || t.includes("sexoth\xe9rapie") ? "fas fa-user-doctor" : t.includes("histoire") || t.includes("historique") || t.includes("culture") ? "fas fa-book-open" : t.includes("sexualit\xe9") ? "fas fa-podcast" : "fas fa-microphone-alt"
+            }
+            async function O() {
+                try {
+                    if (!(y = await c()) || 0 === y.length)
+                        throw Error("Aucun \xe9pisode n'a \xe9t\xe9 charg\xe9 ou la r\xe9cup\xe9ration a \xe9chou\xe9.");
+                    v = new Fuse(y,{
+                        keys: ["title", "description"],
+                        threshold: .4,
+                        includeScore: !0
+                    }),
+                    $.addEventListener("input", e => {
+                        let t = e.target.value.trim();
+                        if (t.length > 2) {
+                            let a = v.search(t);
+                            T(a.map(e => e.item))
+                        } else
+                            T(y)
+                    }
+                    ),
+                    window.addEventListener("resize", () => {
+                        P(g),
+                        D()
+                    }
+                    ),
+                    T(y),
+                    q(0)
+                } catch (e) {
+                    console.error(e),
+                    t()
+                } finally {
+                    m.style.display = "none",
+                    h.classList.remove("hidden"),
+                    h.style.display = "flex"
+                }
+            }
+            L.addEventListener("load", () => {
+                let e = x.querySelector("#loading-spinner");
+                e.classList.add("hidden"),
+                L.classList.remove("hidden")
+            }
+            ),
+            document.body.addEventListener("click", e => {
+                let t = e.target.closest(".open-schedule-modal")
+                  , a = e.target.closest("#close-modal-btn");
+                t ? (e.preventDefault(),
+                B(t.dataset.src)) : (a || e.target === x) && w()
+            }
+            ),
+            document.addEventListener("keydown", e => {
+                "Escape" !== e.key || x.classList.contains("hidden") || w()
+            }
+            ),
+u.downloadBtn.addEventListener("click", () => {
+                if (typeof _ !== 'undefined') {
+                    const downloadUrl = `https://helpful-tapioca-011b0a.netlify.app/telecharger-episode?episodeIndex=${_}`;
+                    
+                    const link = document.createElement("a");
+                    link.href = downloadUrl;
+                    
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            });
+            b.addEventListener("error", t),
+            b.addEventListener("timeupdate", () => {
+                b.duration && (u.seekBar.value = b.currentTime / b.duration * 100,
+                u.currentTime.textContent = e(b.currentTime))
+            }
+            ),
+            b.addEventListener("loadedmetadata", () => {
+                u.totalDuration.textContent = e(b.duration)
+            }
+            ),
+            b.addEventListener("ended", () => {
+                C()
+            }
+            ),
+            b.addEventListener("play", () => {
+                S()
+            }
+            ),
+            b.addEventListener("pause", () => {
+                j()
+            }
+            ),
+            b.addEventListener("loadstart", () => I(!0)),
+            b.addEventListener("playing", () => I(!1)),
+            b.addEventListener("waiting", () => I(!0)),
+            b.addEventListener("canplay", () => I(!1)),
+            b.addEventListener("pause", () => I(!1)),
+            b.addEventListener("stalled", () => I(!1)),
+            b.addEventListener("error", () => I(!1)),
+            u.playPauseBtn.addEventListener("click", k),
+            u.rewindBtn.addEventListener("click", () => {
+                b.currentTime -= 10
+            }
+            ),
+            u.forwardBtn.addEventListener("click", () => {
+                b.currentTime += 10
+            }
+            ),
+            u.volumeSlider.addEventListener("input", e => {
+                b.volume = e.target.value
+            }
+            ),
+            u.seekBar.addEventListener("input", e => {
+                b.duration && (b.currentTime = e.target.value / 100 * b.duration)
+            }
+            ),
+            p.addEventListener("click", K),
+            f.addEventListener("click", M),
+            O()
+        }
+        );
+    </script>
+</html>

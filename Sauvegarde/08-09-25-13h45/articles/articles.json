@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Sexualité et Parentalité",
+    "excerpt": "L'arrivée d'un enfant bouleverse l'intimité. Comment réussir à maintenir une sexualité et de l'érotisme, sans pression ?",
+    "date": "2025-08-31",
+    "author": "Chloé François",
+    "url": "sexualite-et-parentalite.html"
+  },
+    {
+    "id": 2,
+    "category": [
+      "Couple"
+    ],
+    "title": "Sexualité",
+    "excerpt": "L'arrivée d'un enfant bouleverse l'intimité. Comment réussir à maintenir une sexualité et de l'érotisme, sans pression ?",
+    "date": "2025-12-31",
+    "author": "Chloé François",
+    "url": "sexualite.html"
+  }
+]

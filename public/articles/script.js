@@ -1,0 +1,202 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const header = document.getElementById("main-header");
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (header) {
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("header-scrolled", window.scrollY > 50);
+        });
+    }
+    if (mobileMenuButton && mobileMenu) {
+        const icon = mobileMenuButton.querySelector("i");
+        const closeMenu = () => {
+            mobileMenu.classList.add("hidden");
+            if (icon) icon.className = "fas fa-bars";
+        };
+        mobileMenuButton.addEventListener("click", () => {
+            const isHidden = mobileMenu.classList.toggle("hidden");
+            if (icon) icon.className = isHidden ? "fas fa-bars" : "fas fa-times";
+		const isExpanded = !isHidden;
+		mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+		mobileMenuButton.setAttribute('aria-label', isExpanded ? 'Fermer le menu' : 'Ouvrir le menu');	
+        });
+        mobileMenu.addEventListener("click", (e) => {
+            if (e.target.closest("a") || e.target.closest("button")) {
+                closeMenu();
+            }
+        });
+    }
+
+const scheduleModal = document.getElementById("schedule-modal");
+const iframe = document.getElementById("acuity-iframe");
+const loadingSpinner = document.getElementById("loading-spinner");
+iframe.addEventListener("load", () => {
+    loadingSpinner.classList.add("hidden");
+    iframe.classList.remove("hidden");
+});
+scheduleModal.addEventListener("close", () => {
+    iframe.src = "about:blank";
+});
+document.body.addEventListener("click", (e) => {
+    const openBtn = e.target.closest(".open-schedule-modal");
+    if (openBtn) {
+        e.preventDefault();
+        const src = openBtn.dataset.src;
+        if (!src) return;
+        loadingSpinner.classList.remove("hidden");
+        iframe.classList.add("hidden");
+        iframe.src = src;
+        scheduleModal.showModal();
+    }
+});
+
+const copyUrlButton = document.getElementById('copy-url-button');
+if (copyUrlButton) {
+    const pageUrl = window.location.href.split('?')[0].split('#')[0];
+    const articleTitle = document.title;
+    const fbShare = document.getElementById('fb-share');
+    const twShare = document.getElementById('tw-share');
+    const liShare = document.getElementById('li-share');
+    const mailShare = document.getElementById('mail-share');
+
+    if (fbShare) {
+        fbShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+    }
+    if (twShare) {
+        twShare.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(articleTitle)}`;
+    }
+    if (liShare) {
+        liShare.href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(pageUrl)}&title=${encodeURIComponent(articleTitle)}`;
+    }
+    if (mailShare) {
+        mailShare.addEventListener('click', (e) => {
+            e.preventDefault();
+            const subject = encodeURIComponent(articleTitle);
+            const body = encodeURIComponent(`Je te recommande cet article : ${pageUrl}`);
+            window.open(`mailto:?subject=${subject}&body=${body}`, '_blank');
+        });
+    }
+
+    copyUrlButton.addEventListener('click', () => {
+        if (copyUrlButton.classList.contains('copied')) return; 
+        navigator.clipboard.writeText(pageUrl).then(() => {
+            copyUrlButton.classList.add('copied');
+            setTimeout(() => copyUrlButton.classList.remove('copied'), 2500);
+        }).catch(err => {
+            console.error('Erreur : Impossible de copier le lien', err);
+            const textCopy = copyUrlButton.querySelector('.text-copy');
+            if (textCopy) {
+                textCopy.textContent = "Erreur de copie";
+                setTimeout(() => { textCopy.textContent = "Copier le lien"; }, 2500);
+            }
+        });
+    });
+}
+ 
+const latestArticlesList = document.getElementById('latest-articles-list');
+if (latestArticlesList) {
+    const card = latestArticlesList.closest('.card');
+    const title = card.querySelector('h3');
+
+    // Conteneur flex
+    const titleContainer = document.createElement('div');
+    titleContainer.className = 'flex justify-between items-baseline';
+
+    // Bouton de rafraîchissement
+    const refreshButton = document.createElement('button');
+    refreshButton.className = 'text-gray-400 hover:text-custom-dark transition-colors duration-200 text-base p-2 mb-4';
+    refreshButton.setAttribute('aria-label', 'Rafraîchir les articles');
+    refreshButton.innerHTML = '<i class="fas fa-sync-alt"></i>';
+
+    // Insère dans le DOM
+    title.replaceWith(titleContainer);
+    titleContainer.appendChild(title);
+    titleContainer.appendChild(refreshButton);
+
+    const normalizeUrl = url => url.replace(/\/$/, "");
+    const currentPath = normalizeUrl(window.location.pathname.split('/').pop());
+
+    const loadRandomArticles = () => {
+        // 1. Active spinner
+        refreshButton.disabled = true;
+        refreshButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+        fetch('../articles.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Erreur réseau');
+                return response.json();
+            })
+            .then(articles => {
+                const filteredArticles = articles.filter(article => {
+                    const articlePath = normalizeUrl(article.url.split('/').pop());
+                    return articlePath !== currentPath;
+                });
+
+                const getRandomArticles = (array, count) => {
+                    const shuffled = [...array].sort(() => 0.5 - Math.random());
+                    return shuffled.slice(0, count);
+                };
+
+                const selectedArticles = getRandomArticles(filteredArticles, 6);
+                let articlesHtml = '';
+                if (selectedArticles.length > 0) {
+                    selectedArticles.forEach(article => {
+                        articlesHtml += `
+                            <li>
+                                <a href="${article.url}" class="latest-article-card">
+                                    <div>
+                                        <p class="article-title">${article.title}</p>
+                                        <p class="article-category">${article.category}</p>
+                                    </div>
+                                </a>
+                            </li>`;
+                    });
+                } else {
+                    articlesHtml = '<li><p>Pas d\'autres articles disponibles.</p></li>';
+                }
+                latestArticlesList.innerHTML = articlesHtml;
+            })
+            .catch(error => {
+                console.error("Impossible de charger les articles :", error);
+                latestArticlesList.innerHTML = '<li>Impossible de charger les suggestions.</li>';
+            })
+            .finally(() => {
+                // 2. Remet l’icône après le chargement
+                refreshButton.disabled = false;
+                refreshButton.innerHTML = '<i class="fas fa-sync-alt"></i>';
+            });
+    };
+
+    refreshButton.addEventListener('click', loadRandomArticles);
+    loadRandomArticles();
+}
+
+	
+	
+const mailBtn = document.getElementById('mail-btn');
+const contactModal = document.getElementById('contact-modal');
+const copyEmailBtn = document.getElementById('copy-email-btn');
+const copySuccessMsg = document.getElementById('copy-success-msg');
+
+if (mailBtn && contactModal && copyEmailBtn && copySuccessMsg) {
+    const email = 'contact.sexologique@gmail.com';
+    mailBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        contactModal.showModal();
+    });   
+    contactModal.addEventListener('click', (e) => {
+        if (e.target === contactModal) {
+            contactModal.close();
+        }
+    });
+    copyEmailBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(email)
+            .then(() => {
+                copySuccessMsg.classList.remove('opacity-0');
+                setTimeout(() => copySuccessMsg.classList.add('opacity-0'), 2500);
+            })
+            .catch(err => console.error('Erreur de copie:', err));
+    });
+}
+	
+});		

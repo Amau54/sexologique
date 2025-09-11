@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Désir en sommeil : comprendre les blocages du couple",
+    "excerpt": "Pourquoi le désir disparaît parfois dans la relation ? Découvrez les causes fréquentes et les pistes pour le raviver en douceur.",
+    "date": "2025-08-31",
+    "author": "Chloé François",
+    "url": "desir-en-sommeil.html"
+  },
+  {
+    "id": 2,
+    "category": [
+      "Couple"
+    ],
+    "title": "Traumas invisibles et sexualité : quand le corps dit non",
+    "excerpt": "Un trauma, même ancien ou hérité, peut perturber la vie intime. Comment le reconnaître et s’en libérer ?",
+    "date": "2025-12-31",
+    "author": "Chloé François",
+    "url": "traumas-et-sexualite.html"
+  },
+  {
+    "id": 3,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Communication intime : les mots qui rapprochent",
+    "excerpt": "Parler de sexualité au sein du couple reste difficile. Découvrez des clés simples pour ouvrir le dialogue sans malaise.",
+    "date": "2025-09-15",
+    "author": "Chloé François",
+    "url": "communication-intime.html"
+  },
+  {
+    "id": 4,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Érotisme et imagination : stimuler la complicité",
+    "excerpt": "L’imaginaire joue un rôle clé dans le désir. Comment cultiver la fantaisie pour enrichir la sexualité du couple ?",
+    "date": "2025-09-22",
+    "author": "Chloé François",
+    "url": "erotisme-et-imagination.html"
+  },
+  {
+    "id": 5,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Parentalité et intimité : trouver un nouvel équilibre",
+    "excerpt": "L’arrivée d’un enfant bouleverse les repères amoureux. Comment préserver l’érotisme et l’intimité malgré la fatigue et le quotidien ?",
+    "date": "2025-10-01",
+    "author": "Chloé François",
+    "url": "parentalite-et-intimite.html"
+  },
+  {
+    "id": 6,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Sexualité après un choc : se reconstruire en douceur",
+    "excerpt": "Après un accident, une maladie ou une rupture, la sexualité change. Découvrez comment réapprivoiser son corps et son désir.",
+    "date": "2025-10-10",
+    "author": "Chloé François",
+    "url": "sexualite-apres-un-choc.html"
+  },
+  {
+    "id": 7,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Routine ou confort ? Quand la sexualité s’essouffle",
+    "excerpt": "La routine sécurise mais peut étouffer l’érotisme. Comment transformer le quotidien sans perdre la complicité ?",
+    "date": "2025-10-20",
+    "author": "Chloé François",
+    "url": "routine-et-sexualite.html"
+  },
+  {
+    "id": 8,
+    "category": [
+      "Couple & Dynamiques"
+    ],
+    "title": "Héritage émotionnel : l’influence transgénérationnelle sur le désir",
+    "excerpt": "Et si certaines peurs ou blocages sexuels ne vous appartenaient pas vraiment ? Explorez l’impact des transmissions familiales.",
+    "date": "2025-10-30",
+    "author": "Chloé François",
+    "url": "heritage-emotionnel-et-desir.html"
+  }
+]
