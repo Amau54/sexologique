@@ -4,6 +4,18 @@
     "category": [
       "Couple & Dynamiques"
     ],
+    "title": "Sommeil en Couple : Faut-il Sacrifier ses Nuits au Nom de l'Amour ?",
+    "excerpt": "Ronflements, rythmes décalés... Quand le lit devient une source de tension. Découvrez pourquoi dormir séparément n'est pas un échec, mais un acte de soin pour préserver votre couple.",
+    "date": "2025-09-19",
+    "author": "Chloé François",
+    "url": "retrouver-l-harmonie-quand-le-sommeil-nous-separe.html",
+    "iconClass": "fa-solid fa-moon"
+  },
+  {
+    "id": 2,
+    "category": [
+      "Couple & Dynamiques"
+    ],
     "title": "Désir en Berne ? Comment Inviter la Flamme à Revenir",
     "excerpt": "Votre sexualité est en veille ? Oubliez la pression de la performance. Apprenez à nourrir le lien et la tendresse au quotidien pour que le désir refleurisse de lui-même.",
     "date": "2025-08-31",
@@ -12,7 +24,7 @@
     "iconClass": "fa-solid fa-fire"
   },
   {
-    "id": 2,
+    "id": 3,
     "category": [
       "Développement Sexuel"
     ],
@@ -24,7 +36,7 @@
     "iconClass": "fa-solid fa-spa"
   },
   {
-    "id": 3,
+    "id": 4,
     "category": [
       "Couple & Dynamiques"
     ],
@@ -36,7 +48,7 @@
     "iconClass": "fa-solid fa-heart"
   },
   {
-    "id": 4,
+    "id": 5,
     "category": [
       "Formes Relationnelles"
     ],

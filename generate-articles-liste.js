@@ -42,7 +42,9 @@ const iconMap = {
     'fa-solid fa-ribbon': ['endométriose', 'douleurs', 'maladie', 'syndrome', 'vaginisme', 'dyspareunie', 'cancer'],
     'fa-solid fa-triangle-exclamation': ['troubles', 'dysfonction', 'impuissance', 'éjaculation', 'anorgasmie', 'panne'],
     'fa-solid fa-user-doctor': ['médecine', 'professionnels', 'santé', 'consultation', 'sexothérapie', 'gynécologue', 'urologue'],
-    'fa-solid fa-person-running': ['sport', 'fatigue', 'sommeil', 'alimentation', 'lifestyle', 'hygiène de vie'],
+    'fa-solid fa-person-running': ['sport', 'alimentation', 'lifestyle', 'hygiène de vie'],
+	'fa-solid fa-moon': ['sommeil', 'fatigue', 'nuit', 'insomnie', 'repos', 'rêve'],
+
 
     // Corps, cycle et développement
     'fa-solid fa-dna': ['âge', 'âgé', 'vieillissement', 'anatomie', 'physiologie', 'puberté', 'génétique', 'corps humain'],
