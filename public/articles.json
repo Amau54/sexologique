@@ -4,6 +4,30 @@
     "category": [
       "Couple & Dynamiques"
     ],
+    "title": "Différence de Désir dans le Couple : Comprendre et Gérer l'Écart de Libido",
+    "excerpt": "Le décalage de libido dans votre couple est source de frustration ? Explorez les raisons derrière cette différence de désir et découvrez des pistes douces, sans jugement, pour retrouver connexion et tendresse au-delà de la performance.",
+    "date": "2025-09-24",
+    "author": "Chloé François",
+    "url": "libido-desir-et-intimite.html",
+    "iconClass": "fa-solid fa-shield-virus"
+  },
+  {
+    "id": 2,
+    "category": [
+      "Dysfonctions & Troubles"
+    ],
+    "title": "Sexsomnie, Orgasmes Nocturnes",
+    "excerpt": "Rêves érotiques, gestes sexuels inconscients... Découvrez pourquoi votre corps s'éveille sans vous et ce que ces expériences révèlent sur le lien entre cerveau, sommeil et désir.",
+    "date": "2025-09-20",
+    "author": "Chloé François",
+    "url": "mon-corps-s-eveille-sans-moi-comprendre-les-mysteres-du-sommeil-intime.html",
+    "iconClass": "fa-solid fa-brain"
+  },
+  {
+    "id": 3,
+    "category": [
+      "Couple & Dynamiques"
+    ],
     "title": "Sommeil en Couple : Faut-il Sacrifier ses Nuits au Nom de l'Amour ?",
     "excerpt": "Ronflements, rythmes décalés... Quand le lit devient une source de tension. Découvrez pourquoi dormir séparément n'est pas un échec, mais un acte de soin pour préserver votre couple.",
     "date": "2025-09-19",
@@ -12,7 +36,7 @@
     "iconClass": "fa-solid fa-moon"
   },
   {
-    "id": 2,
+    "id": 4,
     "category": [
       "Couple & Dynamiques"
     ],
@@ -24,7 +48,7 @@
     "iconClass": "fa-solid fa-fire"
   },
   {
-    "id": 3,
+    "id": 5,
     "category": [
       "Développement Sexuel"
     ],
@@ -36,7 +60,7 @@
     "iconClass": "fa-solid fa-spa"
   },
   {
-    "id": 4,
+    "id": 6,
     "category": [
       "Couple & Dynamiques"
     ],
@@ -48,7 +72,7 @@
     "iconClass": "fa-solid fa-heart"
   },
   {
-    "id": 5,
+    "id": 7,
     "category": [
       "Formes Relationnelles"
     ],
