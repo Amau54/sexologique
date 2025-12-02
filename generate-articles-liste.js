@@ -50,6 +50,7 @@ const iconMap = {
     'fa-solid fa-dna': ['âge', 'âgé', 'vieillissement', 'anatomie', 'physiologie', 'puberté', 'génétique', 'corps humain'],
     'fa-solid fa-spa': ['corps', 'image de soi', 'acceptation', 'estime de soi', 'nudité', 'bien-être', 'beauté', 'complexes'],
     'fa-solid fa-droplet': ['règles', 'menstruations', 'cycle', 'syndrome prémenstruel', 'spm'],
+	'fa-solid fa-hand-holding-heart': ['tendresse', 'connexion', 'soin', 'relation', 'intimité', 'renaître', 'refleurir'],
     'fa-solid fa-seedling': ['hormone', 'ménopause', 'andropause', 'testostérone', 'oestrogène'],
     'fa-solid fa-universal-access': ['handicap', 'validisme', 'accessibilité'],
     
