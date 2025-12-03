@@ -447,53 +447,38 @@ fallbackTimeout = setTimeout(() => {
     let fuse;
 
 const palettes = [
-    // 0: Couple / Relation 
-    ['#c5878d', '#d9a0a6'],
-    // 1: Difficultés / Anxiété
-    ['#b0c4de', '#8a9ab4'],
-    // 2: Bien-être / Corps
-    ['#c9a89c', '#d6bab1'],
-    // 3: Communication / Psy
-    ['#9fa9d4', '#b5bfdf'],
-    // 4: Désir / Plaisir
-    ['#d8a097', '#b88179'],
-    // 5: Intimité / Douceur
-    ['#c9a9a6', '#b89b98'],
-    // 6: Exploration / Découverte
-    ['#b1a2b8', '#c9bed1'],
-    // 7: Confiance / Estime de soi
-    ['#d19a8d', '#b88378'],
-    // 8: Croissance / Thérapie
-    ['#a99f9a', '#c2b8b3'],
-    // 9: Conscience / Mental
-    ['#b1a2b8', '#9a8ca6'],
-    // 10:  Sécurité / Foyer 
-    ['#bfa28a', '#d2c4b5'],
-    // 11: Clarté / Solutions
-    ['#a4a9ad', '#8f9599'],
-    // 12: Sexualité / Parentalité
-    ['#a9c1d9', '#8fa8c2'],
-	// 13: Guides & Ressources
-	['#c3c8a8', '#b0b79a']
+    ['#9fa9d4', '#b5bfdf'], 
+['#b1a2b8', '#c9bed1'],
+    ['#3d85a6', '#87bdd4'], 
+ ['#5e7485', '#8c9da8'],
+    ['#dcb5b0', '#ebd0cc'], 
+    ['#e0a89e', '#f2c6bf'],
+    ['#c98e88', '#dec0bd'],
+    ['#d18d7e', '#e6b5aa'],
+    ['#d67b73', '#e89e97'],
+    ['#c96e76', '#e09aa0'] 
 ];
 
 const prioritizedKeywords = [
-    { paletteIndex: 4, keywords: ['flamme', 'fantasme', 'orgasme', 'érotisme', 'sensualité', 'passion'] },
-    { paletteIndex: 8, keywords: ['thérapie', 'guérison', 'solution', 'apaisement', 'croissance', 'évolution'] },
-    { paletteIndex: 5, keywords: ['intimité', 'vulnérabilité', 'connexion', 'tendresse', 'câlin'] },
-    { paletteIndex: 1, keywords: ['anxiété', 'stress', 'peur', 'blocage', 'douleur', 'traumatisme', 'honte'] },
-    { paletteIndex: 0, keywords: ['jalousie', 'conflit', 'rupture', 'engagement', 'rencontre'] },
-    { paletteIndex: 9, keywords: ['conscience', 'mental', 'méditation', 'spiritualité', 'lâcher-prise'] },
-    { paletteIndex: 12, keywords: ['sexualité', 'sexe', 'parentalité', 'enfant', 'éducation'] },
-    { paletteIndex: 3, keywords: ['communication', 'parler', 'dialogue', 'écouter', 'comprendre'] },
-    { paletteIndex: 7, keywords: ['confiance', 'estime', 'image', 'acceptation', 'affirmation', 'solitude'] },
-    { paletteIndex: 10, keywords: ['sécurité', 'attachement', 'routine', 'stabilité', 'foyer'] },
-    { paletteIndex: 11, keywords: ['logique', 'clarté', 'analyse', 'objectif', 'méthode'] },
-    { paletteIndex: 6, keywords: ['découverte', 'explorer', 'sexeploration', 'curiosité', 'identité', 'orientation', 'genre'] },
-    { paletteIndex: 0, keywords: ['couple', 'relation', 'amour'] },
-    { paletteIndex: 4, keywords: ['désir', 'plaisir', 'libido', 'masturbation'] },
-    { paletteIndex: 2, keywords: ['corps', 'santé', 'bien-être', 'anatomie', 'cycle', 'ménopause', 'grossesse', 'maladie'] },
-    { paletteIndex: 3, keywords: ['psycho', 'émotion', 'pensée'] }
+    // --- PRIORITÉ 1 : ROUGE / AMOUR ---
+    { paletteIndex: 9, keywords: ['amour', 'passion', 'couple', 'relation', 'flamme', 'rupture', 'jalousie', 'mariage'] },
+    { paletteIndex: 8, keywords: ['désir', 'plaisir', 'libido', 'fantasme', 'orgasme', 'érotisme', 'sexe', 'sexuelle'] },
+    
+    // --- PRIORITÉ 2 : ROSE / INTIMITÉ ---
+    { paletteIndex: 7, keywords: ['confiance', 'estime', 'honte', 'affirmation', 'image', 'soi'] },
+    { paletteIndex: 6, keywords: ['intimité', 'tendresse', 'câlin', 'vulnérabilité', 'douceur', 'connexion'] },
+
+    // --- PRIORITÉ 3 : NUDE / CORPS (Ex-Beige) ---
+    { paletteIndex: 5, keywords: ['corps', 'santé', 'douleur', 'vaginisme', 'anatomie', 'cycle', 'ménopause', 'grossesse'] },
+    { paletteIndex: 4, keywords: ['sécurité', 'attachement', 'routine', 'foyer', 'famille', 'parentalité', 'enfant', 'maison'] },
+
+    // --- PRIORITÉ 4 : VIOLET / PSY ---
+    { paletteIndex: 3, keywords: ['exploration', 'identité', 'genre', 'orientation', 'curiosité', 'découverte'] },
+    { paletteIndex: 2, keywords: ['communication', 'parler', 'dialogue', 'psycho', 'émotion', 'stress', 'anxiété', 'peur'] },
+
+    // --- PRIORITÉ 5 : BLEU / LOGIQUE ---
+    { paletteIndex: 1, keywords: ['mental', 'conscience', 'logique', 'analyse', 'comprendre', 'réflexion', 'cerveau'] },
+    { paletteIndex: 0, keywords: ['guide', 'ressource', 'livre', 'outil', 'méthode', 'solution', 'conseil', 'astuce', 'liste'] }
 ];
 
 function getPaletteIndexFromTitle(title) {
@@ -501,7 +486,6 @@ function getPaletteIndexFromTitle(title) {
     let foundMatches = [];
     for (const group of prioritizedKeywords) {
         for (const keyword of group.keywords) {
-            // Utilise une expression régulière pour trouver le mot-clé en tant que mot entier
             const regex = new RegExp('\\b' + keyword + '\\b');
             if (regex.test(lowerCaseTitle)) {
                 foundMatches.push({ 
@@ -518,7 +502,6 @@ function getPaletteIndexFromTitle(title) {
     return title.length % palettes.length;
 }
 
-// --- Fonctions d'aide pour la manipulation des couleurs ---
 function hexToHSL(hex) {
     let r = 0, g = 0, b = 0;
     if (hex.length == 4) {
@@ -559,46 +542,56 @@ function generateArticlePlaceholder(article, isList = false) {
     const iconClass = article.iconClass || 'fa-solid fa-book-open';
     const paletteIndex = getPaletteIndexFromTitle(article.title);
     const basePalette = palettes[paletteIndex];
-
-    // Algorithme de hachage pour une empreinte unique.
+    const uniqueString = (article.title || '') + (article.url || '') + (article.date || '');
+    
     let seed = 0;
-    const title = article.title || '';
-    for (let i = 0; i < title.length; i++) {
-        seed = ((seed << 5) - seed) + title.charCodeAt(i);
+    for (let i = 0; i < uniqueString.length; i++) {
+        seed = ((seed << 5) - seed) + uniqueString.charCodeAt(i);
         seed |= 0; 
     }
     
-    const color1 = basePalette[0];
-    let color2_hsl = hexToHSL(basePalette[1]);
+    // 1. Angle du dégradé : Très variable (0 à 360 degrés) pour changer la direction de la lumière
+    const angle = Math.abs(seed) % 360;
+    
+    // 2. Teinte (Hue) : Variation subtile (+/- 15 degrés) pour nuancer la couleur de base
+    const hueShift = (Math.abs(seed) % 30) - 15; 
 
-    // On fait varier la saturation et la luminosité de la 2ème couleur.
-    const saturationDelta = ((seed % 10) + 10) % 10 - 5;      // Plage de +/- 5%
-    const lightnessDelta = (((seed >> 8) % 8) + 8) % 8 - 4; // Plage de +/- 4%
+    // 3. Saturation & Luminosité : Variation pour créer de la texture (+/- 8%)
+    const satDelta = (Math.abs(seed >> 2) % 16) - 8; 
+    const lightDelta = (Math.abs(seed >> 3) % 10) - 5;
 
-    color2_hsl.s = Math.max(20, Math.min(95, color2_hsl.s + saturationDelta));
-    color2_hsl.l = Math.max(20, Math.min(95, color2_hsl.l + lightnessDelta));
+    // Couleur 1
+    let hsl1 = hexToHSL(basePalette[0]);
+    hsl1.h = (hsl1.h + hueShift + 360) % 360; 
+    hsl1.s = Math.max(15, Math.min(90, hsl1.s + satDelta)); 
+    const color1 = HSLToHex(hsl1);
 
-    const color2_modified = HSLToHex(color2_hsl);
+    // Couleur 2 (On décale légèrement différemment pour créer du contraste interne)
+    let hsl2 = hexToHSL(basePalette[1]);
+    hsl2.h = (hsl2.h + hueShift + 360) % 360; 
+    hsl2.l = Math.max(20, Math.min(95, hsl2.l + lightDelta));
+    const color2 = HSLToHex(hsl2);
 
-    const style = `background: linear-gradient(135deg, ${color1}, ${color2_modified});`;
+    const style = `background: linear-gradient(${angle}deg, ${color1}, ${color2});`;
     const containerClass = isList ? "list-card-placeholder" : "card-image-placeholder";
+    
     return `<div class="${containerClass}" style="${style}"><i class="${iconClass}"></i></div>`;
 }
 
-    function updateCarouselButtons() {
+function updateCarouselButtons() {
         requestAnimationFrame(() => {
             const viewport = document.getElementById('articles-carousel-viewport');
             if (!viewport || !prevButton || !nextButton) return;
-            prevButton.disabled = viewport.scrollLeft < 1;    
-            nextButton.disabled = viewport.scrollLeft >= viewport.scrollWidth - viewport.clientWidth - 1;
+            prevButton.disabled = viewport.scrollLeft <= 5;    
+            nextButton.disabled = viewport.scrollLeft >= (viewport.scrollWidth - viewport.clientWidth - 5);
         });
     }
     
     function updateListCarouselButtons() {
         requestAnimationFrame(() => {
             if (!listCarouselViewport || !prevListButton || !nextListButton) return;
-            prevListButton.disabled = listCarouselViewport.scrollLeft < 1;
-            nextListButton.disabled = listCarouselViewport.scrollLeft >= listCarouselViewport.scrollWidth - listCarouselViewport.clientWidth - 1;
+            prevListButton.disabled = listCarouselViewport.scrollLeft <= 5;
+            nextListButton.disabled = listCarouselViewport.scrollLeft >= (listCarouselViewport.scrollWidth - listCarouselViewport.clientWidth - 5);
         });
     }
 
@@ -724,13 +717,22 @@ function generateArticlePlaceholder(article, isList = false) {
             allArticles = articlesData.sort((a, b) => new Date(b.date) - new Date(a.date));
             fuse = new Fuse(allArticles, { keys: ['title', 'category', 'excerpt'], threshold: 0.4 });
 
-            if (allArticles.length === 0) {
+if (allArticles.length === 0) {
                 if(latestContainer) latestContainer.innerHTML = '<p class="text-center text-gray-600 col-span-full py-8">Aucun article à la une.</p>';
                 if(noResults) noResults.querySelector('p').textContent = 'Aucun article publié pour le moment.';
             } else {
                  displayLatestArticles(allArticles);
             }
-            handleResults(allArticles);
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialQuery = urlParams.get('q');
+            if (initialQuery && searchInput) {
+                searchInput.value = initialQuery;
+                const articlesToDisplay = fuse.search(initialQuery).map(result => result.item);
+                handleResults(articlesToDisplay);
+            } else {
+                handleResults(allArticles);
+            }
 
         } catch (error) {
             console.error('Erreur de chargement des articles:', error);
@@ -774,15 +776,27 @@ function setView(view) {
         };
     }
 
-    if (searchInput) {
+if (searchInput) {
         const debouncedSearch = debounce(() => {
             const query = searchInput.value.trim();
+            
+            // Ajout : Mise à jour de l'URL sans rechargement
+            const url = new URL(window.location);
+            if (query) {
+                url.searchParams.set('q', query);
+            } else {
+                url.searchParams.delete('q');
+            }
+            window.history.pushState({}, '', url);
+
             const articlesToDisplay = query ? fuse.search(query).map(result => result.item) : allArticles;
             handleResults(articlesToDisplay);
         }, 250);
         searchInput.addEventListener('input', debouncedSearch);
     }
     
+	
+	
     if (viewGridButton && viewListButton) {
         viewGridButton.addEventListener('click', () => setView('grid'));
         viewListButton.addEventListener('click', () => setView('list'));
@@ -806,7 +820,19 @@ function setView(view) {
         listCarouselViewport.addEventListener('scroll', debouncedUpdateAllButtons);
     }
     
-    window.addEventListener('resize', debouncedUpdateAllButtons);
+window.addEventListener('resize', debouncedUpdateAllButtons);
+
+    // Ajout : Navigation au clavier
+    document.addEventListener('keydown', (e) => {
+        if (document.activeElement === searchInput) return; // Ignorer si on tape dans la recherche
+        
+        const isListView = allArticlesSection.classList.contains('list-view-active');
+        if (e.key === 'ArrowLeft') {
+            isListView ? scrollToPrev(listCarouselViewport) : scrollToPrev(carouselViewport);
+        } else if (e.key === 'ArrowRight') {
+            isListView ? scrollToNext(listCarouselViewport) : scrollToNext(carouselViewport);
+        }
+    });
 
     initializeView();
     loadArticles();

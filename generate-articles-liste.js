@@ -30,61 +30,134 @@ const categoryMap = {
 };
 
 // 🗺️ Logique des icônes
-const iconMap = {
-    // Thèmes psychologiques et mentaux
-    'fa-solid fa-brain': ['trauma', 'psycho', 'héritage', 'mémoire', 'inconscient'],
-    'fa-solid fa-head-side-virus': ['santé mentale', 'charge mentale', 'dépression', 'burn-out'],
-    'fa-solid fa-cloud-bolt': ['anxiété', 'stress', 'phobie', 'peur', 'crise'],
+const iconRules = [
+    // 1. URGENCES & SANTÉ MENTALE FORTE (Priorité haute)
+    { 
+        icon: 'fa-solid fa-triangle-exclamation', 
+        keywords: ['urgence', 'danger', 'crise', 'suicide', 'violence', 'abus', 'viol', 'agression', 'harcèlement'] 
+    },
+    { 
+        icon: 'fa-solid fa-head-side-virus', 
+        keywords: ['burn-out', 'dépression', 'trauma', 'ptsd', 'toxique', 'charge mentale', 'bipolaire'] 
+    },
+    { 
+        icon: 'fa-solid fa-cloud-bolt', 
+        keywords: ['anxiété', 'stress', 'angoisse', 'phobie', 'peur', 'panique', 'blocage'] 
+    },
 
-    // Santé physique, maladies et conditions
-    'fa-solid fa-baby-carriage': ['iv-g', 'fausse couche', 'grossesse', 'maternité', 'post-partum', 'pma', 'infertilité', 'devenir parent'],
-    'fa-solid fa-shield-virus': ['ist', 'mst', 'vih', 'hpv', 'dépistage', 'infection', 'herpès', 'chlamydia'],
-    'fa-solid fa-ribbon': ['endométriose', 'douleurs', 'maladie', 'syndrome', 'vaginisme', 'dyspareunie', 'cancer'],
-    'fa-solid fa-triangle-exclamation': ['troubles', 'dysfonction', 'impuissance', 'éjaculation', 'anorgasmie', 'panne'],
-    'fa-solid fa-user-doctor': ['médecine', 'professionnels', 'santé', 'consultation', 'sexothérapie', 'gynécologue', 'urologue'],
-    'fa-solid fa-person-running': ['sport', 'alimentation', 'lifestyle', 'hygiène de vie'],
-	'fa-solid fa-moon': ['sommeil', 'fatigue', 'nuit', 'insomnie', 'repos', 'rêve'],
+    // 2. SANTÉ PHYSIQUE & CONDITIONS SPÉCIFIQUES
+    { 
+        icon: 'fa-solid fa-ribbon', // Ruban pour les causes/maladies
+        keywords: ['endométriose', 'sopk', 'cancer', 'tumeur', 'fibrome', 'kyste'] 
+    },
+    { 
+        icon: 'fa-solid fa-staff-snake', // Symbole médical plus clair que user-doctor
+        keywords: ['vaginisme', 'dyspareunie', 'vulvodynie', 'douleur', 'médical', 'gynéco', 'urologue', 'infection', 'mycose', 'cystite'] 
+    },
+    { 
+        icon: 'fa-solid fa-shield-virus', 
+        keywords: ['ist', 'mst', 'vih', 'sida', 'chlamydia', 'herpès', 'syphilis', 'hpv', 'papillomavirus', 'préservatif', 'protection'] 
+    },
+    { 
+        icon: 'fa-solid fa-baby-carriage', 
+        keywords: ['grossesse', 'enceinte', 'bébé', 'accouchement', 'post-partum', 'fausse couche', 'iv-g', 'avortement', 'fertilité', 'infertilité', 'pma', 'fiv'] 
+    },
 
+    // 3. CYCLE & BIOLOGIE
+    { 
+        icon: 'fa-solid fa-droplet', 
+        keywords: ['règles', 'menstruation', 'flux', 'sang', 'cycle', 'spm', 'tampon', 'cup'] 
+    },
+    { 
+        icon: 'fa-solid fa-seedling', 
+        keywords: ['ménopause', 'andropause', 'hormone', 'bouffée de chaleur', 'puberté', 'croissance', 'vieillissement'] 
+    },
+    { 
+        icon: 'fa-solid fa-dna', 
+        keywords: ['anatomie', 'génétique', 'biologie', 'corps humain', 'clitoris', 'pénis', 'vagin', 'vulve', 'prostate'] 
+    },
 
-    // Corps, cycle et développement
-    'fa-solid fa-dna': ['âge', 'âgé', 'vieillissement', 'anatomie', 'physiologie', 'puberté', 'génétique', 'corps humain'],
-    'fa-solid fa-spa': ['corps', 'image de soi', 'acceptation', 'estime de soi', 'nudité', 'bien-être', 'beauté', 'complexes'],
-    'fa-solid fa-droplet': ['règles', 'menstruations', 'cycle', 'syndrome prémenstruel', 'spm'],
-	'fa-solid fa-hand-holding-heart': ['tendresse', 'connexion', 'soin', 'relation', 'intimité', 'renaître', 'refleurir'],
-    'fa-solid fa-seedling': ['hormone', 'ménopause', 'andropause', 'testostérone', 'oestrogène'],
-    'fa-solid fa-universal-access': ['handicap', 'validisme', 'accessibilité'],
-    
-    // Plaisir, désir et pratiques
-    'fa-solid fa-fire': ['libido', 'désir', 'attirance', 'excitation', 'fantasme'],
-    'fa-solid fa-heart': ['plaisir', 'orgasme', 'jouir', 'érotisme', 'sensation', 'masturbation', 'amour', 'tendresse', 'sensualité'],
-    'fa-solid fa-mask': ['fantasmes', 'porno', 'imagination', 'rêves', 'bdsm', 'fétichisme', 'kink'],
-    'fa-solid fa-bed': ['pénétration', 'fellation', 'cunnilingus', 'rapport sexuel', 'coït', 'preliminaires', 'position'],
-    'fa-solid fa-wand-magic-sparkles': ['sextoys', 'accessoires', 'lubrifiant', 'jouets'],
-    
-    // Relations et communication
-    'fa-solid fa-comments': ['communication', 'dialogue', 'partenaire', 'conflits', 'couple', 'dispute', 'jalousie', 'attachement', 'sentiments', 'émotions'],
-    'fa-solid fa-heart-crack': ['rupture', 'séparation', 'divorce', 'célibat', 'infidélité', 'trahison', 'ghosting'],
-    'fa-solid fa-people-arrows': ['polyamour', 'échangisme', 'trouple', 'non-monogamie', 'relation libre'],
-    'fa-solid fa-handshake-slash': ['consentement', 'respect', 'abus', 'violences', 'harcèlement', 'limites', 'culture du viol'],
-    'fa-solid fa-hands-holding-child': ['parent', 'enfant', 'famille', 'parentalité', 'transmission'],
+    // 4. PRATIQUES & PLAISIR (Distinction Désir vs Pratique)
+    { 
+        icon: 'fa-solid fa-fire', 
+        keywords: ['désir', 'libido', 'excitation', 'passion', 'feu', 'attirance', 'pulsion'] 
+    },
+    { 
+        icon: 'fa-solid fa-wand-magic-sparkles', 
+        keywords: ['sextoy', 'vibromasseur', 'godemichet', 'accessoire', 'lubrifiant', 'jeu', 'jouet'] 
+    },
+    { 
+        icon: 'fa-solid fa-mask', 
+        keywords: ['fantasme', 'bdsm', 'kink', 'fétichisme', 'domination', 'soumission', 'rôle', 'scénario', 'imaginaire'] 
+    },
+    { 
+        icon: 'fa-solid fa-bed', 
+        keywords: ['position', 'kamasutra', 'sodomie', 'fellation', 'cunnilingus', 'anulingus', 'pratique', 'technique', 'faire l\'amour', 'coït', 'pénétration'] 
+    },
+    { 
+        icon: 'fa-solid fa-heart', // Le plaisir et l'amour
+        keywords: ['orgasme', 'jouir', 'plaisir', 'masturbation', 'amour', 'sentiment', 'aimer'] 
+    },
 
-    // Identité, société et culture
-    'fa-solid fa-rainbow': ['lgbtq', 'genre', 'identité', 'orientation', 'non-binaire', 'trans', 'homosexualité', 'bisexualité', 'pansexualité', 'queer', 'asexualité'],
-    'fa-solid fa-users': ['société', 'culture', 'normes', 'pression sociale', 'stéréotypes'],
-    'fa-solid fa-scale-balanced': ['féminisme', 'patriarcat', 'droit', 'loi', 'égalité', 'justice'],
-    'fa-solid fa-book-open-reader': ['histoire', 'historique', 'culture', 'anthropologie'],
+    // 5. RELATIONS & PSYCHO DU COUPLE
+    { 
+        icon: 'fa-solid fa-heart-crack', 
+        keywords: ['rupture', 'séparation', 'divorce', 'ex', 'célibat', 'chagrin', 'deuil', 'infidélité', 'tromperie', 'adultère', 'jalousie'] 
+    },
+    { 
+        icon: 'fa-solid fa-people-arrows', 
+        keywords: ['polyamour', 'trouple', 'libre', 'échangisme', 'libertinage', 'non-monogamie', 'ouvert'] 
+    },
+    { 
+        icon: 'fa-solid fa-comments', 
+        keywords: ['communication', 'dispute', 'conflit', 'dialogue', 'parler', 'écouter', 'entendre', 'incompréhension', 'reproche'] 
+    },
+    { 
+        icon: 'fa-solid fa-hand-holding-heart', 
+        keywords: ['couple', 'relation', 'complicité', 'confiance', 'soutien', 'mariage', 'engagement', 'pacser', 'vivre ensemble'] 
+    },
+
+    // 6. SOCIÉTÉ & IDENTITÉ
+    { 
+        icon: 'fa-solid fa-rainbow', 
+        keywords: ['lgbt', 'gay', 'lesbienne', 'trans', 'queer', 'bi', 'pansexuel', 'asexuel', 'genre', 'fluidité', 'coming out'] 
+    },
+    { 
+        icon: 'fa-solid fa-scale-balanced', 
+        keywords: ['droit', 'loi', 'justice', 'égalité', 'consentement', 'féminisme', 'patriarcat', 'culture du viol'] 
+    },
     
-    // Technologie et modernité
-    'fa-solid fa-mobile-screen-button': ['appli de rencontre', 'rencontre en ligne', 'sexting', 'cybersexe', 'technologie', 'tinder', 'réseaux sociaux'],
-    'fa-solid fa-link-slash': ['addiction', 'dépendance', 'porno-dépendance'],
-    
-    // Connaissance et éducation
-    'fa-solid fa-user-shield': ['contraception', 'pilule', 'stérilet', 'préservatif', 'vasectomie', 'ligature'],
-    'fa-solid fa-graduation-cap': ['éducation', 'jeunes', 'ado', 'première fois', 'apprentissage'],
-    'fa-solid fa-circle-question': ['mythes', 'tabous', 'croyances', 'idées reçues', 'faq', 'questions'],
-    'fa-solid fa-lightbulb': ['conseils', 'astuces', 'guide', 'savoir', 'épanouissement', 'exploration', 'découverte'],
-    'fa-solid fa-venus-mars': ['sexualité', 'sexe']
-};
+    // 7. TECHNO & MODERNE
+    { 
+        icon: 'fa-solid fa-mobile-screen-button', 
+        keywords: ['appli', 'tinder', 'bumble', 'grindr', 'virtuel', 'sexting', 'nudes', 'porno', 'écran', 'internet'] 
+    },
+
+    // 8. RESSOURCES & CONSEILS (Généralistes)
+    { 
+        icon: 'fa-solid fa-lightbulb', 
+        keywords: ['conseil', 'astuce', 'guide', 'tuto', 'comment', 'solution', 'idée', 'réponse'] 
+    },
+    { 
+        icon: 'fa-solid fa-book-open', 
+        keywords: ['livre', 'lecture', 'culture', 'histoire', 'étude', 'recherche', 'science', 'savoir'] 
+    },
+    { 
+        icon: 'fa-solid fa-spa', 
+        keywords: ['bien-être', 'détente', 'soin', 'image de soi', 'acceptation', 'corps', 'complexes', 'beauté'] 
+    },
+
+    // 9. CATCH-ALL (Mots très génériques à la fin)
+    { 
+        icon: 'fa-solid fa-brain', 
+        keywords: ['psycho', 'psychologie', 'mental', 'pensée', 'réflexion'] 
+    },
+    { 
+        icon: 'fa-solid fa-venus-mars', 
+        keywords: ['sexologie', 'sexualité', 'sexe', 'genre', 'humain'] 
+    }
+];
+
 
 
 // --- MOTEUR DU SCRIPT ---

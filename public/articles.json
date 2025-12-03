@@ -21,7 +21,7 @@
     "date": "2025-09-24",
     "author": "Chloé François",
     "url": "libido-desir-et-intimite.html",
-    "iconClass": "fa-solid fa-shield-virus"
+    "iconClass": "fa-solid fa-scale-balanced"
   },
   {
     "id": 3,
@@ -57,7 +57,7 @@
     "date": "2025-08-31",
     "author": "Chloé François",
     "url": "le-desir-s-est-endormi.html",
-    "iconClass": "fa-solid fa-hand-holding-heart"
+    "iconClass": "fa-solid fa-heart"
   },
   {
     "id": 6,
@@ -81,7 +81,7 @@
     "date": "2025-08-31",
     "author": "Chloé François",
     "url": "Sexualite-et-Couple-Durable-Laisser-la-Flamme-Evoluer.html",
-    "iconClass": "fa-solid fa-hand-holding-heart"
+    "iconClass": "fa-solid fa-heart"
   },
   {
     "id": 8,
@@ -93,6 +93,6 @@
     "date": "2025-08-31",
     "author": "Chloé François",
     "url": "sexualite-et-parentalite.html",
-    "iconClass": "fa-solid fa-hand-holding-heart"
+    "iconClass": "fa-solid fa-heart"
   }
 ]
