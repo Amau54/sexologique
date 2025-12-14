@@ -127,15 +127,6 @@
                                     <i class="fas fa-volume-up text-gray-400"></i>
                                 </div>
                                 <div class="flex-1 md:flex-none flex justify-end md:ml-auto space-x-4">
-                                    <!--<a href="https://open.spotify.com/show/3477q2jyE0640A8XkkDXCj" aria-label="Lire l'épisode Spotify"target="_blank" class="text-white hover:text-green-500 transition-colors">
-                                        <i class="fab fa-spotify text-2xl"></i>
-                                    </a>
-                                    <a href="https://podcasts.apple.com/us/podcast/se-x-eploration-podcasts-lucile-bach/id1807489334" aria-label="Lire l'épisode sur apple podcast" target="_blank" class="text-white hover:text-gray-400 transition-colors">
-                                        <i class="fab fa-apple text-2xl"></i>
-                                    </a>
-                                    <a href="https://www.deezer.com/fr/show/1001788981?host=0&utm_campaign=clipboard-generic&utm_source=user_sharing&utm_content=talk_show-1001788981&deferredFl=1" aria-label="Lire l'épisode sur Deezer" target="_blank" class="text-white hover:text-pink-500 transition-colors">
-                                        <i class="fab fa-deezer text-2xl"></i>
-                                    </a>-->
                                     <button id="download-button" aria-label="Télécharger l'épisode" class="text-white hover:text-red-500 transition-colors">
                                         <i class="fas fa-download text-2xl"></i>
                                     </button>
@@ -213,7 +204,7 @@
             ;
             function t() {
                 u.title.innerHTML = '<span class="text-lg text-red-400" style="font-size: 1.125rem;"><i class="fas fa-exclamation-triangle mr-2"></i> Erreur de lecture</span>',
-                u.date.textContent = "Le lecteur est indisponible pour l'instant. Veuillez r\xe9essayer plus tard.",
+                u.date.textContent = "Le lecteur est indisponible pour l'instant (RCN et Ausha ne répondent pas). Veuillez réessayer plus tard.",
                 u.playPauseBtn.disabled = !0,
                 u.rewindBtn.disabled = !0,
                 u.forwardBtn.disabled = !0,
@@ -244,33 +235,157 @@
                 }
                 )
             }
-            let l = [  
-  {"id":"372f5bf73868afcb6a852710b2746cac5d5fb459","title":"Erotisme - Zones \xe9rog\xe8nes m\xe9connues : explorer au-del\xe0 des clich\xe9s !","date":"6 novembre 2025","audio_url":"https://audio.ausha.co/xAYEKT2xM4nD.mp3?t=1758614161"},
-  {"id":"8195ad090f6a237c9376448cc6637e3dbf09baa4","title":"L\xe9rotisme du quotidien : la sensualit\xe9 au d\xe9tour des gestes simples","date":"2 octobre 2025","audio_url":"https://audio.ausha.co/3mNGXfRMrG8A.mp3?t=1758612505"},
-  {"id":"adaf149c62f992a66ac2730c3df5fb9ffb24ad87","title":"S'initier aux pratiques BDSM en douceur","date":"25 septembre 2025","audio_url":"https://audio.ausha.co/Ggdv8sM0E7kW.mp3?t=1758096272"},
-  {"id":"918feaadd6574ce3965c131dc5b17eb432499b2a","title":"Explore ton corps : pas besoin d\xeatre deux pour kiffer !","date":"18 septembre 2025","audio_url":"https://audio.ausha.co/00qYMsJ7nYa5.mp3?t=1758094780"},
-  {"id":"ad463116c3cd3414f94eefece3f4ca6f22d1c79a","title":"Sexualit\xe9 & spiritualit\xe9 : orgasme mystique ou pur fantasme ?","date":"11 septembre 2025","audio_url":"https://audio.ausha.co/reY8KCZgRWad.mp3?t=1757064670"},
-  {"id":"12a16d82e1b997be9fd9175f0e5b0a347515b8d4","title":"Sexualit\xe9 en colocation, en famille, en van : quand l'espace intime devient un d\xe9fi","date":"5 septembre 2025","audio_url":"https://audio.ausha.co/ggR1Ksvq358W.mp3?t=1757063930"},
-  {"id":"a4919ff5e066f2e6237abbb6dc80f4500810ec91","title":"Honte sexuelle : poison intime, h\xe9ritage collectif, injonctions ?","date":"28 août 2025","audio_url":"https://audio.ausha.co/zrwMKhln7Mdp.mp3?t=1754388449"},
-  {"id":"5aa4d09e8197fd3fcf681d7216f253e1366db439","title":"Sexualit\xe9 et m\xe9decine : quand les professionnels nous \xe9coutent pas ou peu...","date":"21 août 2025","audio_url":"https://audio.ausha.co/ggR1Ks5RMYEO.mp3?t=1754384588"},
-  {"id":"7c7fd25cc16b2e4e7314204e30e9e422d4dbd36e","title":"Apr\xe8s l\u2019IVG, comment retrouver une sexualit\xe9 libre ?","date":"14 août 2025","audio_url":"https://audio.ausha.co/VLZe1HJ1PnKO.mp3?t=1754386328"},
-  {"id":"76f73283d9770347fa936f7e6507986fc53abd57","title":"Sexualit\xe9 apr\xe8s une grossesse ou une fausse couche ?","date":"7 août 2025","audio_url":"https://audio.ausha.co/ZRq5Zu1x8XrK.mp3?t=1754383254"},
-  {"id":"d0e7a2c4b93943b6a7a854a0e4aa833cdfb9dad9","title":"Contraception & sexualit\xe9 : outil de libert\xe9 ou pi\xe8ge \xe0 d\xe9sir ?","date":"31 juillet 2025","audio_url":"https://audio.ausha.co/8Px0khjr6XwO.mp3?t=1753438127"},
-  {"id":"6b87dfa675180284398918b7f1074dba3d259560","title":"Sexualit\xe9 & troubles hormonaux - quand le d\xe9sir fait le grand 8 !","date":"24 juillet 2025","audio_url":"https://audio.ausha.co/ew2VKhdYeDa3.mp3?t=1752740003"},
-  {"id":"0b502e76494ef0a1ce24f9772821969cbfa803ac","title":"Plaisir et menstruations : jouir au rythme de ton corps !","date":"17 juillet 2025","audio_url":"https://audio.ausha.co/KjOpJS7eMV1O.mp3?t=1752738126"},
-  {"id":"4e12489c8cdd8cf73bbfb7d5ea55094203ef9935","title":"\xc9veil sexuel, orgasme & \xe2ge : Et si le plaisir n\u2019avait pas de date limite ?","date":"10 juillet 2025","audio_url":"https://audio.ausha.co/kgzZKsqrYZGD.mp3?t=1751471484"},
-  {"id":"c31bf7057808460dd3553923b7e5c7869d13417c","title":"Tu veux booster ta libido ? Commence par ton assiette.","date":"3 juillet 2025","audio_url":"https://audio.ausha.co/ggR1KsvpX3z3.mp3?t=1751363091"},
-  {"id":"5dd1c24ae9373320f5cf39efcf4f55d11e945fb6","title":"Fantasmes, porno VS r\xe9alit\xe9 : quoi en penser ?","date":"19 juin 2025","audio_url":"https://audio.ausha.co/5Axg9TnrkD01.mp3?t=1750164376"},
-  {"id":"54c4dc10fce784645194776dac784ef12f5fe984","title":"Endom\xe9triose & sexualit\xe9 : et si on changeait le r\xe9cit ?","date":"12 juin 2025","audio_url":"https://audio.ausha.co/KjOpJSR5AeNp.mp3?t=1749565453"},
-  {"id":"30fba06229868bbb3a66fef75fc111a211cdfaf2","title":"Handicap et sexualit\xe9 : des clich\xe9s qui p\xe8sent lourd ?","date":"5 juin 2025","audio_url":"https://audio.ausha.co/Ne8LRCDZ7O35.mp3?t=1749130793"},
-  {"id":"ae81af81b95f67de48829ec158cbb8a6e1a3d091","title":"Traumas, sexualit\xe9 et h\xe9ritages invisibles : \xe7a laisse des traces ?","date":"22 mai 2025","audio_url":"https://audio.ausha.co/DeakQCk7Zmga.mp3?t=1747919638"},
-  {"id":"913a96b40aa1b96b90cd81afc9068e4e6f68eae7","title":"Vaginisme : Quand le corps dit non","date":"15 mai 2025","audio_url":"https://audio.ausha.co/xAYEKTr8LpXn.mp3?t=1747295274"},
-  {"id":"57c28f4b01246b62c30bdf7858fe9ef50b21549e","title":"M\xe9nopause & Andropause : le sexe, c\u2019est pas fini !","date":"8 mai 2025","audio_url":"https://audio.ausha.co/LjRZ2S22kXQ6.mp3?t=1746694969"},
-  {"id":"12ab223973c688809938d29d2cd1d50bdcdd97b9","title":"Sexualit\xe9 et personnes \xe2g\xe9es, mythe ou r\xe9alit\xe9 ?","date":"24 avril 2025","audio_url":"https://audio.ausha.co/40G8RsO1e6m7.mp3?t=1745498673"},
-  {"id":"1021095b479e204ca9812c478b4dbac621abb50a","title":"Bien-\xeatre du couple et sommeil. Comment matcher les deux ?","date":"17 avril 2025","audio_url":"https://audio.ausha.co/6wd7jhl5a074.mp3?t=1744901845"},
-  {"id":"94f4cd2cf0fbcc6ab6462b2f58115c5a99c72298","title":"Vie de couple harmonieuse, sexualit\xe9 \xe9panouie. Comment faire?","date":"11 avril 2025","audio_url":"https://audio.ausha.co/00qYMsEggqJE.mp3?t=1744365390"},
-  {"id":"40596b2640db49881e00c6b70ca1645797152af5","title":"La disparit\xe9 dans la vie sexuelle entre une femme et un homme ?","date":"9 avril 2025","audio_url":"https://audio.ausha.co/BqxzGKSXxzpj.mp3?t=1744187374"}
-  ];
+            let l = [{
+            "id": "372f5bf73868afcb6a852710b2746cac5d5fb459",
+            "title": "Erotisme - Zones \xe9rog\xe8nes m\xe9connues : explorer au-del\xe0 des clich\xe9s !",
+            "date": "6 novembre 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/11/2025_11_06_Sexeploration_les_zones_erogenes_meconnues.mp3",
+            "audio_url": "https://audio.ausha.co/xAYEKT2xM4nD.mp3?t=1758614161"
+        }, {
+            "id": "8195ad090f6a237c9376448cc6637e3dbf09baa4",
+            "title": "L'\xe9rotisme du quotidien : la sensualit\xe9 au d\xe9tour des gestes simples",
+            "date": "2 octobre 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/10/2025_10_02_Sexeploration_l_erotisme_du_quotidien.mp3",
+            "audio_url": "https://audio.ausha.co/3mNGXfRMrG8A.mp3?t=1758612505"
+        }, {
+            "id": "adaf149c62f992a66ac2730c3df5fb9ffb24ad87",
+            "title": "S'initier aux pratiques BDSM en douceur",
+            "date": "25 septembre 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/09/2025_09_25_Sexeploration_les_pratiques_bdsm.mp3",
+            "audio_url": "https://audio.ausha.co/Ggdv8sM0E7kW.mp3?t=1758096272"
+        }, {
+            "id": "918feaadd6574ce3965c131dc5b17eb432499b2a",
+            "title": "Explore ton corps : pas besoin d'\xeatre deux pour kiffer !",
+            "date": "18 septembre 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/09/2025_09_18_Sexeploration_erotisme_en_solo.mp3",
+            "audio_url": "https://audio.ausha.co/00qYMsJ7nYa5.mp3?t=1758094780"
+        }, {
+            "id": "ad463116c3cd3414f94eefece3f4ca6f22d1c79a",
+            "title": "Sexualit\xe9 & spiritualit\xe9 : orgasme mystique ou pur fantasme ?",
+            "date": "11 septembre 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/09/2025_09_11_Sexeploration_sexualite_et_spiritualite.mp3",
+            "audio_url": "https://audio.ausha.co/reY8KCZgRWad.mp3?t=1757064670"
+        }, {
+            "id": "12a16d82e1b997be9fd9175f0e5b0a347515b8d4",
+            "title": "Sexualit\xe9 en colocation, en famille, en van : quand l'espace intime devient un d\xe9fi",
+            "date": "5 septembre 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/09/2025_09_04_Sexeploration_sexualite_en_coloc.mp3",
+            "audio_url": "https://audio.ausha.co/ggR1Ksvq358W.mp3?t=1757063930"
+        }, {
+            "id": "a4919ff5e066f2e6237abbb6dc80f4500810ec91",
+            "title": "Honte sexuelle : poison intime, h\xe9ritage collectif, injonctions ?",
+            "date": "28 août 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/08/2025_08_28_Sexeploration_Tabous.mp3",
+            "audio_url": "https://audio.ausha.co/zrwMKhln7Mdp.mp3?t=1754388449"
+        }, {
+            "id": "5aa4d09e8197fd3fcf681d7216f253e1366db439",
+            "title": "Sexualit\xe9 et m\xe9decine : quand les professionnels ne nous \xe9coutent pas ou peu...",
+            "date": "21 août 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/08/2025_08_21_Sexeploration_IVG.mp3",
+            "audio_url": "https://audio.ausha.co/ggR1Ks5RMYEO.mp3?t=1754384588"
+        }, {
+            "id": "7c7fd25cc16b2e4e7314204e30e9e422d4dbd36e",
+            "title": "Apr\xe8s l\u2019IVG, comment retrouver une sexualit\xe9 libre ?",
+            "date": "14 août 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/08/2025_08_14_Sexeploration_Medecine.mp3",
+            "audio_url": "https://audio.ausha.co/VLZe1HJ1PnKO.mp3?t=1754386328"
+        }, {
+            "id": "76f73283d9770347fa936f7e6507986fc53abd57",
+            "title": "Sexualit\xe9 apr\xe8s une grossesse ou une fausse couche ?",
+            "date": "7 août 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/08/2025_08_07_Sexeploration_Grossesse_et_fausse_couche.mp3",
+            "audio_url": "https://audio.ausha.co/ZRq5Zu1x8XrK.mp3?t=1754383254"
+        }, {
+            "id": "d0e7a2c4b93943b6a7a854a0e4aa833cdfb9dad9",
+            "title": "Contraception & sexualit\xe9 : outil de libert\xe9 ou pi\xe8ge \xe0 d\xe9sir ?",
+            "date": "31 juillet 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/07/2025_07_31_Sexeploration_Contraception.mp3",
+            "audio_url": "https://audio.ausha.co/8Px0khjr6XwO.mp3?t=1753438127"
+        }, {
+            "id": "6b87dfa675180284398918b7f1074dba3d259560",
+            "title": "Sexualit\xe9 & troubles hormonaux - quand le d\xe9sir fait le grand 8 !",
+            "date": "24 juillet 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/07/2025_07_24_Sexeploration_Troubles_hormonaux.mp3",
+            "audio_url": "https://audio.ausha.co/ew2VKhdYeDa3.mp3?t=1752740003"
+        }, {
+            "id": "0b502e76494ef0a1ce24f9772821969cbfa803ac",
+            "title": "Plaisir et menstruations : jouir au rythme de ton corps !",
+            "date": "17 juillet 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/07/2025_07_17_Sexeploration_Cycle_menstruel.mp3",
+            "audio_url": "https://audio.ausha.co/KjOpJS7eMV1O.mp3?t=1752738126"
+        }, {
+            "id": "4e12489c8cdd8cf73bbfb7d5ea55094203ef9935",
+            "title": "\xc9veil sexuel, orgasme & \xe2ge : Et si le plaisir n\u2019avait pas de date limite ?",
+            "date": "10 juillet 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/07/2025_07_10_Sexeploration_Orgasme_et_age.mp3",
+            "audio_url": "https://audio.ausha.co/kgzZKsqrYZGD.mp3?t=1751471484"
+        }, {
+            "id": "c31bf7057808460dd3553923b7e5c7869d13417c",
+            "title": "Tu veux booster ta libido ? Commence par ton assiette.",
+            "date": "3 juillet 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/07/2025_07_03_Sexeploration_La_libido_dans_son_assiette.mp3",
+            "audio_url": "https://audio.ausha.co/ggR1KsvpX3z3.mp3?t=1751363091"
+        }, {
+            "id": "5dd1c24ae9373320f5cf39efcf4f55d11e945fb6",
+            "title": "Fantasmes, porno VS r\xe9alit\xe9 : quoi en penser ?",
+            "date": "19 juin 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/06/2025_06_19_sexeploration.mp3",
+            "audio_url": "https://audio.ausha.co/5Axg9TnrkD01.mp3?t=1750164376"
+        }, {
+            "id": "54c4dc10fce784645194776dac784ef12f5fe984",
+            "title": "Endom\xe9triose & sexualit\xe9 : et si on changeait le r\xe9cit ?",
+            "date": "12 juin 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/06/2025_06_12_sexeploration.mp3",
+            "audio_url": "https://audio.ausha.co/KjOpJSR5AeNp.mp3?t=1749565453"
+        }, {
+            "id": "30fba06229868bbb3a66fef75fc111a211cdfaf2",
+            "title": "Handicap et sexualit\xe9 : des clich\xe9s qui p\xe8sent lourd ?",
+            "date": "5 juin 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/06/2025_06_05_sexeploration.mp3",
+            "audio_url": "https://audio.ausha.co/Ne8LRCDZ7O35.mp3?t=1749130793"
+        }, {
+            "id": "ae81af81b95f67de48829ec158cbb8a6e1a3d091",
+            "title": "Traumas, sexualit\xe9 et h\xe9ritages invisibles : \xe7a laisse des traces ?",
+            "date": "22 mai 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/05/2025_05_22_sexeploration.mp3",
+            "audio_url": "https://audio.ausha.co/DeakQCk7Zmga.mp3?t=1747919638"
+        }, {
+            "id": "913a96b40aa1b96b90cd81afc9068e4e6f68eae7",
+            "title": "Vaginisme : Quand le corps dit non",
+            "date": "15 mai 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/05/2025_05_15_sexeploration.mp3",
+            "audio_url": "https://audio.ausha.co/xAYEKTr8LpXn.mp3?t=1747295274"
+        }, {
+            "id": "57c28f4b01246b62c30bdf7858fe9ef50b21549e",
+            "title": "M\xe9nopause & Andropause : le sexe, c\u2019est pas fini !",
+            "date": "8 mai 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/05/2025_05_08_sexeploration.mp3",
+            "audio_url": "https://audio.ausha.co/LjRZ2S22kXQ6.mp3?t=1746694969"
+        }, {
+            "id": "12ab223973c688809938d29d2cd1d50bdcdd97b9",
+            "title": "Sexualit\xe9 et personnes \xe2g\xe9es, mythe ou r\xe9alit\xe9 ?",
+            "date": "24 avril 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/04/2025_04_24_sexeploration.mp3",
+            "audio_url": "https://audio.ausha.co/40G8RsO1e6m7.mp3?t=1745498673"
+        }, {
+            "id": "1021095b479e204ca9812c478b4dbac621abb50a",
+            "title": "Bien-\xeatre du couple et sommeil. Comment faire matcher les deux ?",
+            "date": "17 avril 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/04/2025_04_17_sexploration.mp3",
+            "audio_url": "https://audio.ausha.co/6wd7jhl5a074.mp3?t=1744901845"
+        }, {
+            "id": "94f4cd2cf0fbcc6ab6462b2f58115c5a99c72298",
+            "title": "Vie de couple harmonieuse, sexualit\xe9 \xe9panouie",
+            "date": "11 avril 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/04/2025_04_10_sexeploration.mp3",
+            "audio_url": "https://audio.ausha.co/00qYMsEggqJE.mp3?t=1744365390"
+        }, {
+            "id": "40596b2640db49881e00c6b70ca1645797152af5",
+            "title": "La disparit\xe9 dans la vie sexuelle entre une femme et un homme ?",
+            "date": "9 avril 2025",
+            "rcn_url": "http://www.rcn-radio.org/wp-content/uploads/2025/04/2025_04_03_sexeploration.mp3",
+            "audio_url": "https://audio.ausha.co/BqxzGKSXxzpj.mp3?t=1744187374"
+        }];
             let u = {
                 title: document.getElementById("player-title"),
                 date: document.getElementById("player-date"),
@@ -355,8 +470,31 @@
                     return;
                 _ = e,
                 u.title.textContent = a.title,
-                u.date.textContent = `${a.date} - Chlo\xe9 Fran\xe7ois sur RCN`,
-                b.src = a.audio_url,
+                u.date.textContent = `${a.date} - Chlo\xe9 Fran\xe7ois sur RCN`;
+                
+                // Nouvelle logique de selection de source avec logs
+                u.playPauseBtn.disabled = false; // Reset état erreur potentiel
+                u.seekBar.disabled = false;
+                
+if (a.rcn_url) {
+    console.log(
+        `%c▶ Lecture RCN : %c${a.title}`,
+        "color:#ff7a00; font-weight:bold;",
+        "color:#ffffff; font-weight:normal;"
+    );
+    b.src = a.rcn_url;
+    b.dataset.source = "rcn";
+} else {
+    console.log(
+        `%c▶ Lecture Ausha : %c${a.title}`,
+        "color:#00c8ff; font-weight:bold;",
+        "color:#ffffff; font-weight:normal;"
+    );
+    b.src = a.audio_url;
+    b.dataset.source = "ausha";
+}
+
+
                 t ? b.addEventListener("canplay", () => {
                     let e = b.play();
                     void 0 !== e && e.catch(e => {
@@ -535,7 +673,25 @@ u.downloadBtn.addEventListener("click", () => {
         }
     }
 });
-            b.addEventListener("error", t),
+            // Gestionnaire d'erreur AVEC LOGIQUE DE FALLBACK (Secours)
+            b.addEventListener("error", (e) => {
+                const currentEp = y[_];
+                const currentSrc = b.dataset.source;
+
+                // Si on était sur RCN et qu'il y a un lien Ausha dispo
+                if (currentSrc === "rcn" && currentEp.audio_url) {
+                    console.warn(`[Audio Log] Erreur de lecture sur RCN. Bascule automatique vers Ausha...`);
+                    b.src = currentEp.audio_url;
+                    b.dataset.source = "ausha"; // On met à jour la source
+                    b.load(); // Important pour recharger la nouvelle source
+                    b.play().catch(err => console.error("[Audio Log] Erreur lors de la lecture fallback Ausha", err));
+                } else {
+                    // Si on était déjà sur Ausha ou qu'il n'y a pas d'alternative
+                    console.error("[Audio Log] Echec de lecture sur toutes les sources disponibles.");
+                    t(); // On déclenche l'affichage d'erreur visuel
+                }
+            });
+
             b.addEventListener("timeupdate", () => {
                 b.duration && (u.seekBar.value = b.currentTime / b.duration * 100,
                 u.currentTime.textContent = e(b.currentTime))
@@ -563,7 +719,7 @@ u.downloadBtn.addEventListener("click", () => {
             b.addEventListener("canplay", () => I(!1)),
             b.addEventListener("pause", () => I(!1)),
             b.addEventListener("stalled", () => I(!1)),
-            b.addEventListener("error", () => I(!1)),
+            // Note: l'event listener "error" est géré plus haut pour le fallback
             u.playPauseBtn.addEventListener("click", k),
             u.rewindBtn.addEventListener("click", () => {
                 b.currentTime -= 10

@@ -29,136 +29,107 @@ const categoryMap = {
     'Traumas & Violences': ['trauma', 'violence', 'agression sexuelle', 'harcèlement', 'abus', 'vss', 'violences conjugales', 'inceste']
 };
 
-// 🗺️ Logique des icônes
+// 🗺️ Logique des icônes (Mise à jour pour correspondre aux titres spécifiques)
 const iconRules = [
-    // 1. URGENCES & SANTÉ MENTALE FORTE (Priorité haute)
+    // 1. URGENCES & SANTÉ MENTALE (Thérapie de couple)
     { 
         icon: 'fa-solid fa-triangle-exclamation', 
-        keywords: ['urgence', 'danger', 'crise', 'suicide', 'violence', 'abus', 'viol', 'agression', 'harcèlement'] 
+        keywords: ['urgence', 'danger', 'crise', 'suicide', 'violence', 'thérapie de couple', 'conflit grave'] 
     },
+    
+    // 2. DÉSIR & LIBIDO (Pourquoi consulter, Différence de désir, Désir en berne)
+    // Ajout de 'sexologue' ici pour forcer le lien avec "Pourquoi consulter un sexologue" -> Fire
     { 
-        icon: 'fa-solid fa-head-side-virus', 
-        keywords: ['burn-out', 'dépression', 'trauma', 'ptsd', 'toxique', 'charge mentale', 'bipolaire'] 
-    },
-    { 
-        icon: 'fa-solid fa-cloud-bolt', 
-        keywords: ['anxiété', 'stress', 'angoisse', 'phobie', 'peur', 'panique', 'blocage'] 
+        icon: 'fa-solid fa-fire', 
+        keywords: ['désir', 'libido', 'feu', 'flamme', 'sexologue', 'passion', 'excitation', 'pulsion', 'attirance'] 
     },
 
-    // 2. SANTÉ PHYSIQUE & CONDITIONS SPÉCIFIQUES
+    // 3. COUPLE & SOUTIEN (Sommeil en couple, Sexualité & Couple, Parentalité)
+    // Ajout de 'parentalité' et 'sommeil en couple' pour prioriser cette icône sur la lune ou le bébé
     { 
-        icon: 'fa-solid fa-ribbon', // Ruban pour les causes/maladies
-        keywords: ['endométriose', 'sopk', 'cancer', 'tumeur', 'fibrome', 'kyste'] 
+        icon: 'fa-solid fa-hand-holding-heart', 
+        keywords: ['couple', 'relation', 'parentalité', 'durable', 'lien', 'confiance', 'soutien', 'vivre ensemble', 'harmonie'] 
+    },
+
+    // 4. AMOUR & ORGASME (Sexsomnie)
+    // Ajout de 'sexsomnie' ici pour le lier au cœur plutôt qu'au cerveau
+    { 
+        icon: 'fa-solid fa-heart', 
+        keywords: ['orgasme', 'amour', 'sexsomnie', 'jouir', 'coeur', 'sentiment', 'aimer', 'plaisir'] 
+    },
+
+    // 5. BIEN-ÊTRE & CORPS (Se réconcilier avec son corps)
+    { 
+        icon: 'fa-solid fa-spa', 
+        keywords: ['corps', 'bien-être', 'détente', 'massage', 'réconcilier', 'image de soi', 'soin', 'beauté'] 
+    },
+
+    // --- AUTRES CATÉGORIES (Priorité plus basse) ---
+    { 
+        icon: 'fa-solid fa-brain', 
+        keywords: ['cerveau', 'mental', 'psychologie', 'inconscient', 'pensée'] // Sexsomnie retiré d'ici pour éviter le conflit
     },
     { 
-        icon: 'fa-solid fa-staff-snake', // Symbole médical plus clair que user-doctor
-        keywords: ['vaginisme', 'dyspareunie', 'vulvodynie', 'douleur', 'médical', 'gynéco', 'urologue', 'infection', 'mycose', 'cystite'] 
-    },
-    { 
-        icon: 'fa-solid fa-shield-virus', 
-        keywords: ['ist', 'mst', 'vih', 'sida', 'chlamydia', 'herpès', 'syphilis', 'hpv', 'papillomavirus', 'préservatif', 'protection'] 
+        icon: 'fa-solid fa-moon', 
+        keywords: ['nuit', 'dormir', 'insomnie', 'rêve'] // Attention, "Sommeil" est souvent lié au couple plus haut
     },
     { 
         icon: 'fa-solid fa-baby-carriage', 
-        keywords: ['grossesse', 'enceinte', 'bébé', 'accouchement', 'post-partum', 'fausse couche', 'iv-g', 'avortement', 'fertilité', 'infertilité', 'pma', 'fiv'] 
-    },
-
-    // 3. CYCLE & BIOLOGIE
-    { 
-        icon: 'fa-solid fa-droplet', 
-        keywords: ['règles', 'menstruation', 'flux', 'sang', 'cycle', 'spm', 'tampon', 'cup'] 
-    },
-    { 
-        icon: 'fa-solid fa-seedling', 
-        keywords: ['ménopause', 'andropause', 'hormone', 'bouffée de chaleur', 'puberté', 'croissance', 'vieillissement'] 
-    },
-    { 
-        icon: 'fa-solid fa-dna', 
-        keywords: ['anatomie', 'génétique', 'biologie', 'corps humain', 'clitoris', 'pénis', 'vagin', 'vulve', 'prostate'] 
-    },
-
-    // 4. PRATIQUES & PLAISIR (Distinction Désir vs Pratique)
-    { 
-        icon: 'fa-solid fa-fire', 
-        keywords: ['désir', 'libido', 'excitation', 'passion', 'feu', 'attirance', 'pulsion'] 
+        keywords: ['grossesse', 'enceinte', 'bébé', 'accouchement', 'fertilité'] // Parentalité géré par hand-holding-heart
     },
     { 
         icon: 'fa-solid fa-wand-magic-sparkles', 
-        keywords: ['sextoy', 'vibromasseur', 'godemichet', 'accessoire', 'lubrifiant', 'jeu', 'jouet'] 
+        keywords: ['sextoy', 'vibromasseur', 'jouet', 'lubrifiant'] 
     },
     { 
         icon: 'fa-solid fa-mask', 
-        keywords: ['fantasme', 'bdsm', 'kink', 'fétichisme', 'domination', 'soumission', 'rôle', 'scénario', 'imaginaire'] 
+        keywords: ['fantasme', 'bdsm', 'kink', 'fétichisme'] 
     },
     { 
         icon: 'fa-solid fa-bed', 
-        keywords: ['position', 'kamasutra', 'sodomie', 'fellation', 'cunnilingus', 'anulingus', 'pratique', 'technique', 'faire l\'amour', 'coït', 'pénétration'] 
+        keywords: ['position', 'kamasutra', 'pratique', 'technique', 'pénétration'] 
     },
-    { 
-        icon: 'fa-solid fa-heart', // Le plaisir et l'amour
-        keywords: ['orgasme', 'jouir', 'plaisir', 'masturbation', 'amour', 'sentiment', 'aimer'] 
-    },
-
-    // 5. RELATIONS & PSYCHO DU COUPLE
     { 
         icon: 'fa-solid fa-heart-crack', 
-        keywords: ['rupture', 'séparation', 'divorce', 'ex', 'célibat', 'chagrin', 'deuil', 'infidélité', 'tromperie', 'adultère', 'jalousie'] 
+        keywords: ['rupture', 'séparation', 'divorce', 'ex', 'célibat', 'tromperie'] 
     },
     { 
         icon: 'fa-solid fa-people-arrows', 
-        keywords: ['polyamour', 'trouple', 'libre', 'échangisme', 'libertinage', 'non-monogamie', 'ouvert'] 
+        keywords: ['polyamour', 'trouple', 'libre', 'échangisme'] 
     },
     { 
         icon: 'fa-solid fa-comments', 
-        keywords: ['communication', 'dispute', 'conflit', 'dialogue', 'parler', 'écouter', 'entendre', 'incompréhension', 'reproche'] 
+        keywords: ['communication', 'dialogue', 'parler', 'écouter'] 
     },
-    { 
-        icon: 'fa-solid fa-hand-holding-heart', 
-        keywords: ['couple', 'relation', 'complicité', 'confiance', 'soutien', 'mariage', 'engagement', 'pacser', 'vivre ensemble'] 
-    },
-
-    // 6. SOCIÉTÉ & IDENTITÉ
     { 
         icon: 'fa-solid fa-rainbow', 
-        keywords: ['lgbt', 'gay', 'lesbienne', 'trans', 'queer', 'bi', 'pansexuel', 'asexuel', 'genre', 'fluidité', 'coming out'] 
+        keywords: ['lgbt', 'gay', 'trans', 'queer', 'genre'] 
     },
     { 
         icon: 'fa-solid fa-scale-balanced', 
-        keywords: ['droit', 'loi', 'justice', 'égalité', 'consentement', 'féminisme', 'patriarcat', 'culture du viol'] 
+        keywords: ['droit', 'loi', 'justice', 'égalité', 'consentement'] 
     },
-    
-    // 7. TECHNO & MODERNE
     { 
         icon: 'fa-solid fa-mobile-screen-button', 
-        keywords: ['appli', 'tinder', 'bumble', 'grindr', 'virtuel', 'sexting', 'nudes', 'porno', 'écran', 'internet'] 
+        keywords: ['appli', 'virtuel', 'sexting', 'porno', 'écran'] 
     },
-
-    // 8. RESSOURCES & CONSEILS (Généralistes)
     { 
         icon: 'fa-solid fa-lightbulb', 
-        keywords: ['conseil', 'astuce', 'guide', 'tuto', 'comment', 'solution', 'idée', 'réponse'] 
+        keywords: ['conseil', 'astuce', 'guide', 'tuto'] 
     },
     { 
         icon: 'fa-solid fa-book-open', 
-        keywords: ['livre', 'lecture', 'culture', 'histoire', 'étude', 'recherche', 'science', 'savoir'] 
+        keywords: ['livre', 'lecture', 'étude', 'recherche', 'savoir'] 
     },
     { 
-        icon: 'fa-solid fa-spa', 
-        keywords: ['bien-être', 'détente', 'soin', 'image de soi', 'acceptation', 'corps', 'complexes', 'beauté'] 
-    },
-
-    // 9. CATCH-ALL (Mots très génériques à la fin)
-    { 
-        icon: 'fa-solid fa-brain', 
-        keywords: ['psycho', 'psychologie', 'mental', 'pensée', 'réflexion'] 
+        icon: 'fa-solid fa-staff-snake', 
+        keywords: ['médical', 'gynéco', 'infection', 'douleur'] 
     },
     { 
         icon: 'fa-solid fa-venus-mars', 
-        keywords: ['sexologie', 'sexualité', 'sexe', 'genre', 'humain'] 
+        keywords: ['sexologie', 'sexualité', 'humain'] 
     }
 ];
-
-
 
 // --- MOTEUR DU SCRIPT ---
 
@@ -171,68 +142,31 @@ const askQuestion = (query) => {
     return new Promise(resolve => rl.question(query, resolve));
 };
 
+// --- SYSTÈME DE PONDÉRATION (SCORES) ---
 
-//ANCIENNE VERSION DU CHOIX DES ICONES PAR TITRE ET description
+const TITLE_WEIGHT = 3;    // Un mot-clé dans le titre vaut 3 points
+const EXCERPT_WEIGHT = 1;  // Un mot-clé dans l'extrait vaut 1 point
 
-// Fonction pour suggérer des catégories basées sur le contenu
-const suggestCategory = (article) => {
-    const content = `${article.title} ${article.excerpt}`;
-    const scores = {};
-
-    for (const [category, keywords] of Object.entries(categoryMap)) {
-        scores[category] = 0;
-        keywords.forEach(keyword => {
-            // Crée une expression régulière pour trouver le mot-clé comme un mot entier, insensible à la casse, et gérant un 's' final optionnel.
-            // On "échappe" le mot-clé pour éviter les erreurs si un mot-clé contient des caractères spéciaux (ex: point G).
-            const escapedKeyword = keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-            const regex = new RegExp(`\\b${escapedKeyword}(s?)\\b`, 'i');
-
-            if (regex.test(content)) {
-                scores[category]++;
-            }
-        });
-    }
-
-    // Trier les catégories par score, du plus élevé au plus bas
-    return Object.entries(scores)
-        .filter(([, score]) => score > 0)
-        .sort((a, b) => b[1] - a[1])
-        .map(([category]) => category);
-};
-
-// Nouvelle fonction pour sélectionner une icône
-const selectIconForArticle = (article) => {
-    const lowerCaseContent = `${article.title} ${article.excerpt}`.toLowerCase();
-    let selectedIcon = 'fa-solid fa-book-open'; // Icône par défaut
-
-    for (const [icon, keywords] of Object.entries(iconMap)) {
-        if (keywords.some(key => lowerCaseContent.includes(key))) {
-            selectedIcon = icon;
-            break; 
-        }
-    }
-    return selectedIcon;
-};
-
-
-
-/*
-//NOUVELLE VERSION 
-// --- CONSTANTES DE PONDÉRATION ---
-const TITLE_WEIGHT = 3;    // Un mot-clé dans le titre a plus de poids
-const EXCERPT_WEIGHT = 1;  // Un mot-clé dans l'extrait a un poids normal
-
-// Fonction pour calculer les scores en donnant plus de poids au titre
-const calculateScores = (article, map) => {
+// Fonction générique pour calculer les scores (compatible avec categoryMap et iconRules)
+const calculateScores = (article, dataSource) => {
     const scores = {};
     const lowerCaseTitle = article.title.toLowerCase();
     const lowerCaseExcerpt = article.excerpt.toLowerCase();
 
-    for (const [key, keywords] of Object.entries(map)) {
-        scores[key] = 0;
+    // Normalisation : on transforme la source de données en tableau de format [Clé, Mots-clés]
+    // 1. Si c'est iconRules (Array d'objets) -> on map vers [icon, keywords]
+    // 2. Si c'est categoryMap (Objet) -> on utilise Object.entries
+    const entries = Array.isArray(dataSource) 
+        ? dataSource.map(rule => [rule.icon, rule.keywords])
+        : Object.entries(dataSource);
+
+    for (const [key, keywords] of entries) {
+        // Initialiser le score si pas encore fait
+        if (!scores[key]) scores[key] = 0;
+
         keywords.forEach(keyword => {
             const escapedKeyword = keyword.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-            // Regex pour trouver le mot-clé comme un mot entier, insensible à la casse, avec un 's' optionnel
+            // Regex : mot entier, insensible à la casse, pluriel 's' optionnel
             const regex = new RegExp(`\\b${escapedKeyword}s?\\b`, 'i');
 
             if (regex.test(lowerCaseTitle)) {
@@ -246,38 +180,28 @@ const calculateScores = (article, map) => {
     return scores;
 };
 
-// Fonction améliorée pour suggérer des catégories basées sur le contenu et la pondération
+// Suggérer des catégories (du meilleur score au plus bas)
 const suggestCategory = (article) => {
     const scores = calculateScores(article, categoryMap);
 
-    // Trier les catégories par score, du plus élevé au plus bas
     return Object.entries(scores)
         .filter(([, score]) => score > 0)
         .sort((a, b) => b[1] - a[1])
         .map(([category]) => category);
 };
 
-// Fonction améliorée pour sélectionner l'icône la plus pertinente via un score
+// Sélectionner l'icône la plus pertinente (meilleur score)
 const selectIconForArticle = (article) => {
-    const scores = calculateScores(article, iconMap);
+    // Ici on passe 'iconRules' qui est un tableau, géré par calculateScores
+    const scores = calculateScores(article, iconRules);
     
     const sortedIcons = Object.entries(scores)
         .filter(([, score]) => score > 0)
         .sort((a, b) => b[1] - a[1]);
 
-    // Retourne l'icône avec le meilleur score, ou une icône par défaut si aucun mot-clé n'a été trouvé
+    // Retourne l'icône avec le meilleur score, ou une icône par défaut
     return sortedIcons.length > 0 ? sortedIcons[0][0] : 'fa-solid fa-book-open';
 };
-
-*/
-
-
-
-
-
-
-
-
 
 async function generateArticleList() {
     console.log("🚀 Lancement de la génération de la liste d'articles...");

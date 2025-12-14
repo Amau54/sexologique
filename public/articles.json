@@ -2,7 +2,19 @@
   {
     "id": 1,
     "category": [
-      "Couple & Dynamiques"
+      "Guides & Ressources"
+    ],
+    "title": "Thérapie de couple à Nancy : Pourquoi attendre la crise pour réinventer votre lien ?",
+    "excerpt": "Consulter en thérapie de couple à Nancy est un acte de courage. Pourquoi attendre la crise ? Découvrez comment réinventer votre lien et désamorcer les conflits avant qu'il ne soit trop tard.",
+    "date": "2025-12-14",
+    "author": "Chloé François",
+    "url": "therapie-de-couple-a-nancy-pourquoi-attendre-la-crise-pour-reinventer-votre-lien.html",
+    "iconClass": "fa-solid fa-user-group"
+  },
+  {
+    "id": 2,
+    "category": [
+      "Guides & Ressources"
     ],
     "title": "Pourquoi consulter un sexologue ?",
     "excerpt": "Vous hésitez à franchir le pas ? Découvrez pourquoi consulter un sexologue permet de débloquer des situations, retrouver le désir et apaiser la vie de couple.",
@@ -12,7 +24,7 @@
     "iconClass": "fa-solid fa-fire"
   },
   {
-    "id": 2,
+    "id": 3,
     "category": [
       "Couple & Dynamiques"
     ],
@@ -24,7 +36,7 @@
     "iconClass": "fa-solid fa-scale-balanced"
   },
   {
-    "id": 3,
+    "id": 4,
     "category": [
       "Dysfonctions & Troubles"
     ],
@@ -36,7 +48,7 @@
     "iconClass": "fa-solid fa-brain"
   },
   {
-    "id": 4,
+    "id": 5,
     "category": [
       "Couple & Dynamiques"
     ],
@@ -48,7 +60,7 @@
     "iconClass": "fa-solid fa-moon"
   },
   {
-    "id": 5,
+    "id": 6,
     "category": [
       "Couple & Dynamiques"
     ],
@@ -60,7 +72,7 @@
     "iconClass": "fa-solid fa-heart"
   },
   {
-    "id": 6,
+    "id": 7,
     "category": [
       "Développement Sexuel"
     ],
@@ -72,7 +84,7 @@
     "iconClass": "fa-solid fa-spa"
   },
   {
-    "id": 7,
+    "id": 8,
     "category": [
       "Couple & Dynamiques"
     ],
@@ -84,7 +96,7 @@
     "iconClass": "fa-solid fa-heart"
   },
   {
-    "id": 8,
+    "id": 9,
     "category": [
       "Formes Relationnelles"
     ],
