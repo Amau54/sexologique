@@ -1,0 +1,8 @@
+# Autorise tous les agents (robots) à explorer tout le site.
+User-agent: *
+
+# Ne restreint l'accès à aucun chemin.
+Disallow:
+
+# Indique l'emplacement du fichier sitemap.
+Sitemap: https://sexo-logique.com/sitemap.xml

@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mes Articles | Sexo-logique</title>
+        <meta name="description" content="Découvrez tous les articles de Chloé François, sexologue. Explorez mes réflexions sur la sexualité, le couple, l'érotisme et le bien-être.">
+        <meta property="og:title" content="Mes Articles | Sexo-logique"/>
+        <meta property="og:description" content="Découvrez tous les articles de Chloé François, sexologue. Explorez mes réflexions sur la sexualité, le couple, l'érotisme et le bien-être."/>
+        <meta property="og:url" content="https://www.sexo-logique.com/articles"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://www.sexo-logique.com/../images/og-image-main.jpg"/>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="apple-touch-icon" href="../images/favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        <link rel="preconnect" href="https://zcal.co" crossorigin>
+		<link rel="dns-prefetch" href="https://zcal.co">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+        <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+        </noscript>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+	
+		<link rel="stylesheet" href="style articles.css">
+		
+    </head>
+    <body class="antialiased flex flex-col min-h-screen">
+			<header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
+		<div class="container mx-auto px-4">
+			<nav class="flex items-center justify-between h-16 glass-effect rounded-full px-4 lg:px-8 shadow-sm">
+				<a href="/" class="text-xl font-bold text-custom-dark flex-shrink-0">sexo-logique.com</a>
+				<div class="hidden lg:flex items-center md:space-x-4 lg:space-x-8 text-custom-dark">
+					<a href="/#consultations" class="nav-link">Consultations</a>
+					<a href="/#apropos" class="nav-link">À propos</a>
+					<a href="/sexeploration.html" class="nav-link">Podcast</a>
+					<a href="/articles.html" class="nav-link font-bold text-custom-accent">Articles</a>
+					<a href="/#contact" class="nav-link">Contact</a>
+				</div>
+                <div class="flex items-center space-x-2">
+                        <button id="mobile-menu-button" class="lg:hidden text-custom-dark focus:outline-none p-2" aria-label="Menu principal">
+                        <i class="fas fa-bars text-2xl"></i>
+					</button>
+					<button onclick="openZcalModal('indiv')" class="hidden lg:inline-block bg-custom-dark text-white md:px-4 lg:px-6 py-2 rounded-full hover:bg-opacity-90 transition shadow-md hover:shadow-lg btn-mobile-feedback whitespace-nowrap cursor-pointer">Prendre RDV</button>
+				</div>
+			</nav>
+			<div id="mobile-menu" class="hidden lg:hidden glass-effect rounded-2xl mt-2 p-4 text-custom-dark text-center">
+				<a href="/#consultations" class="block py-2 hover:text-custom-accent">Consultations</a>
+				<a href="/#apropos" class="block py-2 hover:text-custom-accent">À propos</a>
+				<a href="/sexeploration.html" class="block py-2 hover:text-custom-accent">Podcast</a>
+				<a href="/articles.html" class="block py-2 text-custom-accent font-semibold">Articles</a>
+				<a href="/#contact" class="block py-2 hover:text-custom-accent">Contact</a>
+                    <button onclick="openZcalModal('indiv')" class="mt-4 w-full bg-custom-dark text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition shadow-md btn-mobile-feedback cursor-pointer">Prendre RDV</button>
+                </div>
+		</div>
+	</header>
+		
+<main id="articles-page-main" class="flex-grow pt-32 pb-20 hero-bg"> 
+    <section id="Articles" class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12">
+            <h1 class="mt-10 text-4xl md:text-5xl font-bold text-custom-dark tracking-tight leading-tight">
+                Mes réflexions en <span class="text-custom-accent">Sexologie</span>
+            </h1>
+            <p class="mt-8 text-lg md:text-xl max-w-2xl mx-auto text-gray-700">
+                À travers mes articles, je vous invite à explorer le désir, l’intimité et la vie de couple, afin de  vous accompagner vers une sexualité plus consciente et épanouie.
+            </p>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="section-title">À la une</h2>
+            <div id="latest-articles-container" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                </div>
+        </section>
+
+<section id="all-articles-section">
+            <h2 class="section-title">Tous les articles</h2>
+            
+<div class="mb-10 relative flex justify-center items-center">
+    <div class="max-w-lg w-full relative">
+        <label for="searchInput" class="sr-only">Rechercher des articles</label>
+        <input type="search" id="searchInput" placeholder="Rechercher par mot-clé (ex: désir, couple...)" 
+               class="w-full py-3 pl-5 pr-12 text-base text-gray-700 bg-white/60 border border-transparent rounded-full
+                      focus:outline-none focus:ring-2 focus:ring-custom-accent/80 glass-effect transition duration-300"
+               style="height: 46px;">
+        <div class="absolute inset-y-0 right-0 flex items-center pr-5" aria-hidden="true">
+            <i class="fas fa-search text-gray-400"></i>
+        </div>
+    </div>
+
+    <div id="view-toggle-container" class="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2">
+        <button id="view-grid-button" class="view-toggle-button" aria-label="Afficher en grille">
+            <i class="fas fa-grip"></i>
+        </button>
+        <button id="view-list-button" class="view-toggle-button" aria-label="Afficher en liste">
+            <i class="fas fa-list"></i>
+        </button>
+    </div>
+</div>
+
+
+            <div id="articles-views-container">
+                <div id="carousel-container" class="relative flex items-center justify-center w-full max-w-full mx-auto px-8 md:px-16">
+                    <button id="prev-article-slide-button" aria-label="Article précédent" aria-controls="articles-carousel-track" class="absolute -left-6 lg:left-2 top-1/2 -translate-y-1/2 z-10 w-14 h-14 grid place-items-center bg-white/90 rounded-full shadow-lg text-custom-dark hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fas fa-chevron-left text-xl" aria-hidden="true"></i>
+                    </button>
+                    <div id="articles-carousel-viewport" class="relative w-full">
+                        <div id="articles-carousel-track" class="flex">
+                        </div>
+                    </div>
+                    <button id="next-article-slide-button" aria-label="Article suivant" aria-controls="articles-carousel-track" class="absolute -right-6 lg:right-2 top-1/2 -translate-y-1/2 z-10 w-14 h-14 grid place-items-center bg-white/90 rounded-full shadow-lg text-custom-dark hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fas fa-chevron-right text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div id="articles-list-view" class="relative max-w-4xl mx-auto mt-8">
+                    <button id="prev-list-slide-button" aria-label="Page précédente" class="list-carousel-nav-button z-10 w-14 h-14 grid place-items-center bg-white/90 rounded-full shadow-lg text-custom-dark hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fas fa-chevron-left text-xl" aria-hidden="true"></i>
+                    </button>
+                    <div id="list-carousel-viewport" class="relative w-full">
+                        <div id="list-carousel-track">
+                        </div>
+                    </div>
+                    <button id="next-list-slide-button" aria-label="Page suivante" class="list-carousel-nav-button z-10 w-14 h-14 grid place-items-center bg-white/90 rounded-full shadow-lg text-custom-dark hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out disabled:opacity-40 disabled:cursor-not-allowed">
+                        <i class="fas fa-chevron-right text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+		    <div id="no-results" class="hidden text-center mt-10" aria-live="polite">
+			    <p class="text-lg text-gray-600">Aucun article ne correspond à votre recherche.</p>
+		    </div>
+        </section>
+    </section>
+</main>
+		
+		
+
+
+        
+<footer class="bg-gray-100/60 border-t border-gray-200/80 py-8"><div class="container mx-auto px-4 relative flex items-center justify-center md:justify-between"><p class="text-gray-600 text-sm text-center md:text-left">© 2024 <span class="font-semibold text-gray-700">sexo-logique.com</span> - Chloé François<span class="block md:inline text-gray-400">Sexologue & Thérapeute de couple</span></p><nav class="absolute right-0 top-1/2 -translate-y-1/2"><a href="/faq.html" class="text-gray-500 hover:text-custom-accent transition-colors duration-300 text-sm font-medium">FAQ</a></nav></div></footer>
+
+
+    
+       <div id="zcal-modal" style="z-index: 99999 !important;" class="fixed inset-0 hidden flex items-center justify-center p-4 bg-black/30 transition-all duration-300 opacity-0" role="dialog" aria-modal="true" aria-labelledby="zcal-modal-title">
+            <!-- Overlay -->
+            <div class="absolute inset-0" onclick="closeZcalModal()"></div>
+            <!-- Modal -->
+            <div id="zcal-modal-container" class="glass-effect relative w-full max-w-6xl h-full md:h-[90vh]
+           p-0 md:p-0 rounded-2xl shadow-xl
+           flex flex-col overflow-hidden
+           transform scale-95 opacity-0 transition-all duration-300">
+                <!-- Header -->
+                <div class="flex justify-between items-center px-6 py-4 border-b border-white/30 bg-white/40">
+                    <h3 id="zcal-modal-title" class="text-2xl md:text-3xl font-light text-custom-accent">Prise de rendez-vous
+      </h3>
+                    <button onclick="closeZcalModal()" aria-label="Fermer la modale" class="text-gray-400 hover:text-gray-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Tabs -->
+                <div class="flex justify-center py-8 w-full">
+                    <div class="inline-flex bg-[#a37b73]/10 p-1.5 rounded-full border border-[#a37b73]/20 gap-2">
+                        <button id="tab-indiv" onclick="switchZcalTab('indiv')" class="tab-btn px-4 py-2 md:px-8 md:py-3 text-sm md:text-lg font-medium text-[#a37b73] rounded-full transition-all duration-300 hover:bg-[#a37b73]/10">
+                            <span class="text-full">Individuelle</span>
+                            <span class="text-short">Indiv.</span>
+                        </button>
+                        <button id="tab-couple" onclick="switchZcalTab('couple')" class="tab-btn px-4 py-2 md:px-8 md:py-3 text-sm md:text-lg font-medium text-[#a37b73] rounded-full transition-all duration-300 hover:bg-[#a37b73]/10">Couple
+        </button>
+                        <button id="tab-tele" onclick="switchZcalTab('tele')" class="tab-btn active px-4 py-2 md:px-8 md:py-3 text-sm md:text-lg font-medium text-[#a37b73] rounded-full transition-all duration-300">
+                            <span class="text-full">Téléconsultation</span>
+                            <span class="text-short">Télé.</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Content -->
+                <div class="relative flex-grow bg-white">
+                    <div id="content-tele" class="absolute inset-0 opacity-100 transition-opacity duration-300">
+                        <iframe src="https://zcal.co/i/QAIUtOXb?embed=1&embedType=iframe" class="w-full h-full border-0" title="Agenda téléconsultation"></iframe>
+                    </div>
+                    <div id="content-couple" class="absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-300">
+                        <iframe src="https://zcal.co/i/yjsqTQCY?embed=1&embedType=iframe" class="w-full h-full border-0" title="Agenda couple"></iframe>
+                    </div>
+                    <div id="content-indiv" class="absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-300">
+                        <iframe src="https://zcal.co/i/9zS2bGmt?embed=1&embedType=iframe" class="w-full h-full border-0" title="Agenda individuel"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>	
+<script>			
+	/* ======================
+   ZCAL MODAL
+====================== */
+window.openZcalModal = function(type = 'indiv') {
+    const modal = document.getElementById('zcal-modal');
+    const container = document.getElementById('zcal-modal-container');
+    if (!modal || !container) return;
+
+    modal.classList.remove('hidden', 'opacity-0');
+    document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+        container.classList.remove('scale-95', 'opacity-0');
+    });
+
+    window.switchZcalTab(type);
+};
+
+window.closeZcalModal = function() {
+    const modal = document.getElementById('zcal-modal');
+    const container = document.getElementById('zcal-modal-container');
+    if (!modal || !container) return;
+
+    container.classList.add('scale-95', 'opacity-0');
+    modal.classList.add('opacity-0');
+
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }, 300);
+};
+
+window.switchZcalTab = function(type) {
+    ['tele', 'couple', 'indiv'].forEach(t => {
+        const content = document.getElementById('content-' + t);
+        const btn = document.getElementById('tab-' + t);
+        if (!content || !btn) return;
+
+        if (t === type) {
+            content.classList.remove('opacity-0', 'pointer-events-none');
+            btn.classList.add('active');
+        } else {
+            content.classList.add('opacity-0', 'pointer-events-none');
+            btn.classList.remove('active');
+        }
+    });
+};
+
+/* ======================
+   DOM READY
+====================== */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const header = document.getElementById("main-header");
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    /* Header scroll */
+    if (header) {
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("header-scrolled", window.scrollY > 50);
+        });
+    }
+
+    /* Menu mobile */
+    if (mobileMenuButton && mobileMenu) {
+        const icon = mobileMenuButton.querySelector("i");
+
+        const closeMenu = () => {
+            mobileMenu.classList.add("hidden");
+            if (icon) icon.className = "fas fa-bars";
+            mobileMenuButton.setAttribute("aria-expanded", "false");
+            mobileMenuButton.setAttribute("aria-label", "Ouvrir le menu");
+        };
+
+        mobileMenuButton.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            const isHidden = mobileMenu.classList.toggle("hidden");
+            if (icon) icon.className = isHidden ? "fas fa-bars" : "fas fa-times";
+
+            mobileMenuButton.setAttribute("aria-expanded", String(!isHidden));
+            mobileMenuButton.setAttribute(
+                "aria-label",
+                isHidden ? "Ouvrir le menu" : "Fermer le menu"
+            );
+        });
+
+        mobileMenu.addEventListener("click", (e) => {
+            if (e.target.closest("a") || e.target.closest("button")) {
+                closeMenu();
+            }
+        });
+
+        // Clic en dehors → fermeture
+        document.addEventListener("click", (e) => {
+            if (
+                !mobileMenu.classList.contains("hidden") &&
+                !mobileMenu.contains(e.target) &&
+                !mobileMenuButton.contains(e.target)
+            ) {
+                closeMenu();
+            }
+        });
+    }
+
+    /* Modal Zcal : clic overlay */
+    const zcalModal = document.getElementById("zcal-modal");
+    if (zcalModal) {
+        zcalModal.addEventListener("click", (e) => {
+            if (e.target === zcalModal) {
+                window.closeZcalModal();
+            }
+        });
+    }
+
+    /* Touche ESC */
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+
+            if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+                mobileMenu.classList.add("hidden");
+                const icon = mobileMenuButton?.querySelector("i");
+                if (icon) icon.className = "fas fa-bars";
+            }
+
+            if (typeof window.closeZcalModal === "function") {
+                window.closeZcalModal();
+            }
+        }
+    });
+
+    /* ======================
+       INIT ARTICLES (inchangé)
+    ====================== */
+    const allArticlesSection = document.getElementById('all-articles-section');
+    if (!allArticlesSection) return;
+
+    const latestContainer = document.getElementById('latest-articles-container');
+    const searchInput = document.getElementById('searchInput');
+    const noResults = document.getElementById('no-results');
+    const articlesViewsContainer = document.getElementById('articles-views-container');
+    const viewGridButton = document.getElementById('view-grid-button');
+    const viewListButton = document.getElementById('view-list-button');
+    const carouselTrack = document.getElementById('articles-carousel-track');
+    const prevButton = document.getElementById('prev-article-slide-button');
+    const nextButton = document.getElementById('next-article-slide-button');
+    const listCarouselViewport = document.getElementById('list-carousel-viewport');
+    const listCarouselTrack = document.getElementById('list-carousel-track');
+    const prevListButton = document.getElementById('prev-list-slide-button');
+    const nextListButton = document.getElementById('next-list-slide-button');
+
+    let allArticles = [];
+    let fuse;
+
+const palettes = [
+    ['#9fa9d4', '#b5bfdf'], 
+['#b1a2b8', '#c9bed1'],
+    ['#3d85a6', '#87bdd4'], 
+ ['#5e7485', '#8c9da8'],
+    ['#dcb5b0', '#ebd0cc'], 
+    ['#e0a89e', '#f2c6bf'],
+    ['#c98e88', '#dec0bd'],
+    ['#d18d7e', '#e6b5aa'],
+    ['#d67b73', '#e89e97'],
+    ['#c96e76', '#e09aa0'] 
+];
+
+const prioritizedKeywords = [
+    // --- PRIORITÉ 1 : ROUGE / AMOUR ---
+    { paletteIndex: 9, keywords: ['amour', 'passion', 'couple', 'relation', 'flamme', 'rupture', 'jalousie', 'mariage'] },
+    { paletteIndex: 8, keywords: ['désir', 'plaisir', 'libido', 'fantasme', 'orgasme', 'érotisme', 'sexe', 'sexuelle'] },
+    
+    // --- PRIORITÉ 2 : ROSE / INTIMITÉ ---
+    { paletteIndex: 7, keywords: ['confiance', 'estime', 'honte', 'affirmation', 'image', 'soi'] },
+    { paletteIndex: 6, keywords: ['intimité', 'tendresse', 'câlin', 'vulnérabilité', 'douceur', 'connexion'] },
+
+    // --- PRIORITÉ 3 : NUDE / CORPS (Ex-Beige) ---
+    { paletteIndex: 5, keywords: ['corps', 'santé', 'douleur', 'vaginisme', 'anatomie', 'cycle', 'ménopause', 'grossesse'] },
+    { paletteIndex: 4, keywords: ['sécurité', 'attachement', 'routine', 'foyer', 'famille', 'parentalité', 'enfant', 'maison'] },
+
+    // --- PRIORITÉ 4 : VIOLET / PSY ---
+    { paletteIndex: 3, keywords: ['exploration', 'identité', 'genre', 'orientation', 'curiosité', 'découverte'] },
+    { paletteIndex: 2, keywords: ['communication', 'parler', 'dialogue', 'psycho', 'émotion', 'stress', 'anxiété', 'peur'] },
+
+    // --- PRIORITÉ 5 : BLEU / LOGIQUE ---
+    { paletteIndex: 1, keywords: ['mental', 'conscience', 'logique', 'analyse', 'comprendre', 'réflexion', 'cerveau'] },
+    { paletteIndex: 0, keywords: ['guide', 'ressource', 'livre', 'outil', 'méthode', 'solution', 'conseil', 'astuce', 'liste'] }
+];
+
+function getPaletteIndexFromTitle(title) {
+    const lowerCaseTitle = title.toLowerCase();
+    let foundMatches = [];
+    for (const group of prioritizedKeywords) {
+        for (const keyword of group.keywords) {
+            const regex = new RegExp('\\b' + keyword + '\\b');
+            if (regex.test(lowerCaseTitle)) {
+                foundMatches.push({ 
+                    palette: group.paletteIndex, 
+                    priority: prioritizedKeywords.indexOf(group) 
+                });
+            }
+        }
+    }
+    if (foundMatches.length > 0) {
+        foundMatches.sort((a, b) => a.priority - b.priority);
+        return foundMatches[0].palette;
+    }
+    return title.length % palettes.length;
+}
+
+function hexToHSL(hex) {
+    let r = 0, g = 0, b = 0;
+    if (hex.length == 4) {
+        r = "0x" + hex[1] + hex[1]; g = "0x" + hex[2] + hex[2]; b = "0x" + hex[3] + hex[3];
+    } else if (hex.length == 7) {
+        r = "0x" + hex[1] + hex[2]; g = "0x" + hex[3] + hex[4]; b = "0x" + hex[5] + hex[6];
+    }
+    r /= 255; g /= 255; b /= 255;
+    let cmin = Math.min(r,g,b), cmax = Math.max(r,g,b), delta = cmax - cmin, h = 0, s = 0, l = 0;
+    if (delta == 0) h = 0;
+    else if (cmax == r) h = ((g - b) / delta) % 6;
+    else if (cmax == g) h = (b - r) / delta + 2;
+    else h = (r - g) / delta + 4;
+    h = Math.round(h * 60);
+    if (h < 0) h += 360;
+    l = (cmax + cmin) / 2;
+    s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+    s = +(s * 100).toFixed(1);
+    l = +(l * 100).toFixed(1);
+    return { h, s, l };
+}
+
+function HSLToHex({h, s, l}) {
+    s /= 100; l /= 100;
+    let c = (1 - Math.abs(2 * l - 1)) * s, x = c * (1 - Math.abs((h / 60) % 2 - 1)), m = l - c/2, r = 0, g = 0, b = 0;
+    if (0 <= h && h < 60) { r = c; g = x; b = 0; }
+    else if (60 <= h && h < 120) { r = x; g = c; b = 0; }
+    else if (120 <= h && h < 180) { r = 0; g = c; b = x; }
+    else if (180 <= h && h < 240) { r = 0; g = x; b = c; }
+    else if (240 <= h && h < 300) { r = x; g = 0; b = c; }
+    else if (300 <= h && h < 360) { r = c; g = 0; b = x; }
+    r = Math.round((r + m) * 255).toString(16); g = Math.round((g + m) * 255).toString(16); b = Math.round((b + m) * 255).toString(16);
+    if (r.length == 1) r = "0" + r; if (g.length == 1) g = "0" + g; if (b.length == 1) b = "0" + b;
+    return "#" + r + g + b;
+}
+
+function generateArticlePlaceholder(article, isList = false) {
+    const iconClass = article.iconClass || 'fa-solid fa-book-open';
+    const paletteIndex = getPaletteIndexFromTitle(article.title);
+    const basePalette = palettes[paletteIndex];
+    const uniqueString = (article.title || '') + (article.url || '') + (article.date || '');
+    
+    let seed = 0;
+    for (let i = 0; i < uniqueString.length; i++) {
+        seed = ((seed << 5) - seed) + uniqueString.charCodeAt(i);
+        seed |= 0; 
+    }
+    
+    // 1. Angle du dégradé : Très variable (0 à 360 degrés) pour changer la direction de la lumière
+    const angle = Math.abs(seed) % 360;
+    
+    // 2. Teinte (Hue) : Variation subtile (+/- 15 degrés) pour nuancer la couleur de base
+    const hueShift = (Math.abs(seed) % 30) - 15; 
+
+    // 3. Saturation & Luminosité : Variation pour créer de la texture (+/- 8%)
+    const satDelta = (Math.abs(seed >> 2) % 16) - 8; 
+    const lightDelta = (Math.abs(seed >> 3) % 10) - 5;
+
+    // Couleur 1
+    let hsl1 = hexToHSL(basePalette[0]);
+    hsl1.h = (hsl1.h + hueShift + 360) % 360; 
+    hsl1.s = Math.max(15, Math.min(90, hsl1.s + satDelta)); 
+    const color1 = HSLToHex(hsl1);
+
+    // Couleur 2 (On décale légèrement différemment pour créer du contraste interne)
+    let hsl2 = hexToHSL(basePalette[1]);
+    hsl2.h = (hsl2.h + hueShift + 360) % 360; 
+    hsl2.l = Math.max(20, Math.min(95, hsl2.l + lightDelta));
+    const color2 = HSLToHex(hsl2);
+
+    const style = `background: linear-gradient(${angle}deg, ${color1}, ${color2});`;
+    const containerClass = isList ? "list-card-placeholder" : "card-image-placeholder";
+    
+    return `<div class="${containerClass}" style="${style}"><i class="${iconClass}"></i></div>`;
+}
+
+function updateCarouselButtons() {
+        requestAnimationFrame(() => {
+            const viewport = document.getElementById('articles-carousel-viewport');
+            if (!viewport || !prevButton || !nextButton) return;
+            prevButton.disabled = viewport.scrollLeft <= 5;    
+            nextButton.disabled = viewport.scrollLeft >= (viewport.scrollWidth - viewport.clientWidth - 5);
+        });
+    }
+    
+    function updateListCarouselButtons() {
+        requestAnimationFrame(() => {
+            if (!listCarouselViewport || !prevListButton || !nextListButton) return;
+            prevListButton.disabled = listCarouselViewport.scrollLeft <= 5;
+            nextListButton.disabled = listCarouselViewport.scrollLeft >= (listCarouselViewport.scrollWidth - listCarouselViewport.clientWidth - 5);
+        });
+    }
+
+    function scrollToNext(viewport) {
+        if (!viewport) return;
+        viewport.scrollBy({ left: viewport.clientWidth, behavior: 'smooth' });
+    }
+
+    function scrollToPrev(viewport) {
+        if (!viewport) return;
+        viewport.scrollBy({ left: -viewport.clientWidth, behavior: 'smooth' });
+    }
+    
+    function displayLatestArticles(articles) {
+        if (!latestContainer) return;
+        latestContainer.innerHTML = '';
+        articles.slice(0, 3).forEach(article => {
+            const placeholderHtml = generateArticlePlaceholder(article);
+            latestContainer.innerHTML += `
+                <a href="articles/${article.url}" class="card block relative overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1">
+                    <span class="badge-new">Nouveau</span>
+                    <div class="flex flex-row lg:flex-col h-full">
+                        <div class="flex-shrink-0 w-1/4 lg:w-full aspect-[3/4] lg:aspect-video rounded-2xl lg:rounded-none lg:rounded-t-3xl overflow-hidden transition-all duration-300 ease-in-out">
+                            ${placeholderHtml.replace('class="card-image-placeholder"', 'class="w-full h-full card-image-placeholder"')}
+                        </div>
+                        <div class="flex flex-col flex-grow justify-start px-4 pb-4 pt-10 lg:p-6">
+                            <h2 class="text-xl font-bold text-custom-dark leading-tight">${article.title}</h2>
+                            <p class="text-base text-gray-600 leading-snug lg:leading-relaxed mt-2 lg:flex-grow">${article.excerpt}</p>
+                            <div class="hidden sm:flex items-center mt-4 pt-4 border-t border-gray-200/80">
+                                <p class="article-meta">Publié le <time datetime="${article.date}">${new Date(article.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</time></p>
+                            </div>
+                        </div>
+                    </div>
+                </a>`;
+        });
+    }
+
+    function displayCarouselArticles(articles) {
+        if (!carouselTrack) return;
+        carouselTrack.innerHTML = '';
+        articles.forEach(article => {
+            const placeholderHtml = generateArticlePlaceholder(article);
+            const slide = document.createElement('div');
+            slide.className = 'article-slide';
+            slide.innerHTML = `
+                <article class="card glass-effect group flex flex-col p-0 overflow-hidden h-full relative">
+                    ${placeholderHtml}
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div><span class="article-category">${article.category}</span></div>
+                        <h2 class="text-xl font-bold text-custom-dark mt-2 mb-3 group-hover:text-custom-accent transition-colors">
+                            <a href="articles/${article.url}" class="after:content-[''] after:absolute after:inset-0">${article.title}<span class="sr-only">, Lire l'article</span></a>
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed flex-grow">${article.excerpt}</p>
+                        <div class="mt-6 pt-4 border-t border-gray-200/80">
+                            <p class="article-meta">Publié le <time datetime="${article.date}">${new Date(article.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</time></p>
+                        </div>
+                    </div>
+                </article>`;
+            carouselTrack.appendChild(slide);
+        });
+        if (document.getElementById('articles-carousel-viewport')) document.getElementById('articles-carousel-viewport').scrollLeft = 0;
+        updateCarouselButtons();
+    }
+
+    function displayListArticles(articles) {
+        if (!listCarouselTrack) return;
+        listCarouselTrack.innerHTML = '';
+        const articlesPerPage = 6;
+        const pageCount = Math.ceil(articles.length / articlesPerPage);
+
+        if (pageCount > 1) {
+            prevListButton.classList.add('active');
+            nextListButton.classList.add('active');
+        } else {
+            prevListButton.classList.remove('active');
+            nextListButton.classList.remove('active');
+        }
+
+        for (let i = 0; i < pageCount; i++) {
+            const pageArticles = articles.slice(i * articlesPerPage, (i + 1) * articlesPerPage);
+            const pageElement = document.createElement('div');
+            pageElement.className = 'list-carousel-page';
+            pageElement.innerHTML = pageArticles.map(article => {
+                const placeholderHtml = generateArticlePlaceholder(article, true);
+                return `
+                <div class="list-card mb-6 items-stretch">
+                    <a href="articles/${article.url}" class="list-card-link-overlay"><span class="sr-only">Lire l'article: ${article.title}</span></a>
+                    ${placeholderHtml}
+                    <div class="p-6 flex flex-col justify-center flex-grow">
+                        <span class="article-category !mb-2">${article.category}</span>
+                        <h3 class="text-lg font-bold text-custom-dark leading-tight">${article.title}</h3>
+                        <p class="article-meta mt-2 text-sm"><time datetime="${article.date}">${new Date(article.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</time></p>
+                    </div>
+                </div>`;
+            }).join('');
+            listCarouselTrack.appendChild(pageElement);
+        }
+        
+        if (listCarouselViewport) listCarouselViewport.scrollLeft = 0;
+        updateListCarouselButtons();
+    }
+    
+    function handleResults(articles) {
+        const hasResults = articles.length > 0;
+        noResults.classList.toggle('hidden', hasResults);
+        articlesViewsContainer.classList.toggle('hidden', !hasResults);
+        if(hasResults) {
+            displayCarouselArticles(articles);
+            displayListArticles(articles);
+        }
+    }
+
+    async function loadArticles() {
+        const loadingHTML = '<p class="text-center text-gray-600 col-span-full py-8">Chargement des articles...</p>';
+        if (latestContainer) latestContainer.innerHTML = loadingHTML;
+        
+        try {
+            const response = await fetch('articles.json');
+            if (!response.ok) throw new Error(`Erreur réseau: ${response.status}`);
+            const articlesData = await response.json();
+            if (!Array.isArray(articlesData)) throw new Error('Format des données incorrect.');
+            
+            allArticles = articlesData.sort((a, b) => new Date(b.date) - new Date(a.date));
+            fuse = new Fuse(allArticles, { keys: ['title', 'category', 'excerpt'], threshold: 0.4 });
+
+if (allArticles.length === 0) {
+                if(latestContainer) latestContainer.innerHTML = '<p class="text-center text-gray-600 col-span-full py-8">Aucun article à la une.</p>';
+                if(noResults) noResults.querySelector('p').textContent = 'Aucun article publié pour le moment.';
+            } else {
+                 displayLatestArticles(allArticles);
+            }
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const initialQuery = urlParams.get('q');
+            if (initialQuery && searchInput) {
+                searchInput.value = initialQuery;
+                const articlesToDisplay = fuse.search(initialQuery).map(result => result.item);
+                handleResults(articlesToDisplay);
+            } else {
+                handleResults(allArticles);
+            }
+
+        } catch (error) {
+            console.error('Erreur de chargement des articles:', error);
+            const errorHTML = `<p class="text-center text-red-600 col-span-full py-8">Impossible de charger les articles.</p>`;
+            if(latestContainer) latestContainer.innerHTML = errorHTML;
+            handleResults([]);
+        }
+    }	
+    
+function setView(view) {
+        if (view === 'list') {
+            allArticlesSection.classList.add('list-view-active');
+            viewListButton.classList.add('active');
+            viewGridButton.classList.remove('active');
+            requestAnimationFrame(() => {
+                updateListCarouselButtons();
+            });
+        } else { 
+            allArticlesSection.classList.remove('list-view-active');
+            viewGridButton.classList.add('active');
+            viewListButton.classList.remove('active');
+            requestAnimationFrame(() => {
+                updateCarouselButtons();
+            });
+        }
+    }
+
+    function initializeView() {
+        if (window.innerWidth < 768) {
+            allArticlesSection.classList.add('list-view-active');
+        } else {
+            setView('grid'); 
+        }
+    }
+
+    function debounce(func, wait) {
+        let timeout;
+        return (...args) => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
+
+if (searchInput) {
+        const debouncedSearch = debounce(() => {
+            const query = searchInput.value.trim();
+            
+            // Ajout : Mise à jour de l'URL sans rechargement
+            const url = new URL(window.location);
+            if (query) {
+                url.searchParams.set('q', query);
+            } else {
+                url.searchParams.delete('q');
+            }
+            window.history.pushState({}, '', url);
+
+            const articlesToDisplay = query ? fuse.search(query).map(result => result.item) : allArticles;
+            handleResults(articlesToDisplay);
+        }, 250);
+        searchInput.addEventListener('input', debouncedSearch);
+    }
+    
+	
+	
+    if (viewGridButton && viewListButton) {
+        viewGridButton.addEventListener('click', () => setView('grid'));
+        viewListButton.addEventListener('click', () => setView('list'));
+    }
+
+    const debouncedUpdateAllButtons = debounce(() => {
+        updateCarouselButtons();
+        updateListCarouselButtons();
+    }, 150);
+
+    const carouselViewport = document.getElementById('articles-carousel-viewport');
+    if (prevButton && nextButton && carouselViewport) {
+        prevButton.addEventListener('click', () => scrollToPrev(carouselViewport));
+        nextButton.addEventListener('click', () => scrollToNext(carouselViewport));
+        carouselViewport.addEventListener('scroll', debouncedUpdateAllButtons);
+    }
+    
+    if (prevListButton && nextListButton && listCarouselViewport) {
+        prevListButton.addEventListener('click', () => scrollToPrev(listCarouselViewport));
+        nextListButton.addEventListener('click', () => scrollToNext(listCarouselViewport));
+        listCarouselViewport.addEventListener('scroll', debouncedUpdateAllButtons);
+    }
+    
+window.addEventListener('resize', debouncedUpdateAllButtons);
+
+    // Ajout : Navigation au clavier
+    document.addEventListener('keydown', (e) => {
+        if (document.activeElement === searchInput) return; // Ignorer si on tape dans la recherche
+        
+        const isListView = allArticlesSection.classList.contains('list-view-active');
+        if (e.key === 'ArrowLeft') {
+            isListView ? scrollToPrev(listCarouselViewport) : scrollToPrev(carouselViewport);
+        } else if (e.key === 'ArrowRight') {
+            isListView ? scrollToNext(listCarouselViewport) : scrollToNext(carouselViewport);
+        }
+    });
+
+    initializeView();
+    loadArticles();
+});
+</script>
+</html>
