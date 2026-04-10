@@ -1,0 +1,25 @@
+{
+    "sitemap_categories": [
+        {
+            "name": "articles",
+            "path_contains": "/blog/",
+            "sitemap_file": "articles_sitemap.xml",
+            "changefreq": "weekly",
+            "priority": 0.9
+        },
+        {
+            "name": "products",
+            "path_contains": "/products/",
+            "sitemap_file": "products_sitemap.xml",
+            "changefreq": "daily",
+            "priority": 0.95
+        },
+        {
+            "name": "pages",
+            "path_contains": "/",
+            "sitemap_file": "pages_sitemap.xml",
+            "changefreq": "monthly",
+            "priority": 0.8
+        }
+    ]
+}

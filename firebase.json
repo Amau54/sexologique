@@ -22,8 +22,12 @@
       {
         "source": "/.netlify/functions/**",
         "destination": "https://helpful-tapioca-011b0a.netlify.app/.netlify/functions/**"
-      }
-    ]
+	  },
+	  {
+    "source": "**",
+    "destination": "/index.html"
+	  }
+	]
   },
   "emulators": {
     "hosting": {

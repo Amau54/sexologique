@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+    <html lang="fr" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQ | Sexo-logique</title>
+        <meta name="description" content="Questions fréquentes sur la sexologie et la thérapie. Trouvez des réponses claires et professionnelles à vos interrogations.">
+        <meta property="og:title" content="FAQ | Sexo-logique"/>
+        <meta property="og:description" content="Questions fréquentes sur la sexologie et la thérapie. Trouvez des réponses claires et professionnelles à vos interrogations."/>
+        <meta property="og:url" content="https://www.sexo-logique.com/FAQ"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://www.sexo-logique.com/../images/og-image-main.jpg"/>
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+        <link rel="apple-touch-icon" href="../images/favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+        <link rel="preconnect" href="https://zcal.co" crossorigin>
+		<link rel="dns-prefetch" href="https://zcal.co">
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+        <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+        </noscript>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
+				
+		<link rel="stylesheet" href="/articles/style.css">
+
+    </head>
+    <body class="antialiased  hero-bg">
+			<header id="main-header" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300"> 
+		<div class="container mx-auto px-4"> 
+			<nav class="flex items-center justify-between h-16 glass-effect rounded-full px-4 lg:px-8 shadow-sm"> 
+				<a href="/" class="text-xl font-bold text-custom-dark flex-shrink-0">sexo-logique.com</a> 
+				<div class="hidden lg:flex items-center md:space-x-4 lg:space-x-8 text-custom-dark"> 
+					<a href="/#consultations" class="nav-link">Consultations</a> 
+					<a href="/#apropos" class="nav-link">À propos</a> 
+					<a href="/sexeploration.html" class="nav-link">Podcast</a> 
+					<a href="/faq.html" class="nav-link font-bold text-custom-accent">FAQ</a>
+					<a href="/#contact" class="nav-link">Contact</a>
+				</div> 
+                <div class="flex items-center space-x-2"> 
+                        <button id="mobile-menu-button" class="lg:hidden text-custom-dark focus:outline-none p-2" aria-label="Menu principal"> 
+                        <i class="fas fa-bars text-2xl"></i> 
+					</button> 
+					<button onclick="openZcalModal('indiv')" class="hidden lg:inline-block bg-custom-dark text-white md:px-4 lg:px-6 py-2 rounded-full hover:bg-opacity-90 transition shadow-md hover:shadow-lg btn-mobile-feedback whitespace-nowrap cursor-pointer">Prendre RDV</button> 
+				</div> 
+			</nav> 
+			<div id="mobile-menu" class="hidden lg:hidden glass-effect rounded-2xl mt-2 p-4 text-custom-dark text-center"> 
+				<a href="/#consultations" class="block py-2 hover:text-custom-accent">Consultations</a> 
+				<a href="/#apropos" class="block py-2 hover:text-custom-accent">À propos</a> 
+				<a href="/sexeploration.html" class="block py-2 hover:text-custom-accent">Podcast</a> 
+				<a href="/faq.html" class="block py-2 text-custom-accent font-semibold">FAQ</a>
+				<a href="/#contact" class="block py-2 hover:text-custom-accent">Contact</a> 
+                    <button onclick="openZcalModal('indiv')" class="mt-4 w-full bg-custom-dark text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition shadow-md btn-mobile-feedback cursor-pointer">Prendre RDV</button> 
+                </div> 
+		</div> 
+	</header>
+
+
+
+
+<main id="articles-page-main" class="flex-grow pt-32 pb-20 hero-bg"> 
+    <section id="Articles" class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-12 ">
+            <h1 class="mt-10 text-4xl md:text-5xl font-bold text-custom-dark tracking-tight leading-tight">
+                 Questions <span class="text-custom-accent">fréquentes</span>
+            </h1>
+            <p class="pt-16 mt-10 text-lg md:text-xl max-w-2xl mx-auto text-gray-700">
+                Des réponses claires à vos interrogations. 
+                Cliquez sur une question pour en savoir plus.
+            </p>
+        </div>
+
+
+
+<div class="search-container animate-fade-in-up mb-16 relative max-w-xl mx-auto">
+    <input 
+        type="search" 
+        id="faq-search" 
+        class="search-input w-full pl-12 pr-4 py-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#a37b73]/50 shadow-sm transition-all" 
+        placeholder="Une question ? Ex : désir, couple, tarif..."
+        aria-label="Recherche FAQ"
+    >
+    <i class="fas fa-search search-icon absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+</div>
+
+
+        <div id="faq-content" class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                
+                <div class="flex flex-col gap-8">
+
+                    <div class="faq-category">
+                        <h2 class="text-2xl font-bold text-[#3d3b30] mb-6 flex items-center gap-3">
+                            <i class="fas fa-user-doctor text-[#a37b73] text-xl"></i>
+                            La Thérapie en Pratique
+                        </h2>
+                        <div class="space-y-3">
+                            <a href="FAQ/accompagnement-individuel-couple.html" class="faq-question-link">
+                                <span>Consulter seul(e) ou en couple ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/qu-est-ce-qu-un-sexologue.html" class="faq-question-link">
+                                <span>Formation et rôle du sexologue ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/medecin-sexologue-ou-sexologue-clinicien.html" class="faq-question-link">
+                                <span>Différence médecin sexologue et clinicien ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/qui-peut-consulter-un-sexologue.html" class="faq-question-link">
+                                <span>Qui peut consulter un sexologue ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/deroulement-d-une-seance-de-sexologie.html" class="faq-question-link">
+                                <span>Déroulement d'une première séance ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/examen-physique-et-nudite-en-sexologie.html" class="faq-question-link">
+                                <span>Y a-t-il examen physique ou nudité ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/confidentialite-et-deontologie.html" class="faq-question-link">
+                                <span>Confidentialité et déontologie ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/tarifs-et-remboursements-sexologue.html" class="faq-question-link">
+                                <span>Tarifs et remboursements ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/teleconsultation-sexologie-efficacite.html" class="faq-question-link">
+                                <span>Efficacité de la téléconsultation ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                                        <div class="faq-category">
+                        <h2 class="text-2xl font-bold text-[#3d3b30] mb-6 flex items-center gap-3">
+                            <i class="fas fa-spa text-[#a37b73] text-xl"></i>
+                            Épanouissement Personnel
+                        </h2>
+                        <div class="space-y-3">
+                            <a href="FAQ/vie-intime-satisfaction-personnelle.html" class="faq-question-link">
+                                <span>Comment puis-je m'épanouir dans mon intimité ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/la-sexologie-pour-qui-et-pourquoi.html" class="faq-question-link">
+                                <span>La sexologie est-elle seulement pour les problèmes ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/sante-sexuelle-bien-etre.html" class="faq-question-link">
+                                <span>Définir la santé sexuelle et le bien-être ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="faq-category">
+                        <h2 class="text-2xl font-bold text-[#3d3b30] mb-6 flex items-center gap-3">
+                            <i class="fas fa-comments text-[#a37b73] text-xl"></i>
+                            Communication & Couple
+                        </h2>
+                        <div class="space-y-3">
+                            <a href="FAQ/communication-intimite.html" class="faq-question-link">
+                                <span>Comment oser dire mes besoins ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/difficultes-communication-couple.html" class="faq-question-link">
+                                <span>Retrouver l'harmonie face aux difficultés ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/gestion-frustrations-conflits-sexuels.html" class="faq-question-link">
+                                <span>Gérer les frustrations et conflits sexuels ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/preserver-renforcer-complicite.html" class="faq-question-link">
+                                <span>Les secrets pour préserver la complicité ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/comment-convaincre-son-partenaire-de-consulter.html" class="faq-question-link">
+                                <span>Convaincre mon partenaire de consulter ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col gap-8">
+                    
+                    <div class="faq-category">
+                        <h2 class="text-2xl font-bold text-[#3d3b30] mb-6 flex items-center gap-3">
+                            <i class="fas fa-fire-flame-curved text-[#a37b73] text-xl"></i>
+                            Désir et Plaisir
+                        </h2>
+                        <div class="space-y-3">
+                            <a href="FAQ/retrouver-developper-desir.html" class="faq-question-link">
+                                <span>Retrouver et développer le désir au quotidien ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/troubles-desir-sexuel.html" class="faq-question-link">
+                                <span>Que faire en cas de troubles du désir ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/troubles-orgasme.html" class="faq-question-link">
+                                <span>Me libérer en cas de troubles de l'orgasme ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="faq-category">
+                        <h2 class="text-2xl font-bold text-[#3d3b30] mb-6 flex items-center gap-3">
+                            <i class="fas fa-heart-crack text-[#a37b73] text-xl"></i>
+                            Difficultés Sexuelles
+                        </h2>
+                        <div class="space-y-3">
+                            <a href="FAQ/troubles-erection.html" class="faq-question-link">
+                                <span>Aborder les troubles de l'érection ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/ejaculation-precoce-retardee.html" class="faq-question-link">
+                                <span>Gérer l'éjaculation précoce ou retardée ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/douleurs-rapports-sexuels.html" class="faq-question-link">
+                                <span>Douleurs pendant les rapports (vaginisme...) ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/blocages-emotionnels-psychologiques.html" class="faq-question-link">
+                                <span>Dépasser mes blocages émotionnels ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/usage-problematique-pornographie.html" class="faq-question-link">
+                                <span>Gérer un usage problématique du porno ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="faq-category">
+                        <h2 class="text-2xl font-bold text-[#3d3b30] mb-6 flex items-center gap-3">
+                            <i class="fas fa-fingerprint text-[#a37b73] text-xl"></i>
+                            Identité & Parcours
+                        </h2>
+                        <div class="space-y-3">
+                            <a href="FAQ/identite-orientation-sexuelle.html" class="faq-question-link">
+                                <span>Comprendre mon identité et orientation ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/cycles-vie-sexualite-evolutive.html" class="faq-question-link">
+                                <span>Comment la sexualité évolue avec les cycles de vie ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/changements-vie-sexualite.html" class="faq-question-link">
+                                <span>Sexualité et changements de vie (ménopause...) ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                            <a href="FAQ/impact-sante-maladie-sexualite.html" class="faq-question-link">
+                                <span>Retrouver une vie intime après la maladie ?</span>
+                                <i class="fas fa-chevron-right text-sm opacity-70"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="bg-gray-100/60 border-t border-gray-200/80 py-8"><div class="container mx-auto px-4 relative flex items-center justify-center md:justify-between"><p class="text-gray-600 text-sm text-center md:text-left">© 2024 <span class="font-semibold text-gray-700">sexo-logique.com</span> - Chloé François<span class="block md:inline text-gray-400">Sexologue & Thérapeute de couple</span></p><nav class="absolute right-0 top-1/2 -translate-y-1/2"><a href="/faq.html" class="text-gray-500 hover:text-custom-accent transition-colors duration-300 text-sm font-medium">FAQ</a></nav></div></footer>
+<dialog id="contact-modal" class="p-8 rounded-2xl shadow-2xl max-w-sm w-full text-center glass-effect backdrop:bg-black backdrop:bg-opacity-60 border-none">
+    <h2 class="text-3xl font-bold text-custom-dark mb-3">Me contacter</h2>
+    <p class="text-gray-700 mb-6">Choisissez votre méthode préférée pour m'envoyer un message.</p>
+
+    <div class="flex flex-col space-y-2 mb-6">
+        <button id="copy-email-btn" class="w-full bg-custom-dark text-white font-semibold py-3 rounded-full hover:bg-opacity-90 shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+            <i class="fas fa-copy mr-2"></i>Copier l'e-mail
+        </button>
+        <div id="copy-success-msg" class="text-green-700 h-5 text-sm font-medium flex items-center justify-center gap-1.5 opacity-0 transition-opacity duration-300">
+            <i class="fas fa-check-circle"></i>Adresse copiée !
+        </div>
+    </div>
+    <p class="text-sm font-medium text-gray-500 mb-4">Ou utilisez votre service web préféré :</p>
+    <div class="grid grid-cols-2 gap-3 text-sm">
+        <a href="https://mail.google.com/mail/?view=cm&to=contact.sexologique@gmail.com" target="_blank" class="flex items-center justify-center gap-2 rounded-xl py-2.5 px-4 font-semibold bg-white/50 hover:bg-white/70 border border-transparent hover:border-white/30 transition-all duration-200 shadow-sm text-gray-800">
+            <i class="fab fa-google text-red-500"></i>Gmail
+        </a>
+        <a href="https://outlook.live.com/mail/deeplink/compose?to=contact.sexologique@gmail.com" target="_blank" class="flex items-center justify-center gap-2 rounded-xl py-2.5 px-4 font-semibold bg-white/50 hover:bg-white/70 border border-transparent hover:border-white/30 transition-all duration-200 shadow-sm text-gray-800">
+            <i class="fab fa-microsoft text-blue-500"></i>Outlook
+        </a>
+        <a href="https://mail.yahoo.com/d/compose-message?to=contact.sexologique@gmail.com" target="_blank" class="flex items-center justify-center gap-2 rounded-xl py-2.5 px-4 font-semibold bg-white/50 hover:bg-white/70 border border-transparent hover:border-white/30 transition-all duration-200 shadow-sm text-gray-800">
+            <i class="fab fa-yahoo text-purple-600"></i>Yahoo
+        </a>
+        <a href="https://mail.proton.me/compose?to=contact.sexologique@gmail.com" target="_blank" class="flex items-center justify-center gap-2 rounded-xl py-2.5 px-4 font-semibold bg-white/50 hover:bg-white/70 border border-transparent hover:border-white/30 transition-all duration-200 shadow-sm text-gray-800">
+            <i class="fas fa-shield-alt text-purple-800"></i>Proton
+        </a>
+    </div>
+    <form method="dialog" class="absolute top-3 right-3">
+        <button aria-label="Fermer la fenêtre modale" class="text-gray-500 hover:text-gray-800 bg-black/5 hover:bg-black/10 transition-all p-1.5 rounded-full w-8 h-8 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+    </form>
+</dialog>
+<script>
+    console.log("--> Le script est bien lancé !");
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Sélection des éléments
+        const searchInput = document.getElementById('faq-search');
+        const allQuestions = document.querySelectorAll('.faq-question-link');
+        const allCategories = document.querySelectorAll('.faq-category');
+
+        if (!searchInput) {
+            console.error("ERREUR : La barre de recherche (id='faq-search') est introuvable.");
+            return;
+        }
+
+        console.log("Barre de recherche trouvée, prêt à filtrer.");
+
+        // Fonction pour nettoyer le texte (enlever accents et majuscules)
+        const normalizeText = (text) => {
+            return text
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, ""); // Enlève les accents
+        };
+
+        // 2. Écouteur sur la barre de recherche
+        searchInput.addEventListener('input', (e) => {
+            const searchText = normalizeText(e.target.value);
+            
+            // A. Filtrer les questions
+            allQuestions.forEach(link => {
+                const span = link.querySelector('span');
+                if(span) {
+                    const questionText = normalizeText(span.innerText);
+                    if (questionText.includes(searchText)) {
+                        link.style.display = 'flex';
+                    } else {
+                        link.style.display = 'none';
+                    }
+                }
+            });
+
+            // B. Masquer les catégories vides
+            allCategories.forEach(category => {
+                const visibleQuestions = Array.from(category.querySelectorAll('.faq-question-link'))
+                    .filter(link => link.style.display !== 'none');
+
+                if (visibleQuestions.length > 0) {
+                    category.style.display = 'flex';
+                } else {
+                    category.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+    <script src="/articles/script.js" defer></script>
+</body>	
+</html>

@@ -1,0 +1,4 @@
+https://example.com/blog/bulk-post-one
+https://example.com/products/new-gadget
+https://example.com/blog/bulk-post-two
+https://example.com/contact-us

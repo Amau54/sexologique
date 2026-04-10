@@ -1,0 +1,393 @@
+| Classe HTML | Présente dans le CSS | Détails |
+|---|---|---|
+| .${iconClass} | ❌ Non | Aucune définition trouvée |
+| .-translate-x-1/2 | ✅ Oui | Définition trouvée |
+| .-translate-y-1/2 | ✅ Oui | Définition trouvée |
+| .absolute | ✅ Oui | Définition trouvée |
+| .active | ❌ Non | Aucune définition trouvée |
+| .animate-bounce | ✅ Oui | Définition trouvée |
+| .antialiased | ✅ Oui | Définition trouvée |
+| .appearance-none | ✅ Oui | Définition trouvée |
+| .backdrop-blur-lg | ✅ Oui | Définition trouvée |
+| .backdrop-blur-md | ✅ Oui | Définition trouvée |
+| .backdrop-blur-sm | ✅ Oui | Définition trouvée |
+| .bg-[#1DB954] | ✅ Oui | Définition trouvée |
+| .bg-[#FEAA2D] | ✅ Oui | Définition trouvée |
+| .bg-[#a37b73] | ✅ Oui | Définition trouvée |
+| .bg-[#a37b73]/10 | ❌ Non | Aucune définition trouvée |
+| .bg-black | ✅ Oui | Définition trouvée |
+| .bg-black/30 | ❌ Non | Aucune définition trouvée |
+| .bg-black/5 | ✅ Oui | Définition trouvée |
+| .bg-black/60 | ✅ Oui | Définition trouvée |
+| .bg-custom-dark | ✅ Oui | Définition trouvée |
+| .bg-gray-100/60 | ✅ Oui | Définition trouvée |
+| .bg-opacity-40 | ✅ Oui | Définition trouvée |
+| .bg-opacity-50 | ✅ Oui | Définition trouvée |
+| .bg-white/15 | ✅ Oui | Définition trouvée |
+| .bg-white/30 | ✅ Oui | Définition trouvée |
+| .bg-white/40 | ✅ Oui | Définition trouvée |
+| .bg-white/50 | ✅ Oui | Définition trouvée |
+| .bg-white/70 | ✅ Oui | Définition trouvée |
+| .bg-white/80 | ✅ Oui | Définition trouvée |
+| .block | ✅ Oui | Définition trouvée |
+| .border | ✅ Oui | Définition trouvée |
+| .border-0 | ✅ Oui | Définition trouvée |
+| .border-4 | ✅ Oui | Définition trouvée |
+| .border-[#a37b73]/20 | ❌ Non | Aucune définition trouvée |
+| .border-b | ❌ Non | Aucune définition trouvée |
+| .border-gray-200/80 | ✅ Oui | Définition trouvée |
+| .border-t | ✅ Oui | Définition trouvée |
+| .border-transparent | ✅ Oui | Définition trouvée |
+| .border-white/20 | ✅ Oui | Définition trouvée |
+| .border-white/30 | ✅ Oui | Définition trouvée |
+| .border-white/50 | ✅ Oui | Définition trouvée |
+| .bottom-0 | ✅ Oui | Définition trouvée |
+| .bottom-10 | ✅ Oui | Définition trouvée |
+| .btn-mobile-feedback | ✅ Oui | Définition trouvée |
+| .card | ✅ Oui | Définition trouvée |
+| .card-image-placeholder | ❌ Non | Aucune définition trouvée |
+| .card-sexo | ✅ Oui | Définition trouvée |
+| .card-sexo-stack | ✅ Oui | Définition trouvée |
+| .col-span-full | ✅ Oui | Définition trouvée |
+| .container | ✅ Oui | Définition trouvée |
+| .cursor-pointer | ✅ Oui | Définition trouvée |
+| .custom-range | ❌ Non | Aucune définition trouvée |
+| .custom-spinner | ✅ Oui | Définition trouvée |
+| .drop-shadow-md | ✅ Oui | Définition trouvée |
+| .dropdown-content | ✅ Oui | Définition trouvée |
+| .duration-200 | ✅ Oui | Définition trouvée |
+| .duration-300 | ✅ Oui | Définition trouvée |
+| .ease-in-out | ✅ Oui | Définition trouvée |
+| .email | ❌ Non | Aucune définition trouvée |
+| .fa-apple | ❌ Non | Aucune définition trouvée |
+| .fa-bars | ❌ Non | Aucune définition trouvée |
+| .fa-book-open | ❌ Non | Aucune définition trouvée |
+| .fa-brands | ❌ Non | Aucune définition trouvée |
+| .fa-check-circle | ❌ Non | Aucune définition trouvée |
+| .fa-chevron-left | ❌ Non | Aucune définition trouvée |
+| .fa-chevron-right | ❌ Non | Aucune définition trouvée |
+| .fa-copy | ❌ Non | Aucune définition trouvée |
+| .fa-deezer | ❌ Non | Aucune définition trouvée |
+| .fa-download | ❌ Non | Aucune définition trouvée |
+| .fa-envelope | ❌ Non | Aucune définition trouvée |
+| .fa-exclamation-triangle | ❌ Non | Aucune définition trouvée |
+| .fa-google | ❌ Non | Aucune définition trouvée |
+| .fa-instagram | ❌ Non | Aucune définition trouvée |
+| .fa-linkedin-in | ❌ Non | Aucune définition trouvée |
+| .fa-list | ❌ Non | Aucune définition trouvée |
+| .fa-map-marked-alt | ❌ Non | Aucune définition trouvée |
+| .fa-map-marker-alt | ❌ Non | Aucune définition trouvée |
+| .fa-microsoft | ❌ Non | Aucune définition trouvée |
+| .fa-play | ❌ Non | Aucune définition trouvée |
+| .fa-redo-alt | ❌ Non | Aucune définition trouvée |
+| .fa-shield-alt | ❌ Non | Aucune définition trouvée |
+| .fa-spin | ❌ Non | Aucune définition trouvée |
+| .fa-spinner | ❌ Non | Aucune définition trouvée |
+| .fa-spotify | ❌ Non | Aucune définition trouvée |
+| .fa-times | ❌ Non | Aucune définition trouvée |
+| .fa-undo-alt | ❌ Non | Aucune définition trouvée |
+| .fa-volume-down | ❌ Non | Aucune définition trouvée |
+| .fa-volume-up | ❌ Non | Aucune définition trouvée |
+| .fa-yahoo | ❌ Non | Aucune définition trouvée |
+| .fab | ❌ Non | Aucune définition trouvée |
+| .fade-in | ✅ Oui | Définition trouvée |
+| .fas | ❌ Non | Aucune définition trouvée |
+| .fixed | ✅ Oui | Définition trouvée |
+| .flex | ✅ Oui | Définition trouvée |
+| .flex-1 | ✅ Oui | Définition trouvée |
+| .flex-col | ✅ Oui | Définition trouvée |
+| .flex-grow | ✅ Oui | Définition trouvée |
+| .flex-shrink-0 | ✅ Oui | Définition trouvée |
+| .flex-wrap | ✅ Oui | Définition trouvée |
+| .font-bold | ✅ Oui | Définition trouvée |
+| .font-light | ✅ Oui | Définition trouvée |
+| .font-medium | ✅ Oui | Définition trouvée |
+| .font-semibold | ✅ Oui | Définition trouvée |
+| .gap-1.5 | ✅ Oui | Définition trouvée |
+| .gap-2 | ✅ Oui | Définition trouvée |
+| .gap-3 | ✅ Oui | Définition trouvée |
+| .gap-4 | ✅ Oui | Définition trouvée |
+| .gap-8 | ✅ Oui | Définition trouvée |
+| .glass-effect | ✅ Oui | Définition trouvée |
+| .grid | ✅ Oui | Définition trouvée |
+| .grid-cols-1 | ✅ Oui | Définition trouvée |
+| .grid-cols-2 | ✅ Oui | Définition trouvée |
+| .group | ✅ Oui | Définition trouvée |
+| .group-hover:opacity-100 | ❌ Non | Aucune définition trouvée |
+| .group-hover:scale-100 | ❌ Non | Aucune définition trouvée |
+| .group-hover:scale-105 | ❌ Non | Aucune définition trouvée |
+| .group-hover:text-custom-accent | ❌ Non | Aucune définition trouvée |
+| .h-12 | ✅ Oui | Définition trouvée |
+| .h-16 | ✅ Oui | Définition trouvée |
+| .h-2 | ✅ Oui | Définition trouvée |
+| .h-20 | ✅ Oui | Définition trouvée |
+| .h-24 | ✅ Oui | Définition trouvée |
+| .h-48 | ✅ Oui | Définition trouvée |
+| .h-5 | ✅ Oui | Définition trouvée |
+| .h-6 | ✅ Oui | Définition trouvée |
+| .h-64 | ✅ Oui | Définition trouvée |
+| .h-8 | ✅ Oui | Définition trouvée |
+| .h-80 | ❌ Non | Aucune définition trouvée |
+| .h-9 | ✅ Oui | Définition trouvée |
+| .h-full | ✅ Oui | Définition trouvée |
+| .hero-bg | ✅ Oui | Définition trouvée |
+| .hidden | ✅ Oui | Définition trouvée |
+| .hover:-translate-y-1.5 | ❌ Non | Aucune définition trouvée |
+| .hover:-translate-y-2 | ❌ Non | Aucune définition trouvée |
+| .hover:bg-[#946b64] | ❌ Non | Aucune définition trouvée |
+| .hover:bg-[#a37b73]/10 | ❌ Non | Aucune définition trouvée |
+| .hover:bg-black/10 | ❌ Non | Aucune définition trouvée |
+| .hover:bg-gray-800 | ❌ Non | Aucune définition trouvée |
+| .hover:bg-green-600 | ❌ Non | Aucune définition trouvée |
+| .hover:bg-opacity-90 | ❌ Non | Aucune définition trouvée |
+| .hover:bg-white/70 | ❌ Non | Aucune définition trouvée |
+| .hover:border-white/30 | ❌ Non | Aucune définition trouvée |
+| .hover:brightness-95 | ❌ Non | Aucune définition trouvée |
+| .hover:scale-105 | ❌ Non | Aucune définition trouvée |
+| .hover:scale-[1.03] | ❌ Non | Aucune définition trouvée |
+| .hover:shadow-[0_10px_25px_-5px_rgba(163,123,115,0.2),_0_8px_10px_-6px_rgba(163,123,115,0.2)] | ❌ Non | Aucune définition trouvée |
+| .hover:shadow-lg | ❌ Non | Aucune définition trouvée |
+| .hover:shadow-xl | ❌ Non | Aucune définition trouvée |
+| .hover:text-[#a37b73] | ❌ Non | Aucune définition trouvée |
+| .hover:text-custom-accent | ❌ Non | Aucune définition trouvée |
+| .hover:text-custom-dark | ❌ Non | Aucune définition trouvée |
+| .hover:text-gray-600 | ❌ Non | Aucune définition trouvée |
+| .hover:text-gray-800 | ❌ Non | Aucune définition trouvée |
+| .hover:text-red-500 | ❌ Non | Aucune définition trouvée |
+| .hover:text-white | ❌ Non | Aucune définition trouvée |
+| .inline-block | ✅ Oui | Définition trouvée |
+| .inline-flex | ❌ Non | Aucune définition trouvée |
+| .inset-0 | ✅ Oui | Définition trouvée |
+| .instagram | ❌ Non | Aucune définition trouvée |
+| .italic | ❌ Non | Aucune définition trouvée |
+| .items-center | ✅ Oui | Définition trouvée |
+| .justify-between | ✅ Oui | Définition trouvée |
+| .justify-center | ✅ Oui | Définition trouvée |
+| .justify-end | ✅ Oui | Définition trouvée |
+| .justify-start | ✅ Oui | Définition trouvée |
+| .leading-relaxed | ✅ Oui | Définition trouvée |
+| .leading-tight | ✅ Oui | Définition trouvée |
+| .left-0 | ✅ Oui | Définition trouvée |
+| .left-1/2 | ✅ Oui | Définition trouvée |
+| .lg:flex | ❌ Non | Aucune définition trouvée |
+| .lg:gap-16 | ❌ Non | Aucune définition trouvée |
+| .lg:grid-cols-3 | ❌ Non | Aucune définition trouvée |
+| .lg:hidden | ❌ Non | Aucune définition trouvée |
+| .lg:inline-block | ❌ Non | Aucune définition trouvée |
+| .lg:px-6 | ❌ Non | Aucune définition trouvée |
+| .lg:px-8 | ❌ Non | Aucune définition trouvée |
+| .lg:space-x-8 | ❌ Non | Aucune définition trouvée |
+| .line-clamp-3 | ✅ Oui | Définition trouvée |
+| .linkedin | ❌ Non | Aucune définition trouvée |
+| .mail-btn | ❌ Non | Aucune définition trouvée |
+| .maps | ❌ Non | Aucune définition trouvée |
+| .max-w-3xl | ✅ Oui | Définition trouvée |
+| .max-w-5xl | ✅ Oui | Définition trouvée |
+| .max-w-6xl | ✅ Oui | Définition trouvée |
+| .max-w-full | ✅ Oui | Définition trouvée |
+| .max-w-md | ✅ Oui | Définition trouvée |
+| .max-w-sm | ✅ Oui | Définition trouvée |
+| .max-w-xl | ✅ Oui | Définition trouvée |
+| .mb-1 | ✅ Oui | Définition trouvée |
+| .mb-2 | ✅ Oui | Définition trouvée |
+| .mb-3 | ✅ Oui | Définition trouvée |
+| .mb-4 | ✅ Oui | Définition trouvée |
+| .mb-6 | ✅ Oui | Définition trouvée |
+| .mb-8 | ✅ Oui | Définition trouvée |
+| .md:!p-4 | ❌ Non | Aucune définition trouvée |
+| .md:!p-6 | ❌ Non | Aucune définition trouvée |
+| .md:block | ❌ Non | Aucune définition trouvée |
+| .md:flex | ❌ Non | Aucune définition trouvée |
+| .md:flex-none | ❌ Non | Aucune définition trouvée |
+| .md:flex-row | ❌ Non | Aucune définition trouvée |
+| .md:gap-14 | ❌ Non | Aucune définition trouvée |
+| .md:gap-16 | ❌ Non | Aucune définition trouvée |
+| .md:gap-8 | ❌ Non | Aucune définition trouvée |
+| .md:grid-cols-2 | ❌ Non | Aucune définition trouvée |
+| .md:grid-cols-3 | ❌ Non | Aucune définition trouvée |
+| .md:h-14 | ❌ Non | Aucune définition trouvée |
+| .md:h-24 | ❌ Non | Aucune définition trouvée |
+| .md:h-80 | ❌ Non | Aucune définition trouvée |
+| .md:h-[90vh] | ❌ Non | Aucune définition trouvée |
+| .md:h-auto | ❌ Non | Aucune définition trouvée |
+| .md:hidden | ❌ Non | Aucune définition trouvée |
+| .md:inline | ❌ Non | Aucune définition trouvée |
+| .md:inline-block | ❌ Non | Aucune définition trouvée |
+| .md:justify-between | ❌ Non | Aucune définition trouvée |
+| .md:justify-center | ❌ Non | Aucune définition trouvée |
+| .md:justify-start | ❌ Non | Aucune définition trouvée |
+| .md:max-w-none | ❌ Non | Aucune définition trouvée |
+| .md:mb-10 | ❌ Non | Aucune définition trouvée |
+| .md:ml-auto | ❌ Non | Aucune définition trouvée |
+| .md:mt-12 | ❌ Non | Aucune définition trouvée |
+| .md:mt-16 | ❌ Non | Aucune définition trouvée |
+| .md:p-0 | ❌ Non | Aucune définition trouvée |
+| .md:p-8 | ❌ Non | Aucune définition trouvée |
+| .md:px-4 | ❌ Non | Aucune définition trouvée |
+| .md:px-8 | ❌ Non | Aucune définition trouvée |
+| .md:py-20 | ❌ Non | Aucune définition trouvée |
+| .md:py-3 | ❌ Non | Aucune définition trouvée |
+| .md:space-x-4 | ❌ Non | Aucune définition trouvée |
+| .md:space-x-8 | ❌ Non | Aucune définition trouvée |
+| .md:space-y-0 | ❌ Non | Aucune définition trouvée |
+| .md:space-y-5 | ❌ Non | Aucune définition trouvée |
+| .md:space-y-6 | ❌ Non | Aucune définition trouvée |
+| .md:text-2xl | ❌ Non | Aucune définition trouvée |
+| .md:text-3xl | ❌ Non | Aucune définition trouvée |
+| .md:text-4xl | ❌ Non | Aucune définition trouvée |
+| .md:text-6xl | ❌ Non | Aucune définition trouvée |
+| .md:text-7xl | ❌ Non | Aucune définition trouvée |
+| .md:text-base | ❌ Non | Aucune définition trouvée |
+| .md:text-left | ❌ Non | Aucune définition trouvée |
+| .md:text-lg | ❌ Non | Aucune définition trouvée |
+| .md:text-sm | ❌ Non | Aucune définition trouvée |
+| .md:text-xl | ❌ Non | Aucune définition trouvée |
+| .md:w-1/3 | ❌ Non | Aucune définition trouvée |
+| .md:w-1/4 | ❌ Non | Aucune définition trouvée |
+| .md:w-14 | ❌ Non | Aucune définition trouvée |
+| .md:w-2/3 | ❌ Non | Aucune définition trouvée |
+| .md:w-24 | ❌ Non | Aucune définition trouvée |
+| .md:w-80 | ❌ Non | Aucune définition trouvée |
+| .min-h-screen | ✅ Oui | Définition trouvée |
+| .mobile-tab | ❌ Non | Aucune définition trouvée |
+| .mr-2 | ✅ Oui | Définition trouvée |
+| .mr-3 | ✅ Oui | Définition trouvée |
+| .mr-4 | ✅ Oui | Définition trouvée |
+| .mt-1 | ✅ Oui | Définition trouvée |
+| .mt-12 | ✅ Oui | Définition trouvée |
+| .mt-2 | ✅ Oui | Définition trouvée |
+| .mt-4 | ✅ Oui | Définition trouvée |
+| .mt-6 | ✅ Oui | Définition trouvée |
+| .mt-8 | ✅ Oui | Définition trouvée |
+| .mx-auto | ✅ Oui | Définition trouvée |
+| .nav-link | ✅ Oui | Définition trouvée |
+| .object-cover | ✅ Oui | Définition trouvée |
+| .opacity-0 | ✅ Oui | Définition trouvée |
+| .opacity-100 | ❌ Non | Aucune définition trouvée |
+| .overflow-hidden | ✅ Oui | Définition trouvée |
+| .overflow-x-auto | ✅ Oui | Définition trouvée |
+| .p-0 | ❌ Non | Aucune définition trouvée |
+| .p-1.5 | ✅ Oui | Définition trouvée |
+| .p-2 | ✅ Oui | Définition trouvée |
+| .p-3 | ✅ Oui | Définition trouvée |
+| .p-4 | ✅ Oui | Définition trouvée |
+| .p-5 | ✅ Oui | Définition trouvée |
+| .p-6 | ✅ Oui | Définition trouvée |
+| .p-8 | ✅ Oui | Définition trouvée |
+| .pb-12 | ✅ Oui | Définition trouvée |
+| .pb-4 | ✅ Oui | Définition trouvée |
+| .pointer-events-none | ✅ Oui | Définition trouvée |
+| .pt-8 | ✅ Oui | Définition trouvée |
+| .px-10 | ✅ Oui | Définition trouvée |
+| .px-2 | ❌ Non | Aucune définition trouvée |
+| .px-3 | ✅ Oui | Définition trouvée |
+| .px-4 | ✅ Oui | Définition trouvée |
+| .px-5 | ✅ Oui | Définition trouvée |
+| .px-6 | ✅ Oui | Définition trouvée |
+| .px-8 | ✅ Oui | Définition trouvée |
+| .py-1.5 | ✅ Oui | Définition trouvée |
+| .py-12 | ✅ Oui | Définition trouvée |
+| .py-16 | ✅ Oui | Définition trouvée |
+| .py-2 | ✅ Oui | Définition trouvée |
+| .py-2.5 | ✅ Oui | Définition trouvée |
+| .py-3 | ✅ Oui | Définition trouvée |
+| .py-4 | ✅ Oui | Définition trouvée |
+| .py-8 | ✅ Oui | Définition trouvée |
+| .relative | ✅ Oui | Définition trouvée |
+| .right-0 | ✅ Oui | Définition trouvée |
+| .right-3 | ✅ Oui | Définition trouvée |
+| .right-4 | ✅ Oui | Définition trouvée |
+| .rounded-2xl | ✅ Oui | Définition trouvée |
+| .rounded-3xl | ✅ Oui | Définition trouvée |
+| .rounded-full | ✅ Oui | Définition trouvée |
+| .rounded-lg | ✅ Oui | Définition trouvée |
+| .rounded-xl | ✅ Oui | Définition trouvée |
+| .scale-75 | ✅ Oui | Définition trouvée |
+| .scale-95 | ✅ Oui | Définition trouvée |
+| .scroll-smooth | ✅ Oui | Définition trouvée |
+| .scrollbar-hide | ✅ Oui | Définition trouvée |
+| .shadow-2xl | ✅ Oui | Définition trouvée |
+| .shadow-[0_-5px_20px_rgba(0,0,0,0.05)] | ❌ Non | Aucune définition trouvée |
+| .shadow-lg | ✅ Oui | Définition trouvée |
+| .shadow-md | ✅ Oui | Définition trouvée |
+| .shadow-sm | ✅ Oui | Définition trouvée |
+| .shadow-xl | ✅ Oui | Définition trouvée |
+| .sm:block | ❌ Non | Aucune définition trouvée |
+| .sm:flex-row | ❌ Non | Aucune définition trouvée |
+| .sm:h-80 | ❌ Non | Aucune définition trouvée |
+| .sm:px-10 | ❌ Non | Aucune définition trouvée |
+| .sm:text-4xl | ❌ Non | Aucune définition trouvée |
+| .sm:text-5xl | ❌ Non | Aucune définition trouvée |
+| .sm:w-1/2 | ❌ Non | Aucune définition trouvée |
+| .sm:w-80 | ❌ Non | Aucune définition trouvée |
+| .social-icon | ✅ Oui | Définition trouvée |
+| .space-x-2 | ✅ Oui | Définition trouvée |
+| .space-x-3 | ✅ Oui | Définition trouvée |
+| .space-x-6 | ✅ Oui | Définition trouvée |
+| .space-y-2 | ✅ Oui | Définition trouvée |
+| .space-y-3 | ✅ Oui | Définition trouvée |
+| .space-y-4 | ✅ Oui | Définition trouvée |
+| .space-y-6 | ✅ Oui | Définition trouvée |
+| .tab-btn | ✅ Oui | Définition trouvée |
+| .tab-content | ❌ Non | Aucune définition trouvée |
+| .text-2xl | ✅ Oui | Définition trouvée |
+| .text-3xl | ✅ Oui | Définition trouvée |
+| .text-4xl | ✅ Oui | Définition trouvée |
+| .text-[#a37b73] | ❌ Non | Aucune définition trouvée |
+| .text-base | ✅ Oui | Définition trouvée |
+| .text-black | ✅ Oui | Définition trouvée |
+| .text-blue-500 | ✅ Oui | Définition trouvée |
+| .text-center | ✅ Oui | Définition trouvée |
+| .text-custom-accent | ✅ Oui | Définition trouvée |
+| .text-custom-dark | ✅ Oui | Définition trouvée |
+| .text-custom-dark/50 | ❌ Non | Aucune définition trouvée |
+| .text-full | ❌ Non | Aucune définition trouvée |
+| .text-gray-300 | ✅ Oui | Définition trouvée |
+| .text-gray-400 | ✅ Oui | Définition trouvée |
+| .text-gray-500 | ✅ Oui | Définition trouvée |
+| .text-gray-600 | ✅ Oui | Définition trouvée |
+| .text-gray-700 | ✅ Oui | Définition trouvée |
+| .text-gray-800 | ✅ Oui | Définition trouvée |
+| .text-green-700 | ✅ Oui | Définition trouvée |
+| .text-left | ✅ Oui | Définition trouvée |
+| .text-lg | ✅ Oui | Définition trouvée |
+| .text-pink-800 | ✅ Oui | Définition trouvée |
+| .text-purple-600 | ✅ Oui | Définition trouvée |
+| .text-purple-800 | ✅ Oui | Définition trouvée |
+| .text-red-400 | ✅ Oui | Définition trouvée |
+| .text-red-500 | ✅ Oui | Définition trouvée |
+| .text-red-600 | ✅ Oui | Définition trouvée |
+| .text-short | ❌ Non | Aucune définition trouvée |
+| .text-sm | ✅ Oui | Définition trouvée |
+| .text-white | ✅ Oui | Définition trouvée |
+| .text-white/80 | ✅ Oui | Définition trouvée |
+| .text-xl | ✅ Oui | Définition trouvée |
+| .text-xs | ✅ Oui | Définition trouvée |
+| .top-0 | ✅ Oui | Définition trouvée |
+| .top-1/2 | ✅ Oui | Définition trouvée |
+| .top-3 | ✅ Oui | Définition trouvée |
+| .top-4 | ✅ Oui | Définition trouvée |
+| .tracking-tight | ✅ Oui | Définition trouvée |
+| .transform | ✅ Oui | Définition trouvée |
+| .transition | ✅ Oui | Définition trouvée |
+| .transition-all | ✅ Oui | Définition trouvée |
+| .transition-colors | ✅ Oui | Définition trouvée |
+| .transition-opacity | ✅ Oui | Définition trouvée |
+| .transition-transform | ✅ Oui | Définition trouvée |
+| .translate-y-full | ✅ Oui | Définition trouvée |
+| .w-1/2 | ❌ Non | Aucune définition trouvée |
+| .w-12 | ✅ Oui | Définition trouvée |
+| .w-16 | ✅ Oui | Définition trouvée |
+| .w-20 | ✅ Oui | Définition trouvée |
+| .w-24 | ✅ Oui | Définition trouvée |
+| .w-48 | ✅ Oui | Définition trouvée |
+| .w-5 | ✅ Oui | Définition trouvée |
+| .w-6 | ✅ Oui | Définition trouvée |
+| .w-64 | ✅ Oui | Définition trouvée |
+| .w-8 | ✅ Oui | Définition trouvée |
+| .w-9 | ✅ Oui | Définition trouvée |
+| .w-full | ✅ Oui | Définition trouvée |
+| .whitespace-nowrap | ✅ Oui | Définition trouvée |
+| .z-10 | ✅ Oui | Définition trouvée |
+| .z-40 | ✅ Oui | Définition trouvée |
+| .z-50 | ✅ Oui | Définition trouvée |

@@ -1,3 +1,0 @@
-netlify dev -> Lance le serveur
-
-npm run Watch -> mettre input.css dans /src puis sors un fichier purgecss tailwind ds /dist

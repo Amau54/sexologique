@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Logs
+logs/
+
+# Sitemaps output
+sitemaps/
+sitemaps_output/
+
+# IDE / Editor specific
+.vscode/
+.idea/

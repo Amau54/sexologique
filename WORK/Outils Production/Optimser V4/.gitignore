@@ -1,0 +1,5 @@
+node_modules
+dist
+stats.html
+out.log
+build_output.log

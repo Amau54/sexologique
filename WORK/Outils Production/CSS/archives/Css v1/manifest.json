@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "CSS DeepClean V7.4 - Ultimate Edition",
+  "version": "7.4",
+  "description": "Analyse, nettoie, audite et édite le CSS d'une page web.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+        "resources": ["styles.css"],
+        "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

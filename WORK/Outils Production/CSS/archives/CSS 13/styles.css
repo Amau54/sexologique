@@ -1,0 +1,238 @@
+/* styles.css: V6 "Studio" Interface Styles */
+
+/* --- 1. Variables and Base Styles --- */
+:host {
+  /* Font Stacks */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "Fira Code", "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+
+  /* Deep Studio Theme Palette */
+  --color-bg: #1e2227;
+  --color-bg-light: #282c34;
+  --color-bg-lighter: #353b45;
+  --color-text: #abb2bf;
+  --color-text-header: #ffffff;
+  --color-text-muted: #828997;
+  --color-border: #3e4451;
+  --color-accent: #61afef;
+  --color-accent-hover: #4d8ac2;
+  --color-success: #98c379;
+  --color-warning: #e5c07b;
+  --color-danger: #e06c75;
+
+  /* Sizing & Transitions */
+  --radius: 8px;
+  --spacing: 16px;
+  --speed: 0.25s;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 2. Main Panel & Layout --- */
+#deepclean-panel {
+  all: initial;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  width: 440px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: panel-appear 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+}
+
+@keyframes panel-appear {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* --- 3. Header --- */
+.deepclean-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px var(--spacing);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-light);
+  cursor: grab;
+  user-select: none;
+}
+.deepclean-header:active { cursor: grabbing; }
+.deepclean-header-info { flex-grow: 1; pointer-events: none; }
+.deepclean-header h1 { font-size: 16px; font-weight: 600; margin: 0; color: var(--color-text-header); }
+.deepclean-header-path { font-family: var(--font-mono); color: var(--color-text-muted); font-size: 10px; margin: 4px 0 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 280px; }
+.header-actions { display: flex; gap: 10px; align-items: center; }
+.deepclean-icon { width: 16px; height: 16px; flex-shrink: 0; display: inline-block; vertical-align: middle; }
+.deepclean-copy-classes-btn, .deepclean-pick-btn, .deepclean-close-btn { background: none; border: none; cursor: pointer; color: var(--color-text-muted); display: flex; align-items: center; justify-content: center; padding: 4px; border-radius: 4px; transition: all 0.2s; }
+.deepclean-copy-classes-btn:hover { background: var(--color-bg-lighter); color: var(--color-accent); }
+.deepclean-pick-btn:hover, .deepclean-close-btn:hover { background: var(--color-bg-lighter); color: var(--color-text-header); }
+.deepclean-pick-btn.active { color: var(--color-accent); background: var(--color-bg-lighter); }
+.deepclean-close-btn:hover { color: var(--color-text-header); }
+
+svg { width: 16px !important; height: 16px !important; flex-shrink: 0; pointer-events: none; }
+
+/* --- 4. Tabs --- */
+.deepclean-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+}
+.deepclean-tab {
+  flex: 1; text-align: center;
+  padding: 10px;
+  background: var(--color-bg);
+  border: none; color: var(--color-text-muted);
+  font-weight: 500; cursor: pointer;
+  transition: all var(--speed) ease;
+}
+.deepclean-tab:hover { background: var(--color-bg-light); }
+.deepclean-tab.active { color: var(--color-text-header); background: var(--color-bg-light); border-bottom: 2px solid var(--color-accent); }
+
+/* --- 5. Content Panes --- */
+.deepclean-pane { display: none; flex-direction: column; flex-grow: 1; overflow: hidden; height: 100%; }
+.deepclean-pane.active { display: flex; }
+
+/* --- 6. Editor Pane --- */
+.editor-nav { display: flex; gap: 8px; padding: 10px var(--spacing); background: var(--color-bg); border-bottom: 1px solid var(--color-border); }
+.editor-nav button { flex: 1; background: var(--color-bg-light); border: 1px solid var(--color-border); color: var(--color-text); padding: 6px; border-radius: var(--radius); cursor: pointer; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 5px; }
+.editor-nav button:hover { background: var(--color-bg-lighter); color: var(--color-text-header); }
+.editor-nav button svg { width: 14px; height: 14px; }
+
+.editor-controls { padding: var(--spacing); border-bottom: 1px solid var(--color-border); background: var(--color-bg-light); position: relative; display: flex; flex-direction: column; gap: 10px; }
+.editor-controls input {
+  width: 100%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  padding: 10px 14px;
+  font-size: 13px;
+  transition: border-color var(--speed), box-shadow var(--speed);
+}
+.editor-controls input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.2);
+}
+#autocomplete-list {
+  position: absolute; top: 100%; left: var(--spacing); right: var(--spacing);
+  max-height: 150px; overflow-y: auto;
+  background: var(--color-bg-lighter);
+  border: 1px solid var(--color-border);
+  border-top: none; border-radius: 0 0 var(--radius) var(--radius);
+  z-index: 10;
+}
+.autocomplete-item { padding: 8px 12px; cursor: pointer; }
+.autocomplete-item:hover, .autocomplete-item.selected { background: var(--color-accent); color: white; }
+
+.deepclean-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; flex-grow: 1; scroll-behavior: smooth; }
+.deepclean-class-card, .scanner-rule-card { border-bottom: 1px solid var(--color-border); padding: 10px var(--spacing); display: flex; align-items: center; gap: 10px; transition: background 0.2s, opacity 0.2s; }
+.deepclean-class-card.disabled { opacity: 0.4; }
+.deepclean-class-card.disabled .class-name { text-decoration: line-through; }
+.deepclean-class-card[data-is-trash="true"] .class-name { text-decoration: line-through; }
+.deepclean-class-card.ghost-card { border-left: 3px dashed var(--color-warning); opacity: 0.85; background: rgba(229, 192, 123, 0.05); }
+.ghost-icon svg { color: var(--color-warning); margin-right: 4px; vertical-align: middle; }
+.class-card-main.clickable { cursor: pointer; }
+.class-name { font-family: var(--font-mono); flex-grow: 1; }
+/* ... (re-use toggle, indicator styles from V2) ... */
+.switch { position: relative; display: inline-block; width: 38px; height: 22px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--color-bg-lighter); border-radius: 22px; transition: all var(--speed); }
+.slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 2px; bottom: 2px; background-color: white; border-radius: 50%; transition: all var(--speed); }
+input:checked + .slider { background-color: var(--color-success); }
+input:checked + .slider:before { transform: translateX(16px); }
+
+.deepclean-details {
+  background-color: var(--color-bg-light); padding: 12px; margin-top: 10px;
+  max-height: 0; overflow: hidden; transition: all var(--speed) ease;
+}
+.deepclean-details.expanded { max-height: 400px; overflow-y: auto; }
+
+.ghost-info h3 { color: var(--color-warning); font-size: 12px; margin: 0 0 5px 0; }
+.ghost-info p { font-size: 11px; color: var(--color-text-muted); margin: 0; }
+
+.suggestion-box { margin-top: 12px; padding: 10px; background: var(--color-bg-lighter); border-radius: var(--radius); border: 1px solid var(--color-accent); }
+.suggestion-box h3 { color: var(--color-accent); font-size: 11px; text-transform: uppercase; margin: 0 0 8px 0; }
+.suggestion-box pre { font-family: var(--font-mono); font-size: 11px; margin: 0 0 10px 0; color: var(--color-text-header); white-space: pre-wrap; }
+.inject-btn { background: var(--color-accent); color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 11px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 4px; }
+.inject-btn:hover { background: var(--color-accent-hover); }
+.inject-btn svg { margin-right: 4px; }
+
+/* --- 7. Scanner Pane --- */
+.scanner-controls { padding: 10px var(--spacing); background: var(--color-bg-light); border-bottom: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 10px; }
+.scanner-controls-top { display: flex; gap: 10px; }
+.scanner-search { flex-grow: 1; background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text); padding: 6px 10px; border-radius: var(--radius); }
+.scanner-controls-bottom { display: flex; gap: 10px; align-items: center; }
+.scanner-controls-bottom span { font-size: 11px; color: var(--color-text-muted); }
+.scanner-controls button { background: var(--color-bg-lighter); border: 1px solid var(--color-border); color: var(--color-text); padding: 6px 12px; border-radius: var(--radius); cursor: pointer; }
+.scanner-controls button:disabled { opacity: 0.5; cursor: not-allowed; }
+.scanner-list { flex-grow: 1; overflow-y: auto; }
+.scanner-rule-card { display: flex; align-items: center; justify-content: space-between; }
+.scanner-rule-card .selector { font-family: var(--font-mono); flex-grow: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 10px; }
+.scanner-rule-card .count { font-weight: bold; color: var(--color-accent); margin-right: 10px; }
+.scanner-actions { display: flex; gap: 5px; }
+.scanner-actions button { background: var(--color-bg-lighter); border: 1px solid var(--color-border); color: var(--color-text); padding: 4px 8px; border-radius: var(--radius); cursor: pointer; }
+.scanner-actions button:hover { background: var(--color-accent); color: white; }
+
+/* --- 7.5 Settings Pane --- */
+.settings-pane { padding: var(--spacing); overflow-y: auto; }
+.settings-group { margin-bottom: 20px; }
+.settings-group h3 { margin: 0 0 10px 0; font-size: 14px; color: var(--color-text-header); }
+.keybinding { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.keybinding label { font-size: 12px; color: var(--color-text-muted); }
+.keybinding input { background: var(--color-bg-light); border: 1px solid var(--color-border); color: var(--color-accent); border-radius: var(--radius); padding: 4px 8px; width: 100px; text-align: center; font-family: var(--font-mono); font-size: 11px; }
+.settings-footer { margin-top: 20px; text-align: right; }
+#save-settings-btn { background: var(--color-accent); color: white; border: none; padding: 8px 16px; border-radius: var(--radius); cursor: pointer; font-weight: 600; }
+
+/* --- 7.6 Toasts --- */
+#deepclean-toast-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+  pointer-events: none;
+}
+.deepclean-toast {
+  background: var(--color-bg-lighter);
+  color: var(--color-text-header);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: toast-in 0.3s ease-out, toast-out 0.3s ease-in 2.7s forwards;
+  white-space: nowrap;
+  border: 1px solid var(--color-border);
+}
+@keyframes toast-in {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes toast-out {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-20px); opacity: 0; }
+}
+
+/* --- 8. Footer & Micro-copy --- */
+.deepclean-footer { padding: var(--spacing); border-top: 1px solid var(--color-border); background: var(--color-bg-light); }
+.deepclean-footer-actions { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; }
+.footer-row { display: flex; gap: 10px; }
+#deepclean-clean-btn, #global-export-btn, #reset-all-btn { flex: 1; background: var(--color-accent); color: white; border: none; padding: 10px; font-size: 13px; font-weight: 600; border-radius: var(--radius); cursor: pointer; transition: transform 0.1s, background 0.2s; }
+#global-export-btn, #reset-all-btn { background: var(--color-bg-lighter); border: 1px solid var(--color-border); }
+#deepclean-clean-btn:hover { background: var(--color-accent-hover); }
+#global-export-btn:hover, #reset-all-btn:hover { background: var(--color-border); }
+#deepclean-clean-btn:active, #global-export-btn:active, #reset-all-btn:active { transform: scale(0.98); }
+.micro-copy { font-size: 11px; color: var(--color-text-muted); text-align: center; }
+#deepclean-result { margin-top: var(--spacing); background: var(--color-bg-light); border-radius: var(--radius); position: relative; }
+#deepclean-result pre { margin: 0; padding: 10px; font-family: var(--font-mono); font-size: 12px; white-space: pre-wrap; color: var(--color-text); }
+#deepclean-copy-btn { position: absolute; top: 8px; right: 8px; background: var(--color-bg-lighter); border: none; border-radius: 4px; padding: 4px 8px; cursor: pointer; }
+#deepclean-copy-btn:hover { background: var(--color-border); }

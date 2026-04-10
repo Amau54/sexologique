@@ -46,7 +46,9 @@ async function generateSitemap() {
         let priority = 0.5;
         if (url === '/') priority = 1.0;
         else if (url === '/sexeploration') priority = 0.9;
-        else if (url.startsWith('/articles')) priority = 0.8;
+        else if (url.startsWith('/articles')) priority = 0.7;
+        else if (url.startsWith('/FAQ')) priority = 0.8;
+        else if (url.startsWith('/images')) priority = 0.6;
 
         // Ajoute au sitemap
         stream.write({
